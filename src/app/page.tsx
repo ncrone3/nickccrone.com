@@ -37,18 +37,44 @@ function GitHubIcon({
   );
 }
 
-const experience = [
+const highlights = [
   {
-    role: "Product Builder",
-    detail: "Turning early ideas into scoped, testable products.",
+    role: "AWS Internship",
+    detail:
+      "Built a custom data connector to accelerate integration development.",
+    image: "/photos/aws-first-day.jpg",
+    imageAlt: "Nick on his first day at AWS",
   },
   {
-    role: "Software Engineering",
-    detail: "Learning by shipping useful interfaces and systems.",
+    role: "Amway Internship",
+    detail:
+      "Built a cloud-based PySpark pipeline to lead a department wide data modernization initiative.",
+    image: "/photos/amway-bikes.jpg",
+    imageAlt: "Nick at Amway during his internship",
   },
   {
-    role: "Data & Strategy",
-    detail: "Finding signal in messy problems, markets, and behavior.",
+    role: "Georgia Tech VIP",
+    detail:
+      "Built a LinkedIn-esque networking platform to connect faculty and researchers at Georgia Tech Research Institute.",
+  },
+  {
+    role: "Pop the Balloon Dating Show",
+    detail:
+      "Launched a live dating show at Georgia Tech to raise money for the American Red Cross.",
+    image: "/photos/ptb-stage.jpg",
+    imageAlt: "Pop the Balloon dating show team",
+  },
+  {
+    role: "Teaching Assistant",
+    detail:
+      "Taught ISyE students core topics like probability and optimization.\n\nISyE 2027: Probability with Applications\nISyE 3133: Engineering Optimization.",
+  },
+  {
+    role: "Lead Resident Assistant",
+    detail:
+      "Led team of RAs to give students an amazing first-year community at Georgia Tech.",
+    image: "/photos/ra-birthday.jpg",
+    imageAlt: "Resident assistant birthday celebration",
   },
 ];
 
@@ -100,6 +126,23 @@ const topCarouselPhotos: CarouselPhoto[] = [
   { src: "/photos/carousel-extra-2.jpg", variant: "portrait" },
   { src: "/photos/carousel-6.jpg" },
   { src: "/photos/carousel-4.jpg" },
+];
+const bottomCarouselPhotos: CarouselPhoto[] = [
+  { src: "/photos/bottom-mindfulness.jpg" },
+  { src: "/photos/bottom-david-laid.jpg", variant: "portrait" },
+  { src: "/photos/bottom-eren-free.jpg" },
+  { src: "/photos/bottom-wait-im-goated.jpg", variant: "portrait" },
+  { src: "/photos/bottom-zyzz.jpg" },
+  { src: "/photos/bottom-kanye-west-ambition.jpg", variant: "portrait" },
+  { src: "/photos/bottom-great-wave.jpg" },
+  { src: "/photos/bottom-let-that-shi-go.jpg", variant: "portrait" },
+  { src: "/photos/bottom-connor-mcgregor-dc.avif" },
+  { src: "/photos/bottom-tige.jpg", variant: "portrait" },
+  { src: "/photos/bottom-eye-of-a-fallen-angel.jpg" },
+  { src: "/photos/bottom-justin-gaethje-backflip.jpg", variant: "portrait" },
+  { src: "/photos/bottom-arnold.jpg" },
+  { src: "/photos/bottom-sisyphus.jpg", variant: "portrait" },
+  { src: "/photos/bottom-what-if-you-fly.jpg", variant: "portrait" },
 ];
 
 function PhotoCarouselBand({
@@ -199,9 +242,9 @@ export default function Home() {
           <div className="w-full max-w-6xl border-l-2 border-black pl-5 sm:pl-7">
             <h2 className="text-5xl leading-none sm:text-6xl">About Me</h2>
             <p className="mt-4 text-2xl leading-tight sm:text-3xl lg:max-w-[72rem]">
-              I am a 4th year ISyE, ECON + CS student at Georgia Tech. I love
-              building cool things and solving hard problems across product,
-              software engineering, and data.
+              I am a 4th year ISyE, ECON + CS student at Georgia Tech. I am
+              passionate about building cool things and want to be a product
+              manager!
             </p>
           </div>
         </div>
@@ -209,26 +252,36 @@ export default function Home() {
 
       <section className="bg-[#ddd8d4] px-6 pb-16 sm:px-10 lg:px-14">
         <div className="mx-auto max-w-6xl border-t border-black/30 pt-10">
-          <h2 className="text-center text-4xl font-bold">Experience</h2>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {experience.map((item) => (
+          <h2 className="text-center text-4xl font-bold">Highlights</h2>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {highlights.map((item) => (
               <article
                 key={item.role}
-                className="flex min-h-64 flex-col justify-between bg-white p-6 shadow-sm"
+                className="flex min-h-64 flex-col overflow-hidden bg-white shadow-sm"
               >
-                <div>
+                {item.image ? (
+                  <div
+                    aria-label={item.imageAlt}
+                    className="h-48 bg-cover bg-center"
+                    role="img"
+                    style={{ backgroundImage: `url('${item.image}')` }}
+                  />
+                ) : null}
+                <div className="flex flex-1 flex-col justify-between p-6">
+                  <div>
                   <h3 className="text-2xl font-semibold">{item.role}</h3>
-                  <p className="mt-4 text-lg leading-snug text-zinc-700">
+                  <p className="mt-4 whitespace-pre-line text-lg leading-snug text-zinc-700">
                     {item.detail}
                   </p>
+                  </div>
+                  <a
+                    href="#contact"
+                    className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-bold uppercase tracking-wide"
+                  >
+                    See more
+                    <ArrowUpRight size={16} />
+                  </a>
                 </div>
-                <a
-                  href="#contact"
-                  className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-bold uppercase tracking-wide"
-                >
-                  See more
-                  <ArrowUpRight size={16} />
-                </a>
               </article>
             ))}
           </div>
@@ -260,7 +313,12 @@ export default function Home() {
         aria-label="Photo carousel"
         className="overflow-hidden bg-[#ddd8d4] pb-6"
       >
-        <PhotoCarouselBand placement="static" reverse />
+        <PhotoCarouselBand
+          placement="static"
+          photos={bottomCarouselPhotos}
+          reverse
+          tileClassName="h-24 w-36 sm:h-28 sm:w-44 md:h-32 md:w-52"
+        />
       </section>
     </main>
   );
