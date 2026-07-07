@@ -1,5 +1,7 @@
+"use client";
+
 import { ArrowUpRight, Mail } from "lucide-react";
-import type { SVGProps } from "react";
+import { useState, type SVGProps } from "react";
 
 function LinkedInIcon({
   size = 24,
@@ -49,13 +51,22 @@ const highlights = [
     role: "Amway Internship",
     detail:
       "Built a cloud-based PySpark pipeline to lead a department wide data modernization initiative.",
-    image: "/photos/amway-bikes.jpg",
+    image: "/photos/amway-internship.jpg",
     imageAlt: "Nick at Amway during his internship",
+  },
+  {
+    role: "ChatGPT Feature Design",
+    detail:
+      "Improved my favorite product by designing and validating a potential new feature for ChatGPT.",
+    image: "/photos/chatgpt-feature-design.jpg",
+    imageAlt: "ChatGPT feature design mockup",
   },
   {
     role: "Georgia Tech VIP",
     detail:
       "Built a LinkedIn-esque networking platform to connect faculty and researchers at Georgia Tech Research Institute.",
+    image: "/photos/georgia-tech-vip-header.jpg",
+    imageAlt: "Georgia Tech VIP project header",
   },
   {
     role: "Pop the Balloon Dating Show",
@@ -68,6 +79,8 @@ const highlights = [
     role: "Teaching Assistant",
     detail:
       "Taught ISyE students core topics like probability and optimization.\n\nISyE 2027: Probability with Applications\nISyE 3133: Engineering Optimization.",
+      image: "/photos/teaching-assistant-placeholder.jpg",
+      imageAlt: "Teaching assistant at work",
   },
   {
     role: "Lead Resident Assistant",
@@ -75,6 +88,13 @@ const highlights = [
       "Led team of RAs to give students an amazing first-year community at Georgia Tech.",
     image: "/photos/ra-birthday.jpg",
     imageAlt: "Resident assistant birthday celebration",
+  },
+  {
+    role: "Senior Class President",
+    detail:
+      "Led a novel campaign for my high school's senior class president seat...lost unfortunately :(.",
+    image: "/photos/vote-for-nick-header.jpg",
+    imageAlt: "Vote for Nick campaign graphic",
   },
 ];
 
@@ -160,14 +180,14 @@ function PhotoCarouselBand({
   const placementClass =
     placement === "static"
       ? "relative overflow-hidden px-3 py-5"
-      : `pointer-events-none absolute inset-x-0 overflow-hidden px-3 ${
+      : `absolute inset-x-0 overflow-hidden px-3 ${
           placement === "bottom" ? "bottom-5" : "top-5"
         }`;
 
   return (
     <div className={placementClass}>
       <div
-        className={`flex w-max items-center gap-7 ${
+        className={`flex w-max items-center gap-4 ${
           reverse ? "photo-carousel-track-reverse" : "photo-carousel-track"
         }`}
       >
@@ -195,6 +215,9 @@ function PhotoCarouselBand({
 }
 
 export default function Home() {
+  const [showAllHighlights, setShowAllHighlights] = useState(false);
+  const visibleHighlights = showAllHighlights ? highlights : highlights.slice(0, 3);
+
   return (
     <main className="min-h-screen bg-[#ddd8d4] text-black">
       <section className="relative flex min-h-screen overflow-hidden bg-black">
@@ -242,9 +265,7 @@ export default function Home() {
           <div className="w-full max-w-6xl border-l-2 border-black pl-5 sm:pl-7">
             <h2 className="text-5xl leading-none sm:text-6xl">About Me</h2>
             <p className="mt-4 text-2xl leading-tight sm:text-3xl lg:max-w-[72rem]">
-              I am a 4th year ISyE, ECON + CS student at Georgia Tech. I am
-              passionate about building cool things and want to be a product
-              manager!
+              ISyE, ECON + CS @ Georgia Tech. I love building things, making videos, and writing occasionally.
             </p>
           </div>
         </div>
@@ -254,10 +275,10 @@ export default function Home() {
         <div className="mx-auto max-w-6xl border-t border-black/30 pt-10">
           <h2 className="text-center text-4xl font-bold">Highlights</h2>
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {highlights.map((item) => (
+            {visibleHighlights.map((item) => (
               <article
                 key={item.role}
-                className="flex min-h-64 flex-col overflow-hidden bg-white shadow-sm"
+                className="flex min-h-64 flex-col overflow-hidden bg-white shadow-sm transition-shadow duration-200 hover:shadow-xl"
               >
                 {item.image ? (
                   <div
@@ -278,13 +299,24 @@ export default function Home() {
                     href="#contact"
                     className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-bold uppercase tracking-wide"
                   >
-                    See more
+                    Learn more
                     <ArrowUpRight size={16} />
                   </a>
                 </div>
               </article>
             ))}
           </div>
+          {!showAllHighlights ? (
+            <div className="mt-8 flex justify-center">
+              <button
+                type="button"
+                className="inline-flex h-11 items-center justify-center rounded-sm border border-black/25 bg-white/70 px-6 text-sm font-bold uppercase tracking-wide shadow-sm transition hover:bg-white hover:shadow-md"
+                onClick={() => setShowAllHighlights(true)}
+              >
+                More
+              </button>
+            </div>
+          ) : null}
         </div>
       </section>
 

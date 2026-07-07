@@ -29,7 +29,7 @@ html {
     }
 
     to {
-      transform: translateX(calc(-50% - 0.875rem));
+      transform: translateX(calc(-50% - 0.5rem));
     }
   }
 
@@ -39,5 +39,10 @@ html {
 
   .photo-carousel-track-reverse {
     animation: photo-carousel 70s linear infinite reverse;
+  }
+
+  .photo-carousel-track:hover,
+  .photo-carousel-track-reverse:hover {
+    animation-play-state: paused;
   }
 }

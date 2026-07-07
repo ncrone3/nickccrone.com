@@ -41,8 +41,10 @@
 !/public/photos/carousel-extra-4.jpg
 !/public/photos/carousel-extra-5.jpg
 !/public/photos/carousel-extra-6.jpg
-!/public/photos/amway-bikes.jpg
+!/public/photos/chatgpt-feature-design.jpg
+!/public/photos/amway-internship.jpg
 !/public/photos/aws-first-day.jpg
+!/public/photos/georgia-tech-vip-header.jpg
 !/public/photos/bottom-arnold.jpg
 !/public/photos/bottom-connor-mcgregor-dc.avif
 !/public/photos/bottom-david-laid.jpg
@@ -65,6 +67,7 @@
 !/public/photos/ncc-v-hockey.jpg
 !/public/photos/ptb-stage.jpg
 !/public/photos/ra-birthday.jpg
+!/public/photos/vote-for-nick-header.jpg
 
 # debug
 npm-debug.log*
