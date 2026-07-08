@@ -39,9 +39,27 @@ function GitHubIcon({
   );
 }
 
-const highlights = [
+const highlightFilters = [
+  "Work Exp.",
+  "Projects",
+  "Leadership",
+  "Other",
+] as const;
+
+type HighlightFilter = (typeof highlightFilters)[number];
+
+type Highlight = {
+  role: string;
+  category: HighlightFilter;
+  detail: string;
+  image: string;
+  imageAlt: string;
+};
+
+const highlights: Highlight[] = [
   {
     role: "AWS Internship",
+    category: "Work Exp.",
     detail:
       "Built a custom data connector to accelerate integration development.",
     image: "/photos/aws-first-day.jpg",
@@ -49,6 +67,7 @@ const highlights = [
   },
   {
     role: "Amway Internship",
+    category: "Work Exp.",
     detail:
       "Built a cloud-based PySpark pipeline to lead a department wide data modernization initiative.",
     image: "/photos/amway-internship.jpg",
@@ -56,6 +75,7 @@ const highlights = [
   },
   {
     role: "ChatGPT Feature Design",
+    category: "Projects",
     detail:
       "Improved my favorite product by designing and validating a potential new feature for ChatGPT.",
     image: "/photos/chatgpt-feature-design.jpg",
@@ -63,6 +83,7 @@ const highlights = [
   },
   {
     role: "Georgia Tech VIP",
+    category: "Work Exp.",
     detail:
       "Built a LinkedIn-esque networking platform to connect faculty and researchers at Georgia Tech Research Institute.",
     image: "/photos/georgia-tech-vip-header.jpg",
@@ -70,6 +91,7 @@ const highlights = [
   },
   {
     role: "Pop the Balloon Dating Show",
+    category: "Leadership",
     detail:
       "Launched a live dating show at Georgia Tech to raise money for the American Red Cross.",
     image: "/photos/ptb-stage.jpg",
@@ -77,13 +99,15 @@ const highlights = [
   },
   {
     role: "Teaching Assistant",
+    category: "Leadership",
     detail:
       "Taught ISyE students core topics like probability and optimization.\n\nISyE 2027: Probability with Applications\nISyE 3133: Engineering Optimization.",
-      image: "/photos/teaching-assistant-placeholder.jpg",
-      imageAlt: "Teaching assistant at work",
+    image: "/photos/teaching-assistant-placeholder.jpg",
+    imageAlt: "Teaching assistant at work",
   },
   {
     role: "Lead Resident Assistant",
+    category: "Leadership",
     detail:
       "Led team of RAs to give students an amazing first-year community at Georgia Tech.",
     image: "/photos/ra-birthday.jpg",
@@ -91,6 +115,7 @@ const highlights = [
   },
   {
     role: "Senior Class President",
+    category: "Other",
     detail:
       "Led a novel campaign for my high school's senior class president seat...lost unfortunately :(.",
     image: "/photos/vote-for-nick-header.jpg",
@@ -215,7 +240,22 @@ function PhotoCarouselBand({
 
 export default function Home() {
   const [showAllHighlights, setShowAllHighlights] = useState(false);
-  const visibleHighlights = showAllHighlights ? highlights : highlights.slice(0, 3);
+  const [selectedHighlightFilter, setSelectedHighlightFilter] =
+    useState<HighlightFilter | null>(null);
+  const filteredHighlights = selectedHighlightFilter
+    ? highlights.filter((item) => item.category === selectedHighlightFilter)
+    : highlights;
+  const visibleHighlights = showAllHighlights
+    ? filteredHighlights
+    : filteredHighlights.slice(0, 3);
+  const hasHiddenHighlights = filteredHighlights.length > visibleHighlights.length;
+
+  function toggleHighlightFilter(filter: HighlightFilter) {
+    setSelectedHighlightFilter((currentFilter) =>
+      currentFilter === filter ? null : filter,
+    );
+    setShowAllHighlights(false);
+  }
 
   return (
     <main className="min-h-screen bg-[#ddd8d4] text-black">
@@ -273,6 +313,30 @@ export default function Home() {
       <section className="bg-[#ddd8d4] px-5 pb-14 sm:px-10 sm:pb-16 lg:px-14">
         <div className="mx-auto max-w-6xl border-t border-black/30 pt-8 sm:pt-10">
           <h2 className="text-center text-3xl font-bold sm:text-4xl">Highlights</h2>
+          <div
+            aria-label="Highlight filters"
+            className="mt-8 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:justify-center sm:gap-5"
+          >
+            {highlightFilters.map((filter) => {
+              const isSelected = selectedHighlightFilter === filter;
+
+              return (
+                <button
+                  key={filter}
+                  type="button"
+                  aria-pressed={isSelected}
+                  className={`inline-flex h-12 items-center justify-center rounded-2xl border px-5 text-sm font-bold uppercase tracking-wide shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:min-w-40 sm:text-base ${
+                    isSelected
+                      ? "border-black bg-black text-white"
+                      : "border-black/15 bg-white/70 text-black hover:bg-white"
+                  }`}
+                  onClick={() => toggleHighlightFilter(filter)}
+                >
+                  {filter}
+                </button>
+              );
+            })}
+          </div>
           <div className="mt-8 grid gap-5 sm:mt-12 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
             {visibleHighlights.map((item) => (
               <article
@@ -305,7 +369,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          {!showAllHighlights ? (
+          {hasHiddenHighlights ? (
             <div className="mt-8 flex justify-center">
               <button
                 type="button"
