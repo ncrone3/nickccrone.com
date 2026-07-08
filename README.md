@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# nickccrone.com
 
-## Getting Started
+Personal portfolio site for Nick Crone, built with Next.js, React, and Tailwind CSS. The site is deployed on Vercel and connected to the custom domain `nickccrone.com`.
 
-First, run the development server:
+## Current Status
+
+- GitHub repo: `https://github.com/ncrone3/nickccrone.com.git`
+- Main branch: `main`
+- Hosting: Vercel
+- Domain registrar: Porkbun
+- Live domain: `https://nickccrone.com`
+- Local project path: `/Users/nickccrone/Documents/nickccrone.com`
+- Last known repo state: clean and synced with `origin/main`
+
+## What We Built
+
+- Full-screen hero section with forest background and large name treatment.
+- Top photo carousel with personal photos.
+- About section with a short personal intro.
+- Highlights section for work, projects, school roles, and other meaningful experiences.
+- Highlights currently show the first row by default, then reveal the rest with a `More` button.
+- Highlight cards use images, `Learn more` text, and hover shadows.
+- Contact section with email, LinkedIn, and GitHub links.
+- Bottom carousel for inspiration / personality photos.
+- Carousel animations pause on hover.
+- Site has been deployed to Vercel and connected to `nickccrone.com`.
+
+## Current Highlights Order
+
+1. AWS Internship
+2. Amway Internship
+3. ChatGPT Feature Design
+4. Georgia Tech VIP
+5. Pop the Balloon Dating Show
+6. Teaching Assistant
+7. Lead Resident Assistant
+8. Senior Class President
+
+## Important Files
+
+- `src/app/page.tsx`: main page content, highlight data, links, carousel image lists, and page layout.
+- `src/app/globals.css`: global styles and carousel animation timing.
+- `public/photos/`: portfolio images used by the carousels and highlight cards.
+- `public/forest-hero.png`: hero background image.
+- `.gitignore`: intentionally ignores raw photo uploads while allow-listing final website assets.
+
+## Common Commands
+
+Run the local dev server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Build before pushing:
 
-## Learn More
+```bash
+pnpm build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Check Git status:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+git status -sb
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Commit and push:
 
-## Deploy on Vercel
+```bash
+git add .
+git commit -m "Describe the change"
+git push origin main
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Photo Workflow
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+When adding new photos:
+
+1. Put source photos in `public/photos/`.
+2. Rename them to clean lowercase kebab-case names, for example `aws-first-day.jpg`.
+3. Prefer web-friendly formats like `.jpg`, `.png`, `.webp`, or `.avif`.
+4. Update the matching image list or highlight image in `src/app/page.tsx`.
+5. If the image should deploy to Vercel, make sure it is allow-listed in `.gitignore`.
+6. Delete unused/raw uploads after conversion so the folder stays clean.
+7. Run `pnpm build`.
+8. Commit and push.
+
+## Deployment Notes
+
+Vercel should use the standard Next.js settings:
+
+- Framework Preset: Next.js
+- Build Command: default or `pnpm build`
+- Output Directory: blank
+- Root Directory: blank, because this repo is the app root
+
+For Porkbun DNS:
+
+- Root domain `nickccrone.com` should use an `A` record:
+  - Host: `@`
+  - Value: `216.198.79.1`
+- `www.nickccrone.com` should use a `CNAME` record:
+  - Host: `www`
+  - Value: the CNAME Vercel recommends, commonly `cname.vercel-dns.com`
+
+Avoid conflicting `A`, `AAAA`, or extra `CNAME` records for `@` and `www`.
+
+## Next Session Ideas
+
+- Clean up the final `www.nickccrone.com` DNS recommendation in Vercel.
+- Add real images for remaining highlight cards.
+- Add detail pages or modals for `Learn more`.
+- Improve mobile spacing and visual polish after testing on a phone.
+- Add SEO metadata, favicon, and social preview image.
+- Review `public/photos/` and `.gitignore` together to make sure every referenced image is tracked.
+
+## Notes For Codex
+
+- This project lives outside the default Codex workspace, so file edits and commands usually need approval/escalation.
+- Use the existing design language: soft neutral background, black/white photo-card feel, clean section dividers, and restrained UI.
+- Before any push, run `pnpm build`.
+- Do not delete user-uploaded images unless they are clearly raw/unused replacements and the user has asked for cleanup.
