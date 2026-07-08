@@ -45,6 +45,7 @@ const highlightFilters = [
   "Leadership",
   "Other",
 ] as const;
+const showHighlightCardAction = false;
 
 type HighlightFilter = (typeof highlightFilters)[number];
 
@@ -54,14 +55,16 @@ type Highlight = {
   detail: string;
   image: string;
   imageAlt: string;
+  badge?: string;
 };
 
 const highlights: Highlight[] = [
   {
     role: "AWS Internship",
     category: "Work Exp.",
+    badge: "Currently",
     detail:
-      "Built a custom data connector to accelerate integration development.",
+      "Enabling downstream analytics and future developement by building custom data connector.",
     image: "/photos/aws-first-day.jpg",
     imageAlt: "Nick on his first day at AWS",
   },
@@ -69,7 +72,7 @@ const highlights: Highlight[] = [
     role: "Amway Internship",
     category: "Work Exp.",
     detail:
-      "Built a cloud-based PySpark pipeline to lead a department wide data modernization initiative.",
+      "Led a department wide data modernization initiative by building cloud-based data pipeline.",
     image: "/photos/amway-internship.jpg",
     imageAlt: "Nick at Amway during his internship",
   },
@@ -77,7 +80,7 @@ const highlights: Highlight[] = [
     role: "ChatGPT Feature Design",
     category: "Projects",
     detail:
-      "Improved my favorite product by designing and validating a potential new feature for ChatGPT.",
+      "Improved ChatGPT by designing and validating a potential new feature.",
     image: "/photos/chatgpt-feature-design.jpg",
     imageAlt: "ChatGPT feature design mockup",
   },
@@ -85,7 +88,7 @@ const highlights: Highlight[] = [
     role: "Georgia Tech VIP",
     category: "Work Exp.",
     detail:
-      "Built a LinkedIn-esque networking platform to connect faculty and researchers at Georgia Tech Research Institute.",
+      "Built a LinkedIn-esque networking platform to connect researchers at the Georgia Tech Research Institute.",
     image: "/photos/georgia-tech-vip-header.jpg",
     imageAlt: "Georgia Tech VIP project header",
   },
@@ -112,6 +115,14 @@ const highlights: Highlight[] = [
       "Led team of RAs to give students an amazing first-year community at Georgia Tech.",
     image: "/photos/ra-birthday.jpg",
     imageAlt: "Resident assistant birthday celebration",
+  },
+  {
+    role: "Fuddy Award Show",
+    category: "Other",
+    detail:
+      "Led a end of year superlative event for my first year dorm floor.",
+    image: "/photos/fuddies.jpg",
+    imageAlt: "Fuddy Award Show",
   },
   {
     role: "Senior Class President",
@@ -248,7 +259,7 @@ export default function Home() {
   const visibleHighlights = showAllHighlights
     ? filteredHighlights
     : filteredHighlights.slice(0, 3);
-  const hasHiddenHighlights = filteredHighlights.length > visibleHighlights.length;
+  const canToggleHighlights = filteredHighlights.length > 3;
 
   function toggleHighlightFilter(filter: HighlightFilter) {
     setSelectedHighlightFilter((currentFilter) =>
@@ -353,30 +364,41 @@ export default function Home() {
                 ) : null}
                 <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
                   <div>
-                    <h3 className="text-xl font-semibold sm:text-2xl">{item.role}</h3>
+                    <div className="flex flex-wrap items-center gap-3">
+                      <h3 className="text-xl font-semibold sm:text-2xl">{item.role}</h3>
+                      {item.badge ? (
+                        <span className="rounded-full border border-black/20 bg-[#ddd8d4] px-3 py-1 text-xs font-bold uppercase tracking-wide text-black/75">
+                          {item.badge}
+                        </span>
+                      ) : null}
+                    </div>
                     <p className="mt-3 whitespace-pre-line text-base leading-snug text-zinc-700 sm:mt-4 sm:text-lg">
                       {item.detail}
                     </p>
                   </div>
-                  <a
-                    href="#contact"
-                    className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-bold uppercase tracking-wide"
-                  >
-                    Learn more
-                    <ArrowUpRight size={16} />
-                  </a>
+                  {showHighlightCardAction ? (
+                    <a
+                      href="#contact"
+                      className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-bold uppercase tracking-wide"
+                    >
+                      Learn more
+                      <ArrowUpRight size={16} />
+                    </a>
+                  ) : null}
                 </div>
               </article>
             ))}
           </div>
-          {hasHiddenHighlights ? (
+          {canToggleHighlights ? (
             <div className="mt-8 flex justify-center">
               <button
                 type="button"
                 className="inline-flex h-11 items-center justify-center rounded-sm border border-black/25 bg-white/70 px-6 text-sm font-bold uppercase tracking-wide shadow-sm transition hover:bg-white hover:shadow-md"
-                onClick={() => setShowAllHighlights(true)}
+                onClick={() =>
+                  setShowAllHighlights((currentValue) => !currentValue)
+                }
               >
-                More
+                {showAllHighlights ? "See Less" : "See All"}
               </button>
             </div>
           ) : null}
