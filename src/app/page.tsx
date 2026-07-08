@@ -116,16 +116,13 @@ const links = [
   },
 ];
 
+const heroImage = "/hero/interlaken-hero.jpg";
 const tileRotations = ["-7deg", "0deg", "-9deg", "0deg", "-8deg", "3deg"];
 type CarouselPhoto = {
   src: string;
   variant?: "landscape" | "portrait";
 };
 
-const placeholderCarouselPhotos = Array.from(
-  { length: 6 },
-  (): CarouselPhoto => ({ src: "/forest-hero.png" }),
-);
 const topCarouselPhotos: CarouselPhoto[] = [
   { src: "/photos/carousel-extra-4.jpg" },
   { src: "/photos/ncc-1st-bday.jpg", variant: "portrait" },
@@ -167,12 +164,12 @@ const bottomCarouselPhotos: CarouselPhoto[] = [
 
 function PhotoCarouselBand({
   placement = "top",
-  photos = placeholderCarouselPhotos,
+  photos,
   reverse = false,
   tileClassName = "size-16 sm:size-20 md:size-24",
 }: {
   placement?: "top" | "bottom" | "static";
-  photos?: CarouselPhoto[];
+  photos: CarouselPhoto[];
   reverse?: boolean;
   tileClassName?: string;
 }) {
@@ -187,7 +184,7 @@ function PhotoCarouselBand({
   return (
     <div className={placementClass}>
       <div
-        className={`flex w-max items-center gap-4 ${
+        className={`flex w-max items-center gap-3 sm:gap-4 ${
           reverse ? "photo-carousel-track-reverse" : "photo-carousel-track"
         }`}
       >
@@ -198,7 +195,9 @@ function PhotoCarouselBand({
             <div
               key={`${reverse ? "bottom" : "top"}-${photo.src}-${index}`}
               className={`${
-                isPortrait ? "h-32 w-24 sm:h-36 sm:w-28 md:h-40 md:w-28" : tileClassName
+                isPortrait
+                  ? "h-28 w-20 sm:h-36 sm:w-28 md:h-40 md:w-28"
+                  : tileClassName
               } shrink-0 bg-cover bg-center shadow-sm`}
               style={{
                 backgroundImage: `url('${photo.src}')`,
@@ -223,10 +222,10 @@ export default function Home() {
       <section className="relative flex min-h-screen overflow-hidden bg-black">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/forest-hero.png')" }}
+          style={{ backgroundImage: `url('${heroImage}')` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-black/10" />
-        <div className="relative z-10 flex min-h-screen w-full flex-col px-6 py-5 text-white sm:px-10 lg:px-14">
+        <div className="relative z-10 flex min-h-screen w-full flex-col px-5 py-5 text-white sm:px-10 lg:px-14">
           <header className="flex items-center justify-end text-sm font-medium tracking-wide">
             <nav aria-label="Social links" className="flex items-center gap-3">
               {links.map(({ label, href, icon: Icon }) => (
@@ -243,11 +242,11 @@ export default function Home() {
           </header>
 
           <div className="flex flex-1 items-center">
-            <div className="border-l-2 border-white pl-4 sm:pl-6">
-              <p className="mb-6 text-4xl font-light uppercase leading-none sm:text-6xl">
+            <div className="max-w-full border-l-2 border-white pl-4 sm:pl-6">
+              <p className="mb-4 text-3xl font-light uppercase leading-none sm:mb-6 sm:text-6xl">
                 Hi, I&apos;m
               </p>
-              <h1 className="max-w-none whitespace-nowrap text-[clamp(4.2rem,13.1vw,11rem)] font-black uppercase leading-[0.84] tracking-normal">
+              <h1 className="max-w-full whitespace-nowrap text-[clamp(2.75rem,13.1vw,11rem)] font-black uppercase leading-[0.84] tracking-normal">
                 Nick Crone!
               </h1>
             </div>
@@ -255,26 +254,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#ddd8d4] px-6 pb-12 pt-40 sm:px-10 lg:px-14">
+      <section className="relative overflow-hidden bg-[#ddd8d4] px-5 pb-10 pt-32 sm:px-10 sm:pb-12 sm:pt-40 lg:px-14">
         <PhotoCarouselBand
           placement="top"
           photos={topCarouselPhotos}
-          tileClassName="h-24 w-32 sm:h-28 sm:w-40 md:h-32 md:w-44"
+          tileClassName="h-20 w-28 sm:h-28 sm:w-40 md:h-32 md:w-44"
         />
-        <div className="relative mx-auto flex min-h-[38vh] max-w-7xl items-center">
-          <div className="w-full max-w-6xl border-l-2 border-black pl-5 sm:pl-7">
-            <h2 className="text-5xl leading-none sm:text-6xl">About Me</h2>
-            <p className="mt-4 text-2xl leading-tight sm:text-3xl lg:max-w-[72rem]">
+        <div className="relative mx-auto flex min-h-[30vh] max-w-6xl items-center sm:min-h-[38vh]">
+          <div className="w-full max-w-6xl border-l-2 border-black pl-4 sm:pl-7">
+            <h2 className="text-4xl font-bold leading-none sm:text-6xl">About Me</h2>
+            <p className="mt-4 text-xl leading-tight sm:text-3xl lg:max-w-[72rem]">
               ISyE, ECON + CS @ Georgia Tech. I love building things, making videos, and writing occasionally.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#ddd8d4] px-6 pb-16 sm:px-10 lg:px-14">
-        <div className="mx-auto max-w-6xl border-t border-black/30 pt-10">
-          <h2 className="text-center text-4xl font-bold">Highlights</h2>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <section className="bg-[#ddd8d4] px-5 pb-14 sm:px-10 sm:pb-16 lg:px-14">
+        <div className="mx-auto max-w-6xl border-t border-black/30 pt-8 sm:pt-10">
+          <h2 className="text-center text-3xl font-bold sm:text-4xl">Highlights</h2>
+          <div className="mt-8 grid gap-5 sm:mt-12 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
             {visibleHighlights.map((item) => (
               <article
                 key={item.role}
@@ -283,17 +282,17 @@ export default function Home() {
                 {item.image ? (
                   <div
                     aria-label={item.imageAlt}
-                    className="h-48 bg-cover bg-center"
+                    className="h-44 bg-cover bg-center sm:h-48"
                     role="img"
                     style={{ backgroundImage: `url('${item.image}')` }}
                   />
                 ) : null}
-                <div className="flex flex-1 flex-col justify-between p-6">
+                <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
                   <div>
-                  <h3 className="text-2xl font-semibold">{item.role}</h3>
-                  <p className="mt-4 whitespace-pre-line text-lg leading-snug text-zinc-700">
-                    {item.detail}
-                  </p>
+                    <h3 className="text-xl font-semibold sm:text-2xl">{item.role}</h3>
+                    <p className="mt-3 whitespace-pre-line text-base leading-snug text-zinc-700 sm:mt-4 sm:text-lg">
+                      {item.detail}
+                    </p>
                   </div>
                   <a
                     href="#contact"
@@ -320,18 +319,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="bg-[#ddd8d4] px-6 pb-16 sm:px-10 lg:px-14">
+      <section id="contact" className="bg-[#ddd8d4] px-5 pb-14 sm:px-10 sm:pb-16 lg:px-14">
         <div className="mx-auto max-w-6xl border-t border-black/40 pt-7">
-          <h2 className="text-4xl font-bold">Contact Me</h2>
-          <p className="mt-3 text-2xl leading-tight text-black/75">
+          <h2 className="text-3xl font-bold sm:text-4xl">Contact Me</h2>
+          <p className="mt-3 text-xl leading-tight text-black/75 sm:text-2xl">
             I&apos;m always down to chat!
           </p>
-          <div className="mt-8 flex flex-wrap gap-5">
+          <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-5">
             {links.map(({ label, href, icon: Icon }) => (
               <a
                 key={label}
                 href={href}
-                className="inline-flex h-16 min-w-44 items-center justify-center gap-4 rounded-2xl border border-black/15 bg-white/70 px-7 text-xl font-semibold shadow-sm transition hover:-translate-y-0.5 hover:bg-white hover:shadow-md"
+                className="inline-flex h-14 w-full items-center justify-center gap-4 rounded-2xl border border-black/15 bg-white/70 px-7 text-lg font-semibold shadow-sm transition hover:-translate-y-0.5 hover:bg-white hover:shadow-md sm:h-16 sm:w-auto sm:min-w-44 sm:text-xl"
               >
                 <Icon size={28} strokeWidth={2.4} />
                 {label}
@@ -349,7 +348,7 @@ export default function Home() {
           placement="static"
           photos={bottomCarouselPhotos}
           reverse
-          tileClassName="h-24 w-36 sm:h-28 sm:w-44 md:h-32 md:w-52"
+          tileClassName="h-20 w-32 sm:h-28 sm:w-44 md:h-32 md:w-52"
         />
       </section>
     </main>

@@ -41,7 +41,7 @@ Personal portfolio site for Nick Crone, built with Next.js, React, and Tailwind 
 - `src/app/page.tsx`: main page content, highlight data, links, carousel image lists, and page layout.
 - `src/app/globals.css`: global styles and carousel animation timing.
 - `public/photos/`: portfolio images used by the carousels and highlight cards.
-- `public/forest-hero.png`: hero background image.
+- `public/hero/interlaken-hero.jpg`: hero background image.
 - `.gitignore`: intentionally ignores raw photo uploads while allow-listing final website assets.
 
 ## Common Commands
