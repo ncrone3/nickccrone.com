@@ -89,12 +89,12 @@ function GitHubIcon({
 const backdrops: Backdrop[] = [
   {
     label: "Alpine lake",
-    image: "/livemusic/alpine-lake.png",
+    image: "/livemusic/alpine-lake.jpg",
     tint: "from-sky-950/15 via-black/10 to-black/35",
   },
   {
     label: "Golden mountain",
-    image: "/livemusic/golden-mountain.png",
+    image: "/livemusic/golden-mountain.jpg",
     tint: "from-black/45 via-slate-900/20 to-black/55",
   },
 ];
