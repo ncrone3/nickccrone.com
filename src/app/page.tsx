@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUpRight, Mail } from "lucide-react";
+import Link from "next/link";
 import { useState, type SVGProps } from "react";
 
 function LinkedInIcon({
@@ -56,6 +57,7 @@ type Highlight = {
   image: string;
   imageAlt: string;
   badge?: string;
+  href?: string;
 };
 
 const highlights: Highlight[] = [
@@ -83,6 +85,15 @@ const highlights: Highlight[] = [
       "Improved ChatGPT by designing and validating a potential new feature.",
     image: "/photos/chatgpt-feature-design.jpg",
     imageAlt: "ChatGPT feature design mockup",
+  },
+  {
+    role: "Live Music Dashboard",
+    category: "Projects",
+    detail:
+      "A real-time music dashboard for sharing what I am listening to and the stats behind it.",
+    image: "/livemusic/alpine-lake.png",
+    imageAlt: "Alpine lake backdrop for the live music dashboard",
+    href: "/livemusic",
   },
   {
     role: "Georgia Tech VIP",
@@ -268,6 +279,55 @@ export default function Home() {
     setShowAllHighlights(false);
   }
 
+  function renderHighlightCard(item: Highlight, isLinked = false) {
+    return (
+      <article
+        className={`flex min-h-64 flex-col overflow-hidden bg-white shadow-sm transition duration-200 hover:shadow-xl ${
+          isLinked ? "cursor-pointer hover:-translate-y-0.5" : ""
+        }`}
+      >
+        {item.image ? (
+          <div
+            aria-label={item.imageAlt}
+            className="h-44 bg-cover bg-center sm:h-48"
+            role="img"
+            style={{ backgroundImage: `url('${item.image}')` }}
+          />
+        ) : null}
+        <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
+          <div>
+            <div className="flex flex-wrap items-center gap-3">
+              <h3 className="text-xl font-semibold sm:text-2xl">{item.role}</h3>
+              {item.badge ? (
+                <span className="rounded-full border border-black/20 bg-[#ddd8d4] px-3 py-1 text-xs font-bold uppercase tracking-wide text-black/75">
+                  {item.badge}
+                </span>
+              ) : null}
+            </div>
+            <p className="mt-3 whitespace-pre-line text-base leading-snug text-zinc-700 sm:mt-4 sm:text-lg">
+              {item.detail}
+            </p>
+          </div>
+          {showHighlightCardAction && isLinked ? (
+            <span className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-bold uppercase tracking-wide">
+              Learn more
+              <ArrowUpRight size={16} />
+            </span>
+          ) : null}
+          {showHighlightCardAction && !isLinked ? (
+            <a
+              href="#contact"
+              className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-bold uppercase tracking-wide"
+            >
+              Learn more
+              <ArrowUpRight size={16} />
+            </a>
+          ) : null}
+        </div>
+      </article>
+    );
+  }
+
   return (
     <main className="min-h-screen bg-[#ddd8d4] text-black">
       <section className="relative flex min-h-screen overflow-hidden bg-black">
@@ -349,45 +409,19 @@ export default function Home() {
             })}
           </div>
           <div className="mt-8 grid gap-5 sm:mt-12 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {visibleHighlights.map((item) => (
-              <article
-                key={item.role}
-                className="flex min-h-64 flex-col overflow-hidden bg-white shadow-sm transition-shadow duration-200 hover:shadow-xl"
-              >
-                {item.image ? (
-                  <div
-                    aria-label={item.imageAlt}
-                    className="h-44 bg-cover bg-center sm:h-48"
-                    role="img"
-                    style={{ backgroundImage: `url('${item.image}')` }}
-                  />
-                ) : null}
-                <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
-                  <div>
-                    <div className="flex flex-wrap items-center gap-3">
-                      <h3 className="text-xl font-semibold sm:text-2xl">{item.role}</h3>
-                      {item.badge ? (
-                        <span className="rounded-full border border-black/20 bg-[#ddd8d4] px-3 py-1 text-xs font-bold uppercase tracking-wide text-black/75">
-                          {item.badge}
-                        </span>
-                      ) : null}
-                    </div>
-                    <p className="mt-3 whitespace-pre-line text-base leading-snug text-zinc-700 sm:mt-4 sm:text-lg">
-                      {item.detail}
-                    </p>
-                  </div>
-                  {showHighlightCardAction ? (
-                    <a
-                      href="#contact"
-                      className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-bold uppercase tracking-wide"
-                    >
-                      Learn more
-                      <ArrowUpRight size={16} />
-                    </a>
-                  ) : null}
-                </div>
-              </article>
-            ))}
+            {visibleHighlights.map((item) =>
+              item.href ? (
+                <Link
+                  key={item.role}
+                  href={item.href}
+                  className="block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-4 focus-visible:ring-offset-[#ddd8d4]"
+                >
+                  {renderHighlightCard(item, true)}
+                </Link>
+              ) : (
+                <div key={item.role}>{renderHighlightCard(item)}</div>
+              ),
+            )}
           </div>
           {canToggleHighlights ? (
             <div className="mt-8 flex justify-center">
