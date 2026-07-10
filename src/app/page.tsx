@@ -91,7 +91,7 @@ const highlights: Highlight[] = [
     category: "Projects",
     detail:
       "A real-time music dashboard for sharing what I am listening to and the stats behind it.",
-    image: "/livemusic/alpine-lake.png",
+    image: "/livemusic/alpine-lake.jpg",
     imageAlt: "Alpine lake backdrop for the live music dashboard",
     href: "/livemusic",
   },
@@ -282,7 +282,7 @@ export default function Home() {
   function renderHighlightCard(item: Highlight, isLinked = false) {
     return (
       <article
-        className={`flex min-h-64 flex-col overflow-hidden bg-white shadow-sm transition duration-200 hover:shadow-xl ${
+        className={`flex h-full min-h-64 flex-col overflow-hidden bg-white shadow-sm transition duration-200 hover:shadow-xl ${
           isLinked ? "cursor-pointer hover:-translate-y-0.5" : ""
         }`}
       >
@@ -408,7 +408,7 @@ export default function Home() {
               );
             })}
           </div>
-          <div className="mt-8 grid gap-5 sm:mt-12 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-8 grid auto-rows-fr gap-5 sm:mt-12 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
             {visibleHighlights.map((item) =>
               item.href ? (
                 <Link
@@ -419,7 +419,9 @@ export default function Home() {
                   {renderHighlightCard(item, true)}
                 </Link>
               ) : (
-                <div key={item.role}>{renderHighlightCard(item)}</div>
+                <div key={item.role} className="h-full">
+                  {renderHighlightCard(item)}
+                </div>
               ),
             )}
           </div>
