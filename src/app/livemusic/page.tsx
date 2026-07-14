@@ -314,11 +314,17 @@ export default function LiveMusicPage() {
   const dragOffset = useRef({ x: 0, y: 0 });
   const activeBackdrop = backdrops[backdropIndex];
   const currentlyPlaying = spotifyData?.currentlyPlaying;
-  const displayedCurrentlyPlaying =
-    currentlyPlaying ?? placeholderCurrentlyPlaying;
   const displayedRecentTracks = spotifyData?.recentlyPlayed.length
     ? spotifyData.recentlyPlayed
     : recentTracks;
+  const lastPlayedTrack = spotifyData?.recentlyPlayed[0] ?? null;
+  const displayedPlayerTrack =
+    currentlyPlaying ?? lastPlayedTrack ?? placeholderCurrentlyPlaying;
+  const playerCardHeading = currentlyPlaying
+    ? "Currently Playing"
+    : lastPlayedTrack
+      ? "Last Played"
+      : "Nothing Playing";
   const displayedTopTracks = lastfmTopTracks?.length
     ? lastfmTopTracks
     : topTracks;
@@ -617,33 +623,27 @@ export default function LiveMusicPage() {
           >
             <div className="flex items-center justify-center gap-2">
               <Disc3 size={16} />
-              <h2 className="text-base font-medium">Currently Playing</h2>
+              <h2 className="text-base font-medium">{playerCardHeading}</h2>
             </div>
             <div className="mt-3 overflow-hidden rounded-sm border border-black/10 bg-zinc-50">
               <Image
-                src={displayedCurrentlyPlaying.image || fallbackAlbumArt}
-                alt={displayedCurrentlyPlaying.album ?? "Album art"}
+                src={displayedPlayerTrack.image || fallbackAlbumArt}
+                alt={displayedPlayerTrack.album ?? "Album art"}
                 width={384}
                 height={384}
                 className="aspect-square w-full object-cover"
               />
             </div>
             <p className="mt-3 text-2xl leading-none">
-              {currentlyPlaying
-                ? displayedCurrentlyPlaying.title
-                : placeholderCurrentlyPlaying.title}
+              {displayedPlayerTrack.title}
             </p>
-            {currentlyPlaying ? (
+            {displayedPlayerTrack.artist ? (
               <p className="mt-2 text-base leading-none">
-                {displayedCurrentlyPlaying.artist}
+                {displayedPlayerTrack.artist}
               </p>
             ) : null}
             <a
-              href={
-                currentlyPlaying
-                  ? displayedCurrentlyPlaying.spotifyUrl ?? spotifyProfileUrl
-                  : spotifyProfileUrl
-              }
+              href={displayedPlayerTrack.spotifyUrl ?? spotifyProfileUrl}
               className="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wide text-black/65 transition hover:text-black"
             >
               Open Spotify

@@ -56,6 +56,7 @@ type Highlight = {
   detail: string;
   image: string;
   imageAlt: string;
+  imagePosition?: string;
   badge?: string;
   href?: string;
 };
@@ -91,8 +92,9 @@ const highlights: Highlight[] = [
     category: "Projects",
     detail:
       "A real-time music dashboard for sharing what I am listening to and the stats behind it.",
-    image: "/livemusic/alpine-lake.jpg",
-    imageAlt: "Alpine lake backdrop for the live music dashboard",
+    image: "/livemusic/dashboard-preview.jpg",
+    imageAlt: "Live music dashboard with listening stats and currently playing card",
+    imagePosition: "top center",
     href: "/livemusic",
   },
   {
@@ -291,7 +293,10 @@ export default function Home() {
             aria-label={item.imageAlt}
             className="h-44 bg-cover bg-center sm:h-48"
             role="img"
-            style={{ backgroundImage: `url('${item.image}')` }}
+            style={{
+              backgroundImage: `url('${item.image}')`,
+              backgroundPosition: item.imagePosition ?? "center",
+            }}
           />
         ) : null}
         <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
