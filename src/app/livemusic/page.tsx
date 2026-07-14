@@ -1,10 +1,8 @@
 "use client";
 
 import {
-  BarChart3,
   ChevronLeft,
   ChevronRight,
-  Clock3,
   Disc3,
   ExternalLink,
   ListMusic,
@@ -24,12 +22,29 @@ type Backdrop = {
   tint: string;
 };
 
-type PanelId = "top" | "recent" | "minutes";
+type PanelId = "top" | "recent";
 
 type Track = {
   title: string;
   artist: string;
   image: string;
+  album?: string;
+  spotifyUrl?: string;
+  lastfmUrl?: string;
+  playcount?: number;
+};
+
+type SpotifyDashboardResponse = {
+  currentlyPlaying: Track | null;
+  recentlyPlayed: Track[];
+  error?: string;
+  updatedAt?: string;
+};
+
+type LastfmTopResponse = {
+  items: Track[];
+  error?: string;
+  updatedAt?: string;
 };
 
 function SpotifyIcon({
@@ -99,10 +114,13 @@ const backdrops: Backdrop[] = [
   },
 ];
 
+const spotifyProfileUrl =
+  "https://open.spotify.com/user/fitnick8?si=f3c8b82e33094ed7";
+
 const socialLinks = [
   {
     label: "Spotify",
-    href: "https://open.spotify.com/user/fitnick8?si=f3c8b82e33094ed7",
+    href: spotifyProfileUrl,
     icon: SpotifyIcon,
   },
   {
@@ -120,8 +138,9 @@ const socialLinks = [
 const panelLabels: Record<PanelId, string> = {
   top: "Top picks",
   recent: "Recent",
-  minutes: "Minutes",
 };
+
+// Data source plan: Spotify for current/recent listening, Last.fm for rolling top lists.
 
 const topTracks: Track[] = [
   {
@@ -179,15 +198,25 @@ const recentTracks: Track[] = [
   },
 ];
 
+const placeholderCurrentlyPlaying: Track = {
+  title: "Nothing playing..",
+  artist: "",
+  image: "/photos/bottom-eye-of-a-fallen-angel.jpg",
+  spotifyUrl: spotifyProfileUrl,
+};
+
+const fallbackAlbumArt = "/photos/bottom-eye-of-a-fallen-angel.jpg";
+
 const clamp = (value: number, min: number, max: number) =>
   Math.min(Math.max(value, min), max);
 
 function TrackRow({ track }: { track: Track }) {
-  return (
-    <li className="grid grid-cols-[4rem_1fr] items-center gap-4">
+  const href = track.spotifyUrl ?? track.lastfmUrl;
+  const content = (
+    <div className="grid grid-cols-[4rem_1fr] items-center gap-4">
       <div className="relative size-16 overflow-hidden rounded-sm border border-black/10 bg-zinc-200">
         <Image
-          src={track.image}
+          src={track.image || fallbackAlbumArt}
           alt=""
           fill
           sizes="64px"
@@ -202,6 +231,22 @@ function TrackRow({ track }: { track: Track }) {
           {track.artist}
         </p>
       </div>
+    </div>
+  );
+
+  if (!href) {
+    return <li>{content}</li>;
+  }
+
+  return (
+    <li>
+      <a
+        href={href}
+        aria-label={`Open ${track.title} by ${track.artist}`}
+        className="block rounded-sm transition hover:bg-black/5"
+      >
+        {content}
+      </a>
     </li>
   );
 }
@@ -220,7 +265,7 @@ function SidePanel({
   return (
     <div className="flex items-stretch">
       {isOpen ? (
-        <section className="relative h-[28rem] w-[20rem] overflow-hidden rounded-r-xl border border-black/20 bg-white/90 shadow-xl backdrop-blur-sm">
+        <section className="relative h-[28rem] w-[min(20rem,calc(100vw-2rem))] overflow-hidden rounded-r-xl border border-black/20 bg-white/90 shadow-xl backdrop-blur-sm sm:w-[20rem]">
           <button
             type="button"
             aria-label={`Collapse ${panelLabels[id]}`}
@@ -252,11 +297,13 @@ export default function LiveMusicPage() {
   const [backdropIndex, setBackdropIndex] = useState(0);
   const [openPanels, setOpenPanels] = useState<Record<PanelId, boolean>>({
     top: true,
-    recent: false,
-    minutes: false,
+    recent: true,
   });
   const [topType, setTopType] = useState("songs");
   const [topRange, setTopRange] = useState("month");
+  const [lastfmTopTracks, setLastfmTopTracks] = useState<Track[] | null>(null);
+  const [spotifyData, setSpotifyData] =
+    useState<SpotifyDashboardResponse | null>(null);
   const [playerPosition, setPlayerPosition] = useState({ x: 0, y: 0 });
   const [isPlayerPlaced, setIsPlayerPlaced] = useState(false);
   const [isDraggingPlayer, setIsDraggingPlayer] = useState(false);
@@ -266,6 +313,75 @@ export default function LiveMusicPage() {
   const isDraggingPlayerRef = useRef(false);
   const dragOffset = useRef({ x: 0, y: 0 });
   const activeBackdrop = backdrops[backdropIndex];
+  const currentlyPlaying = spotifyData?.currentlyPlaying;
+  const displayedCurrentlyPlaying =
+    currentlyPlaying ?? placeholderCurrentlyPlaying;
+  const displayedRecentTracks = spotifyData?.recentlyPlayed.length
+    ? spotifyData.recentlyPlayed
+    : recentTracks;
+  const displayedTopTracks = lastfmTopTracks?.length
+    ? lastfmTopTracks
+    : topTracks;
+
+  useEffect(() => {
+    let isMounted = true;
+
+    async function loadSpotifyData() {
+      try {
+        const response = await fetch("/api/spotify/dashboard", {
+          cache: "no-store",
+        });
+        const data = (await response.json()) as SpotifyDashboardResponse;
+
+        if (isMounted && response.ok) {
+          setSpotifyData(data);
+        }
+      } catch {
+        if (isMounted) {
+          setSpotifyData(null);
+        }
+      }
+    }
+
+    loadSpotifyData();
+    const intervalId = window.setInterval(loadSpotifyData, 30_000);
+
+    return () => {
+      isMounted = false;
+      window.clearInterval(intervalId);
+    };
+  }, []);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    async function loadLastfmTopTracks() {
+      try {
+        const params = new URLSearchParams({
+          type: topType,
+          period: topRange,
+        });
+        const response = await fetch(`/api/lastfm/top?${params.toString()}`, {
+          cache: "no-store",
+        });
+        const data = (await response.json()) as LastfmTopResponse;
+
+        if (isMounted) {
+          setLastfmTopTracks(response.ok ? data.items : null);
+        }
+      } catch {
+        if (isMounted) {
+          setLastfmTopTracks(null);
+        }
+      }
+    }
+
+    loadLastfmTopTracks();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [topType, topRange]);
 
   useEffect(() => {
     function placePlayer() {
@@ -313,10 +429,11 @@ export default function LiveMusicPage() {
   }
 
   function handlePlayerPointerDown(event: ReactPointerEvent<HTMLDivElement>) {
-    if (
-      event.target instanceof HTMLElement &&
-      event.target.closest("a")
-    ) {
+    const isDesktopLayout = window.matchMedia("(min-width: 1024px)").matches;
+    const isLinkTarget =
+      event.target instanceof HTMLElement && event.target.closest("a");
+
+    if (!isDesktopLayout || isLinkTarget) {
       return;
     }
 
@@ -365,7 +482,7 @@ export default function LiveMusicPage() {
   }
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#ddd8d4] text-black">
+    <main className="relative min-h-screen overflow-x-hidden bg-[#ddd8d4] text-black">
       <div
         className="absolute inset-0 bg-cover bg-center transition-[background-image] duration-500"
         style={{ backgroundImage: `url('${activeBackdrop.image}')` }}
@@ -417,9 +534,9 @@ export default function LiveMusicPage() {
 
         <div
           ref={dashboardAreaRef}
-          className="relative flex flex-1 px-4 py-6 sm:px-8"
+          className="relative flex flex-1 px-4 py-6 sm:px-8 max-lg:flex-col max-lg:gap-6"
         >
-          <aside className="z-20 flex items-start gap-1 max-lg:flex-wrap max-lg:self-start">
+          <aside className="z-20 flex items-start gap-1 max-lg:flex-wrap max-lg:self-start max-sm:w-full max-sm:flex-col">
             <SidePanel id="top" isOpen={openPanels.top} onToggle={togglePanel}>
               <div className="flex items-center gap-2 text-[0.8rem]">
                 <span>Top 5</span>
@@ -440,13 +557,13 @@ export default function LiveMusicPage() {
                   onChange={(event) => setTopRange(event.target.value)}
                   className="rounded border border-black/20 bg-white px-2 py-1 text-xs"
                 >
-                  <option value="day">day</option>
+                  <option value="week">week</option>
                   <option value="month">month</option>
                   <option value="year">year</option>
                 </select>
               </div>
               <ol className="mt-5 flex flex-1 flex-col justify-between">
-                {topTracks.map((track) => (
+                {displayedTopTracks.map((track) => (
                   <TrackRow
                     key={`${track.title}-${track.artist}`}
                     track={track}
@@ -460,12 +577,14 @@ export default function LiveMusicPage() {
               isOpen={openPanels.recent}
               onToggle={togglePanel}
             >
-              <div className="flex items-center gap-2">
-                <ListMusic size={17} />
-                <h2 className="text-sm font-semibold">Recently played...</h2>
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-2">
+                  <ListMusic size={17} />
+                  <h2 className="text-sm font-semibold">Recently played</h2>
+                </div>
               </div>
               <ul className="mt-5 flex flex-1 flex-col justify-between">
-                {recentTracks.map((track) => (
+                {displayedRecentTracks.map((track) => (
                   <TrackRow
                     key={`${track.title}-${track.artist}`}
                     track={track}
@@ -474,45 +593,7 @@ export default function LiveMusicPage() {
               </ul>
             </SidePanel>
 
-            <SidePanel
-              id="minutes"
-              isOpen={openPanels.minutes}
-              onToggle={togglePanel}
-            >
-              <div className="flex items-center gap-2">
-                <Clock3 size={17} />
-                <h2 className="text-sm font-semibold">Listening minutes</h2>
-              </div>
-              <div className="mt-8 space-y-8 text-center">
-                <p>
-                  <span className="block text-4xl font-semibold">20</span>
-                  <span className="text-lg">mins today</span>
-                </p>
-                <p>
-                  <span className="block text-4xl font-semibold">1,220</span>
-                  <span className="text-lg">mins this month</span>
-                </p>
-                <p>
-                  <span className="block text-4xl font-semibold">68,000</span>
-                  <span className="text-lg">mins this year</span>
-                </p>
-              </div>
-            </SidePanel>
           </aside>
-
-          <section
-            aria-label="Backend status"
-            className="absolute bottom-5 left-5 right-5 z-10 max-w-xl rounded-xl border border-white/35 bg-black/35 p-4 text-sm text-white shadow-xl backdrop-blur-sm sm:left-auto sm:right-8 sm:w-[26rem]"
-          >
-            <div className="flex items-center gap-2 font-semibold">
-              <BarChart3 size={17} />
-              Front end preview
-            </div>
-            <p className="mt-2 text-white/80">
-              Live Spotify and Last.fm data will plug in here once the backend
-              is ready. The current tracks, totals, and artwork are placeholders.
-            </p>
-          </section>
 
           <div
             ref={playerCardRef}
@@ -524,7 +605,11 @@ export default function LiveMusicPage() {
             onPointerCancel={handlePlayerPointerUp}
             className={`z-30 w-56 touch-none select-none rounded-lg border border-black/10 bg-white/95 p-4 text-center text-black shadow-2xl transition-opacity ${
               isDraggingPlayer ? "cursor-grabbing" : "cursor-grab"
-            } ${isPlayerPlaced ? "absolute opacity-100" : "absolute opacity-0"}`}
+            } ${
+              isPlayerPlaced
+                ? "lg:absolute opacity-100"
+                : "lg:absolute opacity-0 max-lg:opacity-100"
+            } max-lg:mx-auto max-lg:w-full max-lg:max-w-64 max-lg:cursor-default max-lg:touch-auto lg:touch-none`}
             style={{
               left: playerPosition.x,
               top: playerPosition.y,
@@ -536,17 +621,29 @@ export default function LiveMusicPage() {
             </div>
             <div className="mt-3 overflow-hidden rounded-sm border border-black/10 bg-zinc-50">
               <Image
-                src="/photos/bottom-eye-of-a-fallen-angel.jpg"
-                alt="Placeholder album art"
+                src={displayedCurrentlyPlaying.image || fallbackAlbumArt}
+                alt={displayedCurrentlyPlaying.album ?? "Album art"}
                 width={384}
                 height={384}
                 className="aspect-square w-full object-cover"
               />
             </div>
-            <p className="mt-3 text-2xl leading-none">say my name</p>
-            <p className="mt-2 text-base leading-none">kimj</p>
+            <p className="mt-3 text-2xl leading-none">
+              {currentlyPlaying
+                ? displayedCurrentlyPlaying.title
+                : placeholderCurrentlyPlaying.title}
+            </p>
+            {currentlyPlaying ? (
+              <p className="mt-2 text-base leading-none">
+                {displayedCurrentlyPlaying.artist}
+              </p>
+            ) : null}
             <a
-              href="https://open.spotify.com/"
+              href={
+                currentlyPlaying
+                  ? displayedCurrentlyPlaying.spotifyUrl ?? spotifyProfileUrl
+                  : spotifyProfileUrl
+              }
               className="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wide text-black/65 transition hover:text-black"
             >
               Open Spotify
