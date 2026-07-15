@@ -13,6 +13,7 @@ import {
   useRef,
   useState,
   type PointerEvent as ReactPointerEvent,
+  type RefObject,
   type SVGProps,
 } from "react";
 
@@ -23,8 +24,11 @@ type Backdrop = {
 };
 
 type PanelId = "top" | "recent";
+type TopType = "songs" | "albums" | "artists";
+type TopRange = "week" | "month" | "year";
 
 type Track = {
+  id?: string;
   title: string;
   artist: string;
   image: string;
@@ -32,6 +36,10 @@ type Track = {
   spotifyUrl?: string;
   lastfmUrl?: string;
   playcount?: number;
+  playedAt?: string;
+  isPlaying?: boolean;
+  progressMs?: number | null;
+  durationMs?: number;
 };
 
 type SpotifyDashboardResponse = {
@@ -141,8 +149,10 @@ const panelLabels: Record<PanelId, string> = {
 };
 
 // Data source plan: Spotify for current/recent listening, Last.fm for rolling top lists.
+const SPOTIFY_REFRESH_INTERVAL_MS = 30_000;
+const LASTFM_REFRESH_INTERVAL_MS = 24 * 60 * 60 * 1000;
 
-const topTracks: Track[] = [
+const placeholderTopTracks: Track[] = [
   {
     title: "What Was That",
     artist: "Lorde",
@@ -170,7 +180,7 @@ const topTracks: Track[] = [
   },
 ];
 
-const recentTracks: Track[] = [
+const placeholderRecentTracks: Track[] = [
   {
     title: "Scary Monsters and Nice Sprites",
     artist: "Skrillex",
@@ -210,13 +220,15 @@ const fallbackAlbumArt = "/photos/bottom-eye-of-a-fallen-angel.jpg";
 const clamp = (value: number, min: number, max: number) =>
   Math.min(Math.max(value, min), max);
 
+const getTrackImage = (track: Track) => track.image || fallbackAlbumArt;
+
 function TrackRow({ track }: { track: Track }) {
   const href = track.spotifyUrl ?? track.lastfmUrl;
   const content = (
     <div className="grid grid-cols-[4rem_1fr] items-center gap-4">
       <div className="relative size-16 overflow-hidden rounded-sm border border-black/10 bg-zinc-200">
         <Image
-          src={track.image || fallbackAlbumArt}
+          src={getTrackImage(track)}
           alt=""
           fill
           sizes="64px"
@@ -293,17 +305,233 @@ function SidePanel({
   );
 }
 
+function TopPanel({
+  tracks,
+  topType,
+  topRange,
+  onTopTypeChange,
+  onTopRangeChange,
+}: {
+  tracks: Track[];
+  topType: TopType;
+  topRange: TopRange;
+  onTopTypeChange: (type: TopType) => void;
+  onTopRangeChange: (range: TopRange) => void;
+}) {
+  return (
+    <>
+      <div className="flex items-center gap-2 text-[0.8rem]">
+        <span>Top 5</span>
+        <select
+          aria-label="Top item type"
+          value={topType}
+          onChange={(event) => onTopTypeChange(event.target.value as TopType)}
+          className="rounded border border-black/20 bg-white px-2 py-1 text-xs"
+        >
+          <option value="songs">songs</option>
+          <option value="albums">albums</option>
+          <option value="artists">artists</option>
+        </select>
+        <span>of the</span>
+        <select
+          aria-label="Top item time range"
+          value={topRange}
+          onChange={(event) => onTopRangeChange(event.target.value as TopRange)}
+          className="rounded border border-black/20 bg-white px-2 py-1 text-xs"
+        >
+          <option value="week">week</option>
+          <option value="month">month</option>
+          <option value="year">year</option>
+        </select>
+      </div>
+      <ol className="mt-5 flex flex-1 flex-col justify-between">
+        {tracks.map((track) => (
+          <TrackRow key={getTrackKey(track)} track={track} />
+        ))}
+      </ol>
+    </>
+  );
+}
+
+function RecentPanel({ tracks }: { tracks: Track[] }) {
+  return (
+    <>
+      <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center gap-2">
+          <ListMusic size={17} />
+          <h2 className="text-sm font-semibold">Recently played</h2>
+        </div>
+      </div>
+      <ul className="mt-5 flex flex-1 flex-col justify-between">
+        {tracks.map((track) => (
+          <TrackRow key={getTrackKey(track)} track={track} />
+        ))}
+      </ul>
+    </>
+  );
+}
+
+function PlayerCard({
+  cardRef,
+  heading,
+  isCurrent,
+  isDragging,
+  isPlaced,
+  position,
+  statusMessage,
+  track,
+  updatedAt,
+  onPointerCancel,
+  onPointerDown,
+  onPointerMove,
+  onPointerUp,
+}: {
+  cardRef: RefObject<HTMLDivElement | null>;
+  heading: string;
+  isCurrent: boolean;
+  isDragging: boolean;
+  isPlaced: boolean;
+  position: { x: number; y: number };
+  statusMessage?: string | null;
+  track: Track;
+  updatedAt?: string;
+  onPointerCancel: (event: ReactPointerEvent<HTMLDivElement>) => void;
+  onPointerDown: (event: ReactPointerEvent<HTMLDivElement>) => void;
+  onPointerMove: (event: ReactPointerEvent<HTMLDivElement>) => void;
+  onPointerUp: (event: ReactPointerEvent<HTMLDivElement>) => void;
+}) {
+  const [now, setNow] = useState(() => Date.now());
+  const progressPercent = getProgressPercent(track, updatedAt, now, isCurrent);
+  const hasProgress = isCurrent && Boolean(track.durationMs);
+  const trackProgressKey = track.id ?? track.spotifyUrl ?? track.title;
+
+  useEffect(() => {
+    if (!hasProgress) {
+      return;
+    }
+
+    const intervalId = window.setInterval(() => setNow(Date.now()), 1_000);
+
+    return () => window.clearInterval(intervalId);
+  }, [hasProgress, trackProgressKey]);
+
+  return (
+    <div
+      ref={cardRef}
+      role="application"
+      aria-label="Draggable music status card"
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+      onPointerCancel={onPointerCancel}
+      className={`z-30 w-56 touch-none select-none rounded-lg border border-black/10 bg-white/95 p-4 text-center text-black shadow-2xl transition-opacity ${
+        isDragging ? "cursor-grabbing" : "cursor-grab"
+      } ${
+        isPlaced
+          ? "lg:absolute opacity-100"
+          : "lg:absolute opacity-0 max-lg:opacity-100"
+      } max-lg:mx-auto max-lg:w-full max-lg:max-w-64 max-lg:cursor-default max-lg:touch-auto lg:touch-none`}
+      style={{
+        left: position.x,
+        top: position.y,
+      }}
+    >
+      <div className="flex items-center justify-center gap-2">
+        <Disc3
+          size={16}
+          className={isCurrent ? "animate-spin" : undefined}
+          style={isCurrent ? { animationDuration: "3s" } : undefined}
+        />
+        <h2 className="text-base font-medium">{heading}</h2>
+      </div>
+      <a
+        href={track.spotifyUrl ?? spotifyProfileUrl}
+        aria-label={`Open ${track.title} on Spotify`}
+        className="mt-3 block overflow-hidden rounded-sm border border-black/10 bg-zinc-50"
+      >
+        <Image
+          src={getTrackImage(track)}
+          alt={track.album ?? "Album art"}
+          width={384}
+          height={384}
+          className="aspect-square w-full object-cover"
+        />
+      </a>
+      {progressPercent !== null ? (
+        <div
+          aria-label="Track progress"
+          className="mt-3 h-1.5 overflow-hidden rounded-full bg-black/10"
+        >
+          <div
+            className="h-full rounded-full bg-black transition-[width] duration-1000 ease-linear"
+            style={{ width: `${progressPercent}%` }}
+          />
+        </div>
+      ) : null}
+      <p className="mt-3 text-2xl leading-none">{track.title}</p>
+      {track.artist ? (
+        <p className="mt-2 text-base leading-none">{track.artist}</p>
+      ) : null}
+      <a
+        href={track.spotifyUrl ?? spotifyProfileUrl}
+        className="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wide text-black/65 transition hover:text-black"
+      >
+        Open Spotify
+        <ExternalLink size={12} />
+      </a>
+      {statusMessage ? (
+        <p className="mt-3 text-[0.7rem] leading-snug text-black/50">
+          {statusMessage}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
+function getProgressPercent(
+  track: Track,
+  updatedAt: string | undefined,
+  now: number,
+  isCurrent: boolean,
+) {
+  if (!isCurrent || !track.durationMs || track.durationMs <= 0) {
+    return null;
+  }
+
+  const fetchedAt = updatedAt ? Date.parse(updatedAt) : now;
+  const elapsedSinceFetch = Number.isFinite(fetchedAt)
+    ? Math.max(0, now - fetchedAt)
+    : 0;
+  const progressMs = (track.progressMs ?? 0) + elapsedSinceFetch;
+
+  return clamp((progressMs / track.durationMs) * 100, 0, 100);
+}
+
+function getTrackKey(track: Track) {
+  return [
+    track.id,
+    track.spotifyUrl,
+    track.playedAt,
+    track.title,
+    track.artist,
+    track.album,
+  ]
+    .filter(Boolean)
+    .join("-");
+}
+
 export default function LiveMusicPage() {
   const [backdropIndex, setBackdropIndex] = useState(0);
   const [openPanels, setOpenPanels] = useState<Record<PanelId, boolean>>({
     top: true,
     recent: true,
   });
-  const [topType, setTopType] = useState("songs");
-  const [topRange, setTopRange] = useState("month");
+  const [topType, setTopType] = useState<TopType>("songs");
+  const [topRange, setTopRange] = useState<TopRange>("month");
   const [lastfmTopTracks, setLastfmTopTracks] = useState<Track[] | null>(null);
   const [spotifyData, setSpotifyData] =
     useState<SpotifyDashboardResponse | null>(null);
+  const [spotifyError, setSpotifyError] = useState<string | null>(null);
   const [playerPosition, setPlayerPosition] = useState({ x: 0, y: 0 });
   const [isPlayerPlaced, setIsPlayerPlaced] = useState(false);
   const [isDraggingPlayer, setIsDraggingPlayer] = useState(false);
@@ -316,7 +544,7 @@ export default function LiveMusicPage() {
   const currentlyPlaying = spotifyData?.currentlyPlaying;
   const displayedRecentTracks = spotifyData?.recentlyPlayed.length
     ? spotifyData.recentlyPlayed
-    : recentTracks;
+    : placeholderRecentTracks;
   const lastPlayedTrack = spotifyData?.recentlyPlayed[0] ?? null;
   const displayedPlayerTrack =
     currentlyPlaying ?? lastPlayedTrack ?? placeholderCurrentlyPlaying;
@@ -327,7 +555,7 @@ export default function LiveMusicPage() {
       : "Nothing Playing";
   const displayedTopTracks = lastfmTopTracks?.length
     ? lastfmTopTracks
-    : topTracks;
+    : placeholderTopTracks;
 
   useEffect(() => {
     let isMounted = true;
@@ -341,16 +569,22 @@ export default function LiveMusicPage() {
 
         if (isMounted && response.ok) {
           setSpotifyData(data);
+          setSpotifyError(null);
+        } else if (isMounted) {
+          setSpotifyError(data.error ?? "Unable to load Spotify data.");
         }
       } catch {
         if (isMounted) {
-          setSpotifyData(null);
+          setSpotifyError("Unable to load Spotify data.");
         }
       }
     }
 
     loadSpotifyData();
-    const intervalId = window.setInterval(loadSpotifyData, 30_000);
+    const intervalId = window.setInterval(
+      loadSpotifyData,
+      SPOTIFY_REFRESH_INTERVAL_MS,
+    );
 
     return () => {
       isMounted = false;
@@ -383,9 +617,14 @@ export default function LiveMusicPage() {
     }
 
     loadLastfmTopTracks();
+    const intervalId = window.setInterval(
+      loadLastfmTopTracks,
+      LASTFM_REFRESH_INTERVAL_MS,
+    );
 
     return () => {
       isMounted = false;
+      window.clearInterval(intervalId);
     };
   }, [topType, topRange]);
 
@@ -544,38 +783,13 @@ export default function LiveMusicPage() {
         >
           <aside className="z-20 flex items-start gap-1 max-lg:flex-wrap max-lg:self-start max-sm:w-full max-sm:flex-col">
             <SidePanel id="top" isOpen={openPanels.top} onToggle={togglePanel}>
-              <div className="flex items-center gap-2 text-[0.8rem]">
-                <span>Top 5</span>
-                <select
-                  aria-label="Top item type"
-                  value={topType}
-                  onChange={(event) => setTopType(event.target.value)}
-                  className="rounded border border-black/20 bg-white px-2 py-1 text-xs"
-                >
-                  <option value="songs">songs</option>
-                  <option value="albums">albums</option>
-                  <option value="artists">artists</option>
-                </select>
-                <span>of the</span>
-                <select
-                  aria-label="Top item time range"
-                  value={topRange}
-                  onChange={(event) => setTopRange(event.target.value)}
-                  className="rounded border border-black/20 bg-white px-2 py-1 text-xs"
-                >
-                  <option value="week">week</option>
-                  <option value="month">month</option>
-                  <option value="year">year</option>
-                </select>
-              </div>
-              <ol className="mt-5 flex flex-1 flex-col justify-between">
-                {displayedTopTracks.map((track) => (
-                  <TrackRow
-                    key={`${track.title}-${track.artist}`}
-                    track={track}
-                  />
-                ))}
-              </ol>
+              <TopPanel
+                tracks={displayedTopTracks}
+                topType={topType}
+                topRange={topRange}
+                onTopTypeChange={setTopType}
+                onTopRangeChange={setTopRange}
+              />
             </SidePanel>
 
             <SidePanel
@@ -583,73 +797,26 @@ export default function LiveMusicPage() {
               isOpen={openPanels.recent}
               onToggle={togglePanel}
             >
-              <div className="flex items-center justify-between gap-3">
-                <div className="flex items-center gap-2">
-                  <ListMusic size={17} />
-                  <h2 className="text-sm font-semibold">Recently played</h2>
-                </div>
-              </div>
-              <ul className="mt-5 flex flex-1 flex-col justify-between">
-                {displayedRecentTracks.map((track) => (
-                  <TrackRow
-                    key={`${track.title}-${track.artist}`}
-                    track={track}
-                  />
-                ))}
-              </ul>
+              <RecentPanel tracks={displayedRecentTracks} />
             </SidePanel>
 
           </aside>
 
-          <div
-            ref={playerCardRef}
-            role="application"
-            aria-label="Draggable currently playing card"
+          <PlayerCard
+            cardRef={playerCardRef}
+            heading={playerCardHeading}
+            isCurrent={Boolean(currentlyPlaying?.isPlaying)}
+            isDragging={isDraggingPlayer}
+            isPlaced={isPlayerPlaced}
+            position={playerPosition}
+            track={displayedPlayerTrack}
+            statusMessage={spotifyError}
+            updatedAt={spotifyData?.updatedAt}
+            onPointerCancel={handlePlayerPointerUp}
             onPointerDown={handlePlayerPointerDown}
             onPointerMove={handlePlayerPointerMove}
             onPointerUp={handlePlayerPointerUp}
-            onPointerCancel={handlePlayerPointerUp}
-            className={`z-30 w-56 touch-none select-none rounded-lg border border-black/10 bg-white/95 p-4 text-center text-black shadow-2xl transition-opacity ${
-              isDraggingPlayer ? "cursor-grabbing" : "cursor-grab"
-            } ${
-              isPlayerPlaced
-                ? "lg:absolute opacity-100"
-                : "lg:absolute opacity-0 max-lg:opacity-100"
-            } max-lg:mx-auto max-lg:w-full max-lg:max-w-64 max-lg:cursor-default max-lg:touch-auto lg:touch-none`}
-            style={{
-              left: playerPosition.x,
-              top: playerPosition.y,
-            }}
-          >
-            <div className="flex items-center justify-center gap-2">
-              <Disc3 size={16} />
-              <h2 className="text-base font-medium">{playerCardHeading}</h2>
-            </div>
-            <div className="mt-3 overflow-hidden rounded-sm border border-black/10 bg-zinc-50">
-              <Image
-                src={displayedPlayerTrack.image || fallbackAlbumArt}
-                alt={displayedPlayerTrack.album ?? "Album art"}
-                width={384}
-                height={384}
-                className="aspect-square w-full object-cover"
-              />
-            </div>
-            <p className="mt-3 text-2xl leading-none">
-              {displayedPlayerTrack.title}
-            </p>
-            {displayedPlayerTrack.artist ? (
-              <p className="mt-2 text-base leading-none">
-                {displayedPlayerTrack.artist}
-              </p>
-            ) : null}
-            <a
-              href={displayedPlayerTrack.spotifyUrl ?? spotifyProfileUrl}
-              className="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wide text-black/65 transition hover:text-black"
-            >
-              Open Spotify
-              <ExternalLink size={12} />
-            </a>
-          </div>
+          />
         </div>
       </div>
     </main>

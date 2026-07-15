@@ -1,5 +1,6 @@
 const SPOTIFY_API_BASE_URL = "https://api.spotify.com/v1";
 const SPOTIFY_ACCOUNTS_BASE_URL = "https://accounts.spotify.com";
+const SPOTIFY_REQUEST_TIMEOUT_MS = 8_000;
 
 export const SPOTIFY_SCOPES = [
   "user-read-currently-playing",
@@ -17,6 +18,8 @@ type SpotifyArtist = {
 };
 
 type SpotifyTrack = {
+  id?: string;
+  uri?: string;
   type: string;
   name: string;
   artists: SpotifyArtist[];
@@ -81,7 +84,12 @@ type SpotifyTokenResponse = {
   error_description?: string;
 };
 
+type SpotifyFetchOptions = {
+  retryOnRateLimit?: boolean;
+};
+
 export type DashboardTrack = {
+  id?: string;
   title: string;
   artist: string;
   album: string;
@@ -122,6 +130,28 @@ export class SpotifyApiError extends Error {
     this.name = "SpotifyApiError";
     this.status = status;
     this.retryAfter = retryAfter;
+  }
+}
+
+async function fetchSpotify(
+  input: RequestInfo | URL,
+  init: RequestInit = {},
+) {
+  try {
+    return await fetch(input, {
+      ...init,
+      signal: AbortSignal.timeout(SPOTIFY_REQUEST_TIMEOUT_MS),
+    });
+  } catch (error) {
+    if (error instanceof DOMException && error.name === "TimeoutError") {
+      throw new SpotifyApiError(
+        504,
+        "Spotify request timed out.",
+        null,
+      );
+    }
+
+    throw error;
   }
 }
 
@@ -183,9 +213,10 @@ async function sleep(ms: number) {
 async function spotifyFetch<T>(
   path: string,
   accessToken: string,
+  options: SpotifyFetchOptions = {},
   attempt = 0,
 ): Promise<T | null> {
-  const response = await fetch(`${SPOTIFY_API_BASE_URL}${path}`, {
+  const response = await fetchSpotify(`${SPOTIFY_API_BASE_URL}${path}`, {
     headers: {
       Authorization: `Bearer ${accessToken}`,
     },
@@ -196,14 +227,14 @@ async function spotifyFetch<T>(
     return null;
   }
 
-  if (response.status === 429 && attempt < 2) {
+  if (response.status === 429 && options.retryOnRateLimit !== false && attempt < 2) {
     const retryAfter = response.headers.get("retry-after");
     const retryAfterMs = retryAfter
       ? Number(retryAfter) * 1000
       : 500 * 2 ** attempt;
 
     await sleep(Math.max(retryAfterMs, 250));
-    return spotifyFetch<T>(path, accessToken, attempt + 1);
+    return spotifyFetch<T>(path, accessToken, options, attempt + 1);
   }
 
   if (!response.ok) {
@@ -230,6 +261,7 @@ function normalizeTrack(
   }
 
   return {
+    id: track.id,
     title: track.name,
     artist: track.artists.map((artist) => artist.name).join(", "),
     album: track.album?.name ?? "",
@@ -238,6 +270,36 @@ function normalizeTrack(
     durationMs: track.duration_ms,
     ...options,
   };
+}
+
+function getTrackDedupKey(track: DashboardTrack) {
+  return (
+    track.id ??
+    track.spotifyUrl ??
+    `${track.title.toLowerCase()}|${track.artist.toLowerCase()}|${track.album.toLowerCase()}`
+  );
+}
+
+function getUniqueRecentTracks(tracks: DashboardTrack[], limit: number) {
+  const seen = new Set<string>();
+  const uniqueTracks: DashboardTrack[] = [];
+
+  for (const track of tracks) {
+    const key = getTrackDedupKey(track);
+
+    if (seen.has(key)) {
+      continue;
+    }
+
+    seen.add(key);
+    uniqueTracks.push(track);
+
+    if (uniqueTracks.length === limit) {
+      break;
+    }
+  }
+
+  return uniqueTracks;
 }
 
 export function getSpotifyAuthorizeUrl(state: string) {
@@ -254,7 +316,7 @@ export function getSpotifyAuthorizeUrl(state: string) {
 }
 
 export async function exchangeSpotifyCodeForTokens(code: string) {
-  const response = await fetch(`${SPOTIFY_ACCOUNTS_BASE_URL}/api/token`, {
+  const response = await fetchSpotify(`${SPOTIFY_ACCOUNTS_BASE_URL}/api/token`, {
     method: "POST",
     headers: {
       Authorization: getBasicAuthHeader(),
@@ -284,7 +346,7 @@ export async function exchangeSpotifyCodeForTokens(code: string) {
 }
 
 export async function getSpotifyAccessToken() {
-  const response = await fetch(`${SPOTIFY_ACCOUNTS_BASE_URL}/api/token`, {
+  const response = await fetchSpotify(`${SPOTIFY_ACCOUNTS_BASE_URL}/api/token`, {
     method: "POST",
     headers: {
       Authorization: getBasicAuthHeader(),
@@ -421,16 +483,42 @@ export async function searchSpotifyArtworkWithAccessToken(
 
 export async function getSpotifyDashboardData(): Promise<SpotifyDashboardData> {
   const accessToken = await getSpotifyAccessToken();
-  const [currentlyPlaying, recentlyPlayed] = await Promise.all([
+  const [currentlyPlayingResult, recentlyPlayedResult] = await Promise.allSettled([
     spotifyFetch<SpotifyCurrentlyPlayingResponse>(
       "/me/player/currently-playing",
       accessToken,
+      { retryOnRateLimit: false },
     ),
     spotifyFetch<SpotifyRecentlyPlayedResponse>(
-      "/me/player/recently-played?limit=5",
+      "/me/player/recently-played?limit=20",
       accessToken,
+      { retryOnRateLimit: false },
     ),
   ]);
+  const currentlyPlaying =
+    currentlyPlayingResult.status === "fulfilled"
+      ? currentlyPlayingResult.value
+      : null;
+  const recentlyPlayed =
+    recentlyPlayedResult.status === "fulfilled"
+      ? recentlyPlayedResult.value
+      : null;
+
+  if (
+    currentlyPlayingResult.status === "rejected" &&
+    recentlyPlayedResult.status === "rejected"
+  ) {
+    throw currentlyPlayingResult.reason;
+  }
+
+  const normalizedRecentTracks =
+    recentlyPlayed?.items
+      ?.map((item) =>
+        normalizeTrack(item.track, {
+          playedAt: item.played_at,
+        }),
+      )
+      .filter((track): track is DashboardTrack => Boolean(track)) ?? [];
 
   return {
     currentlyPlaying: currentlyPlaying?.is_playing
@@ -439,14 +527,7 @@ export async function getSpotifyDashboardData(): Promise<SpotifyDashboardData> {
           progressMs: currentlyPlaying.progress_ms,
         })
       : null,
-    recentlyPlayed:
-      recentlyPlayed?.items
-        ?.map((item) =>
-          normalizeTrack(item.track, {
-            playedAt: item.played_at,
-          }),
-        )
-        .filter((track): track is DashboardTrack => Boolean(track)) ?? [],
+    recentlyPlayed: getUniqueRecentTracks(normalizedRecentTracks, 5),
     updatedAt: new Date().toISOString(),
   };
 }

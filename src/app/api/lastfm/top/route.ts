@@ -9,7 +9,7 @@ import {
   type LastfmTopType,
 } from "@/lib/lastfm";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 86_400;
 
 export async function GET(request: NextRequest) {
   const typeParam = request.nextUrl.searchParams.get("type") ?? "songs";
@@ -32,7 +32,7 @@ export async function GET(request: NextRequest) {
   try {
     return NextResponse.json(await getLastfmTopItems(type, period), {
       headers: {
-        "Cache-Control": "no-store",
+        "Cache-Control": "s-maxage=86400, stale-while-revalidate=3600",
       },
     });
   } catch (error) {

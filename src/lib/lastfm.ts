@@ -5,6 +5,7 @@ import {
 } from "@/lib/spotify";
 
 const LASTFM_API_URL = "https://ws.audioscrobbler.com/2.0/";
+const LASTFM_REVALIDATE_SECONDS = 24 * 60 * 60;
 
 export type LastfmTopType = "songs" | "albums" | "artists";
 export type LastfmTopPeriod = "week" | "month" | "year";
@@ -224,7 +225,9 @@ async function enrichWithSpotifyArtwork(
 
 async function requestLastfm<T>(params: URLSearchParams): Promise<T> {
   const response = await fetch(`${LASTFM_API_URL}?${params.toString()}`, {
-    cache: "no-store",
+    next: {
+      revalidate: LASTFM_REVALIDATE_SECONDS,
+    },
   });
   const body = (await response.json()) as T & LastfmErrorResponse;
 
