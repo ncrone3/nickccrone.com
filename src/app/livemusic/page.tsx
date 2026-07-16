@@ -42,9 +42,18 @@ type Track = {
   durationMs?: number;
 };
 
-type SpotifyDashboardResponse = {
+type SpotifyCurrentResponse = {
   currentlyPlaying: Track | null;
+  error?: string;
+  retryAfter?: string | null;
+  updatedAt?: string;
+};
+
+type RecentTracksResponse = {
   recentlyPlayed: Track[];
+  errors?: {
+    recentlyPlayed?: string;
+  };
   error?: string;
   updatedAt?: string;
 };
@@ -148,9 +157,12 @@ const panelLabels: Record<PanelId, string> = {
   recent: "Recent",
 };
 
-// Data source plan: Spotify for current/recent listening, Last.fm for rolling top lists.
-const SPOTIFY_REFRESH_INTERVAL_MS = 30_000;
+// Data source plan: Spotify for live playback, Last.fm for listening history.
+const SPOTIFY_CURRENT_REFRESH_INTERVAL_MS = 30_000;
+const RECENT_TRACKS_REFRESH_INTERVAL_MS = 30_000;
 const LASTFM_REFRESH_INTERVAL_MS = 24 * 60 * 60 * 1000;
+const HIDDEN_TAB_REFRESH_INTERVAL_MS = 2 * 60 * 1000;
+const RECENT_TRACKS_PENDING_MESSAGE = "Recently played will update soon.";
 
 const placeholderTopTracks: Track[] = [
   {
@@ -353,7 +365,13 @@ function TopPanel({
   );
 }
 
-function RecentPanel({ tracks }: { tracks: Track[] }) {
+function RecentPanel({
+  statusMessage,
+  tracks,
+}: {
+  statusMessage?: string | null;
+  tracks: Track[];
+}) {
   return (
     <>
       <div className="flex items-center justify-between gap-3">
@@ -362,11 +380,17 @@ function RecentPanel({ tracks }: { tracks: Track[] }) {
           <h2 className="text-sm font-semibold">Recently played</h2>
         </div>
       </div>
-      <ul className="mt-5 flex flex-1 flex-col justify-between">
-        {tracks.map((track) => (
-          <TrackRow key={getTrackKey(track)} track={track} />
-        ))}
-      </ul>
+      {tracks.length > 0 ? (
+        <ul className="mt-5 flex flex-1 flex-col justify-between">
+          {tracks.map((track) => (
+            <TrackRow key={getTrackKey(track)} track={track} />
+          ))}
+        </ul>
+      ) : (
+        <div className="flex flex-1 items-center justify-center text-center text-sm text-black/55">
+          {statusMessage ?? "Recently played is unavailable right now."}
+        </div>
+      )}
     </>
   );
 }
@@ -520,6 +544,14 @@ function getTrackKey(track: Track) {
     .join("-");
 }
 
+function getRetryAfterMs(retryAfter: string | null | undefined) {
+  const retryAfterSeconds = Number(retryAfter);
+
+  return Number.isFinite(retryAfterSeconds) && retryAfterSeconds > 0
+    ? retryAfterSeconds * 1000
+    : null;
+}
+
 export default function LiveMusicPage() {
   const [backdropIndex, setBackdropIndex] = useState(0);
   const [openPanels, setOpenPanels] = useState<Record<PanelId, boolean>>({
@@ -529,9 +561,16 @@ export default function LiveMusicPage() {
   const [topType, setTopType] = useState<TopType>("songs");
   const [topRange, setTopRange] = useState<TopRange>("month");
   const [lastfmTopTracks, setLastfmTopTracks] = useState<Track[] | null>(null);
-  const [spotifyData, setSpotifyData] =
-    useState<SpotifyDashboardResponse | null>(null);
-  const [spotifyError, setSpotifyError] = useState<string | null>(null);
+  const [spotifyCurrentData, setSpotifyCurrentData] =
+    useState<SpotifyCurrentResponse | null>(null);
+  const [recentTracksData, setRecentTracksData] =
+    useState<RecentTracksResponse | null>(null);
+  const [spotifyCurrentError, setSpotifyCurrentError] = useState<string | null>(
+    null,
+  );
+  const [recentTracksError, setRecentTracksError] = useState<string | null>(
+    null,
+  );
   const [playerPosition, setPlayerPosition] = useState({ x: 0, y: 0 });
   const [isPlayerPlaced, setIsPlayerPlaced] = useState(false);
   const [isDraggingPlayer, setIsDraggingPlayer] = useState(false);
@@ -540,12 +579,17 @@ export default function LiveMusicPage() {
   const playerCardRef = useRef<HTMLDivElement>(null);
   const isDraggingPlayerRef = useRef(false);
   const dragOffset = useRef({ x: 0, y: 0 });
+  const currentPlaybackRequestId = useRef(0);
+  const recentTracksRequestId = useRef(0);
+  const topTracksRequestId = useRef(0);
   const activeBackdrop = backdrops[backdropIndex];
-  const currentlyPlaying = spotifyData?.currentlyPlaying;
-  const displayedRecentTracks = spotifyData?.recentlyPlayed.length
-    ? spotifyData.recentlyPlayed
+  const currentlyPlaying = spotifyCurrentData?.currentlyPlaying;
+  const displayedRecentTracks = recentTracksData
+    ? recentTracksData.recentlyPlayed
     : placeholderRecentTracks;
-  const lastPlayedTrack = spotifyData?.recentlyPlayed[0] ?? null;
+  const recentTracksStatus =
+    recentTracksData?.errors?.recentlyPlayed ?? recentTracksError;
+  const lastPlayedTrack = recentTracksData?.recentlyPlayed[0] ?? null;
   const displayedPlayerTrack =
     currentlyPlaying ?? lastPlayedTrack ?? placeholderCurrentlyPlaying;
   const playerCardHeading = currentlyPlaying
@@ -559,43 +603,174 @@ export default function LiveMusicPage() {
 
   useEffect(() => {
     let isMounted = true;
+    let timeoutId: number | undefined;
+    let controller: AbortController | null = null;
 
-    async function loadSpotifyData() {
+    function scheduleNextLoad(delayMs = SPOTIFY_CURRENT_REFRESH_INTERVAL_MS) {
+      timeoutId = window.setTimeout(loadCurrentPlayback, delayMs);
+    }
+
+    function handleVisibilityChange() {
+      if (document.hidden) {
+        return;
+      }
+
+      if (timeoutId) {
+        window.clearTimeout(timeoutId);
+      }
+
+      loadCurrentPlayback();
+    }
+
+    async function loadCurrentPlayback() {
+      if (document.hidden) {
+        scheduleNextLoad(HIDDEN_TAB_REFRESH_INTERVAL_MS);
+        return;
+      }
+
+      const requestId = currentPlaybackRequestId.current + 1;
+      currentPlaybackRequestId.current = requestId;
+      controller?.abort();
+      controller = new AbortController();
+      let nextRefreshMs = SPOTIFY_CURRENT_REFRESH_INTERVAL_MS;
+
       try {
-        const response = await fetch("/api/spotify/dashboard", {
+        const response = await fetch("/api/spotify/current", {
           cache: "no-store",
+          signal: controller.signal,
         });
-        const data = (await response.json()) as SpotifyDashboardResponse;
+        const data = (await response.json()) as SpotifyCurrentResponse;
 
-        if (isMounted && response.ok) {
-          setSpotifyData(data);
-          setSpotifyError(null);
-        } else if (isMounted) {
-          setSpotifyError(data.error ?? "Unable to load Spotify data.");
+        if (!isMounted || requestId !== currentPlaybackRequestId.current) {
+          return;
         }
-      } catch {
-        if (isMounted) {
-          setSpotifyError("Unable to load Spotify data.");
+
+        if (response.ok) {
+          setSpotifyCurrentData(data);
+          setSpotifyCurrentError(null);
+        } else {
+          nextRefreshMs =
+            getRetryAfterMs(data.retryAfter) ?? SPOTIFY_CURRENT_REFRESH_INTERVAL_MS;
+          setSpotifyCurrentError(
+            data.error ?? "Unable to load current Spotify playback.",
+          );
+        }
+      } catch (error) {
+        if (error instanceof DOMException && error.name === "AbortError") {
+          return;
+        }
+
+        if (isMounted && requestId === currentPlaybackRequestId.current) {
+          setSpotifyCurrentError("Unable to load current Spotify playback.");
+        }
+      } finally {
+        if (isMounted && requestId === currentPlaybackRequestId.current) {
+          scheduleNextLoad(nextRefreshMs);
         }
       }
     }
 
-    loadSpotifyData();
-    const intervalId = window.setInterval(
-      loadSpotifyData,
-      SPOTIFY_REFRESH_INTERVAL_MS,
-    );
+    loadCurrentPlayback();
+    document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
       isMounted = false;
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      controller?.abort();
+
+      if (timeoutId) {
+        window.clearTimeout(timeoutId);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    let isMounted = true;
+    let controller: AbortController | null = null;
+
+    async function loadRecentTracks() {
+      if (document.hidden) {
+        return;
+      }
+
+      const requestId = recentTracksRequestId.current + 1;
+      recentTracksRequestId.current = requestId;
+      controller?.abort();
+      controller = new AbortController();
+
+      try {
+        const response = await fetch("/api/lastfm/recent", {
+          cache: "no-store",
+          signal: controller.signal,
+        });
+        const data = (await response.json()) as RecentTracksResponse;
+
+        if (!isMounted || requestId !== recentTracksRequestId.current) {
+          return;
+        }
+
+        if (response.ok) {
+          setRecentTracksData((currentData) => {
+            if (data.recentlyPlayed.length > 0) {
+              return data;
+            }
+
+            return currentData?.recentlyPlayed.length ? currentData : data;
+          });
+          setRecentTracksError(
+            data.recentlyPlayed.length > 0
+              ? null
+              : data.errors?.recentlyPlayed ?? RECENT_TRACKS_PENDING_MESSAGE,
+          );
+        } else {
+          setRecentTracksError(RECENT_TRACKS_PENDING_MESSAGE);
+        }
+      } catch (error) {
+        if (error instanceof DOMException && error.name === "AbortError") {
+          return;
+        }
+
+        if (isMounted && requestId === recentTracksRequestId.current) {
+          setRecentTracksError(RECENT_TRACKS_PENDING_MESSAGE);
+        }
+      }
+    }
+
+    function handleVisibilityChange() {
+      if (!document.hidden) {
+        loadRecentTracks();
+      }
+    }
+
+    loadRecentTracks();
+    const intervalId = window.setInterval(
+      loadRecentTracks,
+      RECENT_TRACKS_REFRESH_INTERVAL_MS,
+    );
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      isMounted = false;
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      controller?.abort();
       window.clearInterval(intervalId);
     };
   }, []);
 
   useEffect(() => {
     let isMounted = true;
+    let controller: AbortController | null = null;
 
     async function loadLastfmTopTracks() {
+      if (document.hidden) {
+        return;
+      }
+
+      const requestId = topTracksRequestId.current + 1;
+      topTracksRequestId.current = requestId;
+      controller?.abort();
+      controller = new AbortController();
+
       try {
         const params = new URLSearchParams({
           type: topType,
@@ -603,16 +778,27 @@ export default function LiveMusicPage() {
         });
         const response = await fetch(`/api/lastfm/top?${params.toString()}`, {
           cache: "no-store",
+          signal: controller.signal,
         });
         const data = (await response.json()) as LastfmTopResponse;
 
-        if (isMounted) {
+        if (isMounted && requestId === topTracksRequestId.current) {
           setLastfmTopTracks(response.ok ? data.items : null);
         }
-      } catch {
-        if (isMounted) {
+      } catch (error) {
+        if (error instanceof DOMException && error.name === "AbortError") {
+          return;
+        }
+
+        if (isMounted && requestId === topTracksRequestId.current) {
           setLastfmTopTracks(null);
         }
+      }
+    }
+
+    function handleVisibilityChange() {
+      if (!document.hidden) {
+        loadLastfmTopTracks();
       }
     }
 
@@ -621,9 +807,12 @@ export default function LiveMusicPage() {
       loadLastfmTopTracks,
       LASTFM_REFRESH_INTERVAL_MS,
     );
+    document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
       isMounted = false;
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      controller?.abort();
       window.clearInterval(intervalId);
     };
   }, [topType, topRange]);
@@ -797,7 +986,10 @@ export default function LiveMusicPage() {
               isOpen={openPanels.recent}
               onToggle={togglePanel}
             >
-              <RecentPanel tracks={displayedRecentTracks} />
+              <RecentPanel
+                statusMessage={recentTracksStatus}
+                tracks={displayedRecentTracks}
+              />
             </SidePanel>
 
           </aside>
@@ -810,8 +1002,8 @@ export default function LiveMusicPage() {
             isPlaced={isPlayerPlaced}
             position={playerPosition}
             track={displayedPlayerTrack}
-            statusMessage={spotifyError}
-            updatedAt={spotifyData?.updatedAt}
+            statusMessage={spotifyCurrentError}
+            updatedAt={spotifyCurrentData?.updatedAt}
             onPointerCancel={handlePlayerPointerUp}
             onPointerDown={handlePlayerPointerDown}
             onPointerMove={handlePlayerPointerMove}

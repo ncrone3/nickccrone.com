@@ -32,7 +32,7 @@ export async function GET(request: NextRequest) {
   try {
     return NextResponse.json(await getLastfmTopItems(type, period), {
       headers: {
-        "Cache-Control": "s-maxage=86400, stale-while-revalidate=3600",
+        "Cache-Control": "s-maxage=86400, stale-while-revalidate=3600, stale-if-error=86400",
       },
     });
   } catch (error) {
