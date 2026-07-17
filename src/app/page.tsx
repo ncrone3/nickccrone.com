@@ -319,6 +319,11 @@ export default function Home() {
               <ArrowUpRight size={16} />
             </span>
           ) : null}
+          {isLinked && !showHighlightCardAction ? (
+            <span className="mt-8 inline-flex w-fit text-sm font-bold uppercase tracking-wide text-zinc-500 transition group-hover:text-black">
+              See more
+            </span>
+          ) : null}
           {showHighlightCardAction && !isLinked ? (
             <a
               href="#contact"
@@ -419,7 +424,7 @@ export default function Home() {
                 <Link
                   key={item.role}
                   href={item.href}
-                  className="block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-4 focus-visible:ring-offset-[#ddd8d4]"
+                  className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-4 focus-visible:ring-offset-[#ddd8d4]"
                 >
                   {renderHighlightCard(item, true)}
                 </Link>

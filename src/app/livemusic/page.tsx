@@ -5,9 +5,11 @@ import {
   ChevronRight,
   Disc3,
   ExternalLink,
+  Home,
   ListMusic,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   useEffect,
   useRef,
@@ -925,7 +927,14 @@ export default function LiveMusicPage() {
 
       <div className="relative z-10 flex min-h-screen flex-col">
         <header className="grid min-h-16 grid-cols-[1fr_auto_1fr] items-center border-b border-black/25 bg-white/20 px-5 backdrop-blur-sm sm:px-8">
-          <div className="min-w-0">
+          <div className="flex min-w-0 items-center gap-3">
+            <Link
+              href="/"
+              aria-label="Back to portfolio"
+              className="grid size-9 shrink-0 place-items-center rounded-sm bg-black/5 text-black transition hover:bg-black hover:text-white"
+            >
+              <Home size={20} strokeWidth={2.3} />
+            </Link>
             <h1 className="truncate text-xl font-medium sm:text-2xl">
               Nick Crone&apos;s Live Music Dashboard:
             </h1>
