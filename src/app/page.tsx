@@ -98,6 +98,15 @@ const highlights: Highlight[] = [
     href: "/livemusic",
   },
   {
+    role: "Media Wall",
+    category: "Projects",
+    detail:
+      "A dense visual wall of books, movies, shows, albums, songs, and videos I keep coming back to.",
+    image: "/photos/bottom-great-wave.jpg",
+    imageAlt: "The Great Wave artwork used as a Media Wall preview",
+    href: "/media",
+  },
+  {
     role: "Georgia Tech VIP",
     category: "Work Exp.",
     detail:

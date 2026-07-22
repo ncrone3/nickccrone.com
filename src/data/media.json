@@ -1,0 +1,2384 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "book-hunter-gatherers-guide-21st-century",
+      "type": "book",
+      "title": "A Hunter-Gatherer's Guide to the 21st Century",
+      "creator": "Heather Heying and Bret Weinstein",
+      "year": 2021,
+      "image": {
+        "url": "https://covers.openlibrary.org/b/isbn/9780593086889-L.jpg",
+        "alt": "A Hunter-Gatherer's Guide to the 21st Century book cover",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://openlibrary.org/isbn/9780593086889",
+        "source": "https://covers.openlibrary.org/b/isbn/9780593086889-L.jpg"
+      },
+      "description": "Evolutionary thinking applied to modern life.",
+      "tags": [
+        "book",
+        "evolution",
+        "modern life",
+        "science"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "book-atomic-habits",
+      "type": "book",
+      "title": "Atomic Habits",
+      "creator": "James Clear",
+      "year": 2018,
+      "image": {
+        "url": "https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg",
+        "alt": "Atomic Habits book cover",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://openlibrary.org/isbn/9780735211292",
+        "source": "https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg"
+      },
+      "description": "Tiny systems, compounding behavior, and practical self-improvement.",
+      "tags": [
+        "book",
+        "habits",
+        "systems",
+        "self improvement"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "book-how-to-win-friends",
+      "type": "book",
+      "title": "How to Win Friends and Influence People",
+      "creator": "Dale Carnegie",
+      "year": 1936,
+      "image": {
+        "url": "https://covers.openlibrary.org/b/isbn/9780671027032-L.jpg",
+        "alt": "How to Win Friends and Influence People book cover",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://openlibrary.org/isbn/9780671027032",
+        "source": "https://covers.openlibrary.org/b/isbn/9780671027032-L.jpg"
+      },
+      "description": "A classic on attention, warmth, and getting along with people.",
+      "tags": [
+        "book",
+        "communication",
+        "people",
+        "classic"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "book-mans-search-for-meaning",
+      "type": "book",
+      "title": "Man's Search for Meaning",
+      "creator": "Viktor E. Frankl",
+      "year": 1946,
+      "image": {
+        "url": "https://covers.openlibrary.org/b/isbn/9780807014295-L.jpg",
+        "alt": "Man's Search for Meaning book cover",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://openlibrary.org/isbn/9780807014295",
+        "source": "https://covers.openlibrary.org/b/isbn/9780807014295-L.jpg"
+      },
+      "description": "A short, durable book about meaning under pressure.",
+      "tags": [
+        "book",
+        "meaning",
+        "psychology",
+        "classic"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "book-grit",
+      "type": "book",
+      "title": "Grit: The Power of Passion and Perseverance",
+      "creator": "Angela Duckworth",
+      "year": 2016,
+      "image": {
+        "url": "https://covers.openlibrary.org/b/isbn/9781501111105-L.jpg",
+        "alt": "Grit book cover",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://openlibrary.org/isbn/9781501111105",
+        "source": "https://covers.openlibrary.org/b/isbn/9781501111105-L.jpg"
+      },
+      "description": "A focused look at persistence, practice, and long games.",
+      "tags": [
+        "book",
+        "grit",
+        "psychology",
+        "growth"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "book-economic-facts-and-fallacies",
+      "type": "book",
+      "title": "Economic Facts and Fallacies",
+      "creator": "Thomas Sowell",
+      "year": 2008,
+      "image": {
+        "url": "https://covers.openlibrary.org/b/isbn/9780465022038-L.jpg",
+        "alt": "Economic Facts and Fallacies book cover",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://openlibrary.org/isbn/9780465022038",
+        "source": "https://covers.openlibrary.org/b/isbn/9780465022038-L.jpg"
+      },
+      "description": "Economics, incentives, and sharp arguments.",
+      "tags": [
+        "book",
+        "economics",
+        "policy",
+        "nonfiction"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "movie-zindagi-na-milegi-dobara-2011",
+      "type": "movie",
+      "title": "Zindagi Na Milegi Dobara",
+      "creator": "Zoya Akhtar",
+      "year": 2011,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/hKO9O715wYxjkQSEv47giCYcyO8.jpg",
+        "alt": "Poster for Zindagi Na Milegi Dobara (2011)",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/61202-zindagi-na-milegi-dobara",
+        "source": "https://www.themoviedb.org/movie/61202"
+      },
+      "description": "A bright road-trip movie about friendship and taking the leap.",
+      "tags": [
+        "movie",
+        "bollywood",
+        "travel",
+        "friendship"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "movie-la-la-land-2016",
+      "type": "movie",
+      "title": "La La Land",
+      "creator": "Damien Chazelle",
+      "year": 2016,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
+        "alt": "La La Land movie poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/313369-la-la-land",
+        "source": "https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg"
+      },
+      "description": "Color, music, ambition, and a very good bittersweet ending.",
+      "tags": [
+        "movie",
+        "musical",
+        "jazz",
+        "favorite"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "movie-surfs-up-2007",
+      "type": "movie",
+      "title": "Surf's Up",
+      "creator": "Ash Brannon and Chris Buck",
+      "year": 2007,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/lenJ0hOmlks0dyxzNJoNVQlR3qR.jpg",
+        "alt": "Poster for Surf's Up (2007)",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/9408-surf-s-up",
+        "source": "https://www.themoviedb.org/movie/9408-surf-s-up"
+      },
+      "description": "A laid-back animated sports mockumentary.",
+      "tags": [
+        "movie",
+        "animation",
+        "surfing",
+        "comfort"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "movie-the-batman-2022",
+      "type": "movie",
+      "title": "The Batman",
+      "creator": "Matt Reeves",
+      "year": 2022,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+        "alt": "The Batman movie poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/414906-the-batman",
+        "source": "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+      },
+      "description": "Moody detective Batman with a heavy, stylish atmosphere.",
+      "tags": [
+        "movie",
+        "batman",
+        "detective",
+        "noir"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "movie-the-nice-guys-2016",
+      "type": "movie",
+      "title": "The Nice Guys",
+      "creator": "Shane Black",
+      "year": 2016,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/clq4So9spa9cXk3MZy2iMdqkxP2.jpg",
+        "alt": "Poster for The Nice Guys (2016)",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/290250-the-nice-guys",
+        "source": "https://www.themoviedb.org/movie/290250-the-nice-guys"
+      },
+      "description": "Fast, funny, and very rewatchable.",
+      "tags": [
+        "movie",
+        "comedy",
+        "detective",
+        "buddy"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "movie-spirited-away-2001",
+      "type": "movie",
+      "title": "Spirited Away",
+      "creator": "Hayao Miyazaki",
+      "year": 2001,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+        "alt": "Spirited Away movie poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/129-spirited-away",
+        "source": "https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg"
+      },
+      "description": "Dreamlike, strange, warm, and beautifully animated.",
+      "tags": [
+        "movie",
+        "anime",
+        "ghibli",
+        "animation"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "movie-fight-club-1999",
+      "type": "movie",
+      "title": "Fight Club",
+      "creator": "David Fincher",
+      "year": 1999,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+        "alt": "Fight Club movie poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/550-fight-club",
+        "source": "https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg"
+      },
+      "description": "Fincher chaos, identity, and late-night movie energy.",
+      "tags": [
+        "movie",
+        "fincher",
+        "drama",
+        "cult"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "movie-whiplash-2014",
+      "type": "movie",
+      "title": "Whiplash",
+      "creator": "Damien Chazelle",
+      "year": 2014,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
+        "alt": "Whiplash movie poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/244786-whiplash",
+        "source": "https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg"
+      },
+      "description": "Intensity, obsession, and one of the great final scenes.",
+      "tags": [
+        "movie",
+        "music",
+        "jazz",
+        "discipline"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "movie-your-name-2016",
+      "type": "movie",
+      "title": "Your Name",
+      "creator": "Makoto Shinkai",
+      "year": 2016,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg",
+        "alt": "Your Name movie poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/372058-your-name",
+        "source": "https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg"
+      },
+      "description": "Big feelings, cosmic timing, and gorgeous animation.",
+      "tags": [
+        "movie",
+        "anime",
+        "romance",
+        "animation"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "show-avatar-the-last-airbender",
+      "type": "show",
+      "title": "Avatar: The Last Airbender",
+      "creator": "Michael Dante DiMartino and Bryan Konietzko",
+      "year": 2005,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/v2vn1coUMPKw0GI1KGC5J4IXtqp.jpg",
+        "alt": "Poster for Avatar: The Last Airbender (2005)",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/tv/246-avatar-the-last-airbender",
+        "source": "https://www.themoviedb.org/tv/246-avatar-the-last-airbender"
+      },
+      "description": "A perfectly built adventure show with heart.",
+      "tags": [
+        "show",
+        "animation",
+        "adventure",
+        "favorite"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "show-the-office-us",
+      "type": "show",
+      "title": "The Office",
+      "creator": "Greg Daniels",
+      "year": 2005,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/qWnJzyZhyy74gjpSjIXWmuk0ifX.jpg",
+        "alt": "The Office poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/tv/2316-the-office",
+        "source": "https://image.tmdb.org/t/p/w500/qWnJzyZhyy74gjpSjIXWmuk0ifX.jpg"
+      },
+      "description": "Easy comfort comedy with an endless supply of bits.",
+      "tags": [
+        "show",
+        "comedy",
+        "sitcom",
+        "comfort"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "show-attack-on-titan",
+      "type": "show",
+      "title": "Attack on Titan",
+      "creator": "Hajime Isayama",
+      "year": 2013,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/hqRb1wyIVsaMukZElPBUXoJPqrR.jpg",
+        "alt": "Poster for Attack on Titan (2013)",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/tv/1429-attack-on-titan",
+        "source": "https://www.themoviedb.org/tv/1429-attack-on-titan"
+      },
+      "description": "Huge stakes, hard choices, and relentless momentum.",
+      "tags": [
+        "show",
+        "anime",
+        "action",
+        "drama"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "show-brooklyn-nine-nine",
+      "type": "show",
+      "title": "Brooklyn Nine-Nine",
+      "creator": "Dan Goor and Michael Schur",
+      "year": 2013,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/sInWA4mKzMJU596LL2nOaC6pVT0.jpg",
+        "alt": "Poster for Brooklyn Nine-Nine (2013)",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/tv/48891-brooklyn-nine-nine",
+        "source": "https://www.themoviedb.org/tv/48891-brooklyn-nine-nine"
+      },
+      "description": "Fast workplace comedy with a lot of heart.",
+      "tags": [
+        "show",
+        "comedy",
+        "sitcom",
+        "workplace"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "show-parks-and-recreation",
+      "type": "show",
+      "title": "Parks and Recreation",
+      "creator": "Greg Daniels and Michael Schur",
+      "year": 2009,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/dDuzrl9rUIBYieZjqmtNCdncrmZ.jpg",
+        "alt": "Poster for Parks and Recreation (2009)",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/tv/8592-parks-and-recreation",
+        "source": "https://www.themoviedb.org/tv/8592-parks-and-recreation"
+      },
+      "description": "Optimistic, quotable, and very good hangout TV.",
+      "tags": [
+        "show",
+        "comedy",
+        "sitcom",
+        "workplace"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-speak-for-yourself",
+      "type": "album",
+      "title": "Speak for Yourself",
+      "creator": "Imogen Heap",
+      "year": 2005,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/98/85/1e/98851e09-6760-85e1-c1ef-e1034f6a7cb8/886445364712_cover.jpg/1000x1000bb.jpg",
+        "alt": "Speak for Yourself by Imogen Heap album cover",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Speak%20for%20Yourself%20Imogen%20Heap",
+        "source": "https://music.apple.com/us/album/speak-for-yourself/1785686643"
+      },
+      "description": "Inventive electronic pop with a very specific mood.",
+      "tags": [
+        "album",
+        "electronic",
+        "pop",
+        "imogen heap"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "album-for-us",
+      "type": "album",
+      "title": "For Us",
+      "creator": "Nate Sib",
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6c/95/69/6c956977-e61a-b2a1-033e-5f3b8caf9d31/25UMGIM61691.rgb.jpg/1000x1000bb.jpg",
+        "alt": "for us by Nate Sib album cover",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/For%20Us%20Nate%20Sib",
+        "source": "https://music.apple.com/us/album/for-us/1811381025"
+      },
+      "description": "Nate Sib in the rotation.",
+      "tags": [
+        "album",
+        "nate sib",
+        "music",
+        "pop"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-boy-2hollis",
+      "type": "album",
+      "title": "Boy",
+      "creator": "2hollis",
+      "year": 2024,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7d/ca/16/7dca16b6-4996-3a83-1384-e3be1ca3004d/197342590211_cover.jpg/1000x1000bb.jpg",
+        "alt": "boy by 2hollis album cover",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Boy%202hollis",
+        "source": "https://music.apple.com/us/album/boy/1746250658"
+      },
+      "description": "Glitchy, high-energy, and very online.",
+      "tags": [
+        "album",
+        "2hollis",
+        "electronic",
+        "pop"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-the-college-dropout",
+      "type": "album",
+      "title": "The College Dropout",
+      "creator": "Kanye West",
+      "year": 2004,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/15/05/09/15050911-a2f1-9ebc-0d16-6e8faad1cf80/00602567924326.rgb.jpg/1000x1000bb.jpg",
+        "alt": "The College Dropout by Kanye West album cover",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/The%20College%20Dropout%20Kanye%20West",
+        "source": "https://music.apple.com/us/album/the-college-dropout/1437467864"
+      },
+      "description": "A cornerstone album with personality in every corner.",
+      "tags": [
+        "album",
+        "hip hop",
+        "kanye west",
+        "classic"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-graduation",
+      "type": "album",
+      "title": "Graduation",
+      "creator": "Kanye West",
+      "year": 2007,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/39/25/2d/39252d65-2d50-b991-0962-f7a98a761271/00602517483507.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Graduation by Kanye West album cover",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Graduation%20Kanye%20West",
+        "source": "https://music.apple.com/us/album/graduation/1442845779"
+      },
+      "description": "Big hooks and even bigger production.",
+      "tags": [
+        "album",
+        "hip hop",
+        "kanye west",
+        "pop rap"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "album-ll-the-hellp",
+      "type": "album",
+      "title": "LL",
+      "creator": "The Hellp",
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/91/6c/2b/916c2b6e-a777-f812-97cd-e684c49a60bf/075679629128.jpg/1000x1000bb.jpg",
+        "alt": "LL by The Hellp album cover",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/LL%20The%20Hellp",
+        "source": "https://music.apple.com/us/album/ll/1775286036"
+      },
+      "description": "Sleek, strange, and catchy.",
+      "tags": [
+        "album",
+        "the hellp",
+        "electronic",
+        "music"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-korean-kimj",
+      "type": "album",
+      "title": "Korean",
+      "creator": "kimj",
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3c/87/41/3c874177-e21b-e7e1-575d-d983bcef9d0a/artwork.jpg/1000x1000bb.jpg",
+        "alt": "KOREAN by kimj album cover",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Korean%20kimj",
+        "source": "https://music.apple.com/us/album/korean/1804285608"
+      },
+      "description": "A compact pick from the music pile.",
+      "tags": [
+        "album",
+        "kimj",
+        "music"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-future-nostalgia",
+      "type": "album",
+      "title": "Future Nostalgia",
+      "creator": "Dua Lipa",
+      "year": 2020,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/6c/11/d6/6c11d681-aa3a-d59e-4c2e-f77e181026ab/190295092665.jpg/1000x1000bb.jpg",
+        "alt": "Future Nostalgia by Dua Lipa album cover",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Future%20Nostalgia%20Dua%20Lipa",
+        "source": "https://music.apple.com/us/album/future-nostalgia/1538003494"
+      },
+      "description": "Clean pop polish with disco momentum.",
+      "tags": [
+        "album",
+        "pop",
+        "dance",
+        "dua lipa"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-hold-on-nate-sib",
+      "type": "song",
+      "title": "Hold On",
+      "creator": "Nate Sib",
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/25/f7/68/25f7680b-aa8e-d1dc-0119-3ca14b71e25b/24UM1IM13433.rgb.jpg/1000x1000bb.jpg",
+        "alt": "hold on by Nate Sib cover art",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Hold%20On%20Nate%20Sib",
+        "source": "https://music.apple.com/us/album/hold-on/1774630324?i=1774630337"
+      },
+      "description": "A Nate Sib track for the wall.",
+      "tags": [
+        "song",
+        "nate sib",
+        "music"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-music-baby-jane-remover",
+      "type": "song",
+      "title": "Music Baby",
+      "creator": "Jane Remover",
+      "image": {
+        "url": "https://i.scdn.co/image/ab67616d0000b27316f22f331f822af67bbfc400",
+        "alt": "Music Baby by Jane Remover cover art",
+        "width": 640,
+        "height": 640
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Music%20Baby%20Jane%20Remover",
+        "source": "https://open.spotify.com/track/3heQu7YLQFf0WY4Z2giXhk"
+      },
+      "description": "Jane Remover in a sharp, restless lane.",
+      "tags": [
+        "song",
+        "jane remover",
+        "music",
+        "pop"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-ipod-touch-ninajirachi",
+      "type": "song",
+      "title": "iPod Touch",
+      "creator": "Ninajirachi",
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d1/50/30/d1503098-6560-d9e8-6aac-afdaa42ebe95/199350811814.jpg/1000x1000bb.jpg",
+        "alt": "iPod Touch by Ninajirachi cover art",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/iPod%20Touch%20Ninajirachi",
+        "source": "https://music.apple.com/us/album/ipod-touch/1817553615?i=1817553617"
+      },
+      "description": "Bright electronic pop energy.",
+      "tags": [
+        "song",
+        "ninajirachi",
+        "electronic",
+        "music"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-whiplash-2hollis",
+      "type": "song",
+      "title": "Whiplash",
+      "creator": "2hollis",
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/f3/09/99/f3099914-6f3a-9aad-e074-326e6fbfe103/197342285117_cover.jpg/1000x1000bb.jpg",
+        "alt": "whiplash by 2hollis cover art",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Whiplash%202hollis",
+        "source": "https://music.apple.com/us/album/whiplash/1697377154?i=1697377396"
+      },
+      "description": "A punchy 2hollis pick.",
+      "tags": [
+        "song",
+        "2hollis",
+        "electronic",
+        "music"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-put-my-hoodie-on-effie",
+      "type": "song",
+      "title": "Put My Hoodie On",
+      "creator": "Effie",
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b5/b8/53/b5b85378-d822-f1f1-1156-697798981e3f/199350071591.jpg/1000x1000bb.jpg",
+        "alt": "put my hoodie on by Effie cover art",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Put%20My%20Hoodie%20On%20Effie",
+        "source": "https://music.apple.com/us/album/put-my-hoodie-on/1802796528?i=1802798101"
+      },
+      "description": "A sticky pop track.",
+      "tags": [
+        "song",
+        "effie",
+        "pop",
+        "music"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-dancing-with-your-eyes-closed",
+      "type": "song",
+      "title": "Dancing With Your Eyes Closed",
+      "creator": "Jane Remover",
+      "image": {
+        "url": "https://i.scdn.co/image/ab67616d0000b2735876f718db6ce28c679bb842",
+        "alt": "Dancing with your eyes closed by Jane Remover cover art",
+        "width": 640,
+        "height": 640
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Dancing%20With%20Your%20Eyes%20Closed%20Jane%20Remover",
+        "source": "https://open.spotify.com/track/1QkeomwCeKgXOEWoMHzrXr"
+      },
+      "description": "A Jane Remover track with motion in the title and the sound.",
+      "tags": [
+        "song",
+        "jane remover",
+        "music"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-the-difference-flume",
+      "type": "song",
+      "title": "The Difference",
+      "creator": "Flume",
+      "year": 2020,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ff/6d/94/ff6d948d-ca8c-5c88-a0ab-e9913377269c/653738041823_Cover.jpg/1000x1000bb.jpg",
+        "alt": "The Difference by Flume cover art",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/The%20Difference%20Flume",
+        "source": "https://music.apple.com/us/album/the-difference-feat-toro-y-moi/1694793030?i=1694793033"
+      },
+      "description": "A clean burst of electronic brightness.",
+      "tags": [
+        "song",
+        "flume",
+        "electronic",
+        "dance"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "song-blank-space-taylor-swift",
+      "type": "song",
+      "title": "Blank Space",
+      "creator": "Taylor Swift",
+      "year": 2014,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/89/4a/4a/894a4ab9-b0b0-9ea5-ca41-8da0b9b79453/14UMDIM03405.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Blank Space by Taylor Swift cover art",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Blank%20Space%20Taylor%20Swift",
+        "source": "https://music.apple.com/us/album/blank-space/1440935467?i=1440935808"
+      },
+      "description": "Huge pop writing, crisp and theatrical.",
+      "tags": [
+        "song",
+        "pop",
+        "taylor swift",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-rather-be-clean-bandit",
+      "type": "song",
+      "title": "Rather Be",
+      "creator": "Clean Bandit",
+      "year": 2014,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/10/55/d1/1055d1b7-e579-8f4a-5172-9bf865e3cfcb/825646090037.jpg/1000x1000bb.jpg",
+        "alt": "Rather Be by Clean Bandit cover art",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Rather%20Be%20Clean%20Bandit",
+        "source": "https://music.apple.com/us/album/rather-be-feat-jess-glynne/992093742?i=992093768"
+      },
+      "description": "A polished dance-pop classic.",
+      "tags": [
+        "song",
+        "dance",
+        "pop",
+        "clean bandit"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-middle-dj-snake",
+      "type": "song",
+      "title": "Middle",
+      "creator": "DJ Snake",
+      "year": 2015,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/38/6d/64/386d64d2-c311-4ea5-0841-99658f6f7253/16UMGIM39232.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Middle by DJ Snake cover art",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Middle%20DJ%20Snake",
+        "source": "https://music.apple.com/us/album/middle-feat-bipolar-sunshine/1440867448?i=1440867457"
+      },
+      "description": "Clean electronic-pop nostalgia.",
+      "tags": [
+        "song",
+        "dj snake",
+        "dance",
+        "pop"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-what-do-you-mean-justin-bieber",
+      "type": "song",
+      "title": "What Do You Mean?",
+      "creator": "Justin Bieber",
+      "year": 2015,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/81/a4/dc/81a4dc50-8d7e-6ae5-71d3-f83393348248/15UMGIM59807.rgb.jpg/1000x1000bb.jpg",
+        "alt": "What Do You Mean? by Justin Bieber cover art",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/What%20Do%20You%20Mean%20Justin%20Bieber",
+        "source": "https://music.apple.com/us/album/what-do-you-mean/1440825845?i=1440826311"
+      },
+      "description": "A light, instantly recognizable pop single.",
+      "tags": [
+        "song",
+        "justin bieber",
+        "pop",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-insane-rommulas",
+      "type": "song",
+      "title": "insane",
+      "creator": "rommulas",
+      "year": 2025,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e5/06/8c/e5068cb2-388e-cf91-632a-cb392a4df475/054391218261.jpg/1000x1000bb.jpg",
+        "alt": "insane single artwork by rommulas",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/track/53y151Sdj4KZRMuq5mkIg7",
+        "source": "https://music.apple.com/us/album/insane/1886234797?i=1886234801&uo=4"
+      },
+      "description": "A compact underground-pop cut with a sharp late-night charge.",
+      "tags": [
+        "song",
+        "underground",
+        "pop rap",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-music-underscores",
+      "type": "song",
+      "title": "Music",
+      "creator": "underscores",
+      "year": 2025,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/34/e9/68/34e9680c-152b-9fc6-07e7-8f253e76d8f2/810090098852_Cover.jpg/1000x1000bb.jpg",
+        "alt": "Music song artwork by underscores",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/track/4kfaLw8sMFbZ1LQxlTaS2y",
+        "source": "https://music.apple.com/us/album/music/1878382378?i=1878382596&uo=4"
+      },
+      "description": "Glitchy, bright, and self-aware electronic pop.",
+      "tags": [
+        "song",
+        "hyperpop",
+        "electropop",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-famous-nate-sib",
+      "type": "song",
+      "title": "famous",
+      "creator": "nate sib",
+      "year": 2024,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e2/04/69/e20469c3-8c27-3e9a-d77b-4c1c3e38ab30/artwork.jpg/1000x1000bb.jpg",
+        "alt": "Famous single artwork by Nate Sib",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/nate%20sib%20famous",
+        "source": "https://music.apple.com/us/album/famous/1740543101?i=1740543102&uo=4"
+      },
+      "description": "A short, distorted pop entry from nate sib.",
+      "tags": [
+        "song",
+        "alt pop",
+        "hyperpop",
+        "2020s",
+        "needs review"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-all-the-stars-kendrick-lamar-sza",
+      "type": "song",
+      "title": "All the Stars (with SZA)",
+      "creator": "Kendrick Lamar, SZA",
+      "year": 2018,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/4d/16/55/4d165549-3d11-86dc-fcbf-be7fe0bcadfb/18UMGIM00002.rgb.jpg/1000x1000bb.jpg",
+        "alt": "All The Stars song artwork by Kendrick Lamar and SZA",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/track/5RTVMR0OXWejMsK86IfR2l",
+        "source": "https://music.apple.com/us/album/all-the-stars/1440903005?i=1440903307&uo=4"
+      },
+      "description": "A sweeping soundtrack anthem with a polished, cinematic glow.",
+      "tags": [
+        "song",
+        "hip hop",
+        "r&b",
+        "soundtrack",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-duvet-boa",
+      "type": "song",
+      "title": "Duvet",
+      "creator": "bôa",
+      "year": 1998,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/45/44/15/45441528-0288-eedc-f6fc-93137b8cfe96/067003248969.png/1000x1000bb.jpg",
+        "alt": "Duvet song artwork by bôa",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/track/7urtwZEtOypb3r8HNi42dT",
+        "source": "https://music.apple.com/us/album/duvet/1596227761?i=1596227762&uo=4"
+      },
+      "description": "Dreamy alt-rock tied to anime memory and internet rediscovery.",
+      "tags": [
+        "song",
+        "alternative rock",
+        "anime",
+        "1990s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-location-playboi-carti",
+      "type": "song",
+      "title": "Location",
+      "creator": "Playboi Carti",
+      "year": 2017,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/f9/58/95/f95895f4-0ef6-a636-241e-ba4824ef6621/17UMGIM08349.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Location song artwork by Playboi Carti",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://music.apple.com/us/song/1555620479",
+        "source": "https://music.apple.com/us/album/location/1440887343?i=1440887503&uo=4"
+      },
+      "description": "A hazy opener that turns minimal delivery into atmosphere.",
+      "tags": [
+        "song",
+        "trap",
+        "cloud rap",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-ghost-town-kanye-west",
+      "type": "song",
+      "title": "Ghost Town",
+      "creator": "Kanye West, PARTYNEXTDOOR",
+      "year": 2018,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f8/92/62/f892628e-bfd5-2437-c1f5-0ebbd366de09/00602577303098.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Ghost Town song artwork by Kanye West",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/track/7vgTNTaEz3CsBZ1N4YQalM",
+        "source": "https://music.apple.com/us/album/ghost-town-feat-partynextdoor/1441460375?i=1441460621&uo=4"
+      },
+      "description": "A raw, cathartic centerpiece from ye.",
+      "tags": [
+        "song",
+        "hip hop",
+        "art rap",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-i-hate-you-i-love-you-dvrst",
+      "type": "song",
+      "title": "I Hate You I Love You",
+      "creator": "DVRST",
+      "year": 2022,
+      "image": {
+        "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02baa1633a4681a9fa36cc1ba7",
+        "alt": "I Hate You I Love You single artwork by DVRST",
+        "width": 300,
+        "height": 300
+      },
+      "links": {
+        "primary": "https://open.spotify.com/track/5uUKBQYxIjdRIhKvzP1c6x",
+        "source": "https://open.spotify.com/album/4hcjr6lpFL24nHjjy7LqjQ"
+      },
+      "description": "A moody phonk/electronic track built around shadowy momentum.",
+      "tags": [
+        "song",
+        "phonk",
+        "electronic",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-no-lie-sean-paul-dua-lipa",
+      "type": "song",
+      "title": "No Lie",
+      "creator": "Sean Paul, Dua Lipa",
+      "year": 2016,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/30/b8/24/30b824c1-9937-d38a-96e5-f4a660b2d689/18UMGIM35012.rgb.jpg/1000x1000bb.jpg",
+        "alt": "No Lie song artwork by Sean Paul featuring Dua Lipa",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/track/1Vb4HQnN2kZ5Y2KgYF5TDV",
+        "source": "https://music.apple.com/us/album/no-lie-feat-dua-lipa/1396476826?i=1396477176&uo=4"
+      },
+      "description": "A sleek dancehall-pop crossover with Dua Lipa on the hook.",
+      "tags": [
+        "song",
+        "dancehall pop",
+        "pop",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-hate-me-ellie-goulding-juice-wrld",
+      "type": "song",
+      "title": "Hate Me (with Juice WRLD)",
+      "creator": "Ellie Goulding, Juice WRLD",
+      "year": 2019,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c9/8d/96/c98d964d-c33a-b1de-dc81-8525b347ebd3/19UMGIM53750.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Hate Me single artwork by Ellie Goulding and Juice WRLD",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/29FoTD5vBY3Fq1QWhbl3FM",
+        "source": "https://music.apple.com/us/album/hate-me/1469521997?i=1469522003&uo=4"
+      },
+      "description": "A glossy pop collaboration with a bitter, melodic bite.",
+      "tags": [
+        "song",
+        "pop",
+        "emo rap",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-lights-ellie-goulding",
+      "type": "song",
+      "title": "Lights",
+      "creator": "Ellie Goulding",
+      "year": 2010,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/e6/d0/7f/e6d07f34-8422-cb62-6d35-c198c4342123/10UMGIM03428.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Lights song artwork by Ellie Goulding",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Ellie%20Goulding%20Lights",
+        "source": "https://music.apple.com/us/album/lights/1446018300?i=1446018500&uo=4"
+      },
+      "description": "Sparkling synth-pop from Ellie Goulding's early run.",
+      "tags": [
+        "song",
+        "synth pop",
+        "pop",
+        "2010s",
+        "needs review"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-lie-2hollis",
+      "type": "song",
+      "title": "lie",
+      "creator": "2hollis",
+      "year": 2024,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7d/ca/16/7dca16b6-4996-3a83-1384-e3be1ca3004d/197342590211_cover.jpg/1000x1000bb.jpg",
+        "alt": "lie song artwork by 2hollis",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/0JfgfkFvNYiZIt5mS3skmZ",
+        "source": "https://music.apple.com/us/album/lie/1746250658?i=1746250862&uo=4"
+      },
+      "description": "A terse, blown-out cut from 2hollis' boy era.",
+      "tags": [
+        "song",
+        "digicore",
+        "underground",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-take-it-slow-nate-sib",
+      "type": "song",
+      "title": "take it slow",
+      "creator": "nate sib",
+      "year": 2025,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/93/f3/86/93f386e1-2017-2128-747c-482e30060082/24UM1IM42708.rgb.jpg/1000x1000bb.jpg",
+        "alt": "take it slow single artwork by Nate Sib",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://www.natesib.com/releases-archive/take-it-slow/",
+        "source": "https://music.apple.com/us/album/take-it-slow/1789430305?i=1789430306&uo=4"
+      },
+      "description": "A fragile, fast-moving pop song circling the idea of slowing down.",
+      "tags": [
+        "song",
+        "alt pop",
+        "hyperpop",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-tonight-nate-sib",
+      "type": "song",
+      "title": "tonight",
+      "creator": "nate sib",
+      "year": 2025,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2f/62/5f/2f625f08-b2d1-7776-26c0-afa105703197/25UMGIM09605.rgb.jpg/1000x1000bb.jpg",
+        "alt": "tonight single artwork by Nate Sib",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/6TmdwqMxBMwjDFp8KaQNIr",
+        "source": "https://music.apple.com/us/album/tonight/1795086550?i=1795087092&uo=4"
+      },
+      "description": "A quick, emotionally charged nate sib single.",
+      "tags": [
+        "song",
+        "alt pop",
+        "hyperpop",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-bad-boy-juice-wrld-young-thug",
+      "type": "song",
+      "title": "Bad Boy (with Young Thug)",
+      "creator": "Juice WRLD, Young Thug",
+      "year": 2021,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/41/49/03/41490399-f85b-6d44-ed3b-a3b739273c2c/21UMGIM00557.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Bad Boy single artwork by Juice WRLD and Young Thug",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/5hUFZjxtqYvxm9FGUhHCdE",
+        "source": "https://music.apple.com/us/album/bad-boy/1549038323?i=1549039131&uo=4"
+      },
+      "description": "A posthumous Juice WRLD single with Young Thug's elastic energy.",
+      "tags": [
+        "song",
+        "rap",
+        "trap",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-babydoll-dominic-fike",
+      "type": "song",
+      "title": "Babydoll",
+      "creator": "Dominic Fike",
+      "year": 2018,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2d/37/18/2d3718e9-8620-b603-d3cc-f34ce817070d/886447290170.jpg/1000x1000bb.jpg",
+        "alt": "Babydoll song artwork by Dominic Fike",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/track/0ilv9ad25mKCv9cvQXKh5j",
+        "source": "https://music.apple.com/us/album/babydoll/1438243719?i=1438243880&uo=4"
+      },
+      "description": "A brief, catchy Dominic Fike cut with a breezy snap.",
+      "tags": [
+        "song",
+        "indie pop",
+        "alternative",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-stay-the-kid-laroi-justin-bieber",
+      "type": "song",
+      "title": "STAY",
+      "creator": "The Kid LAROI, Justin Bieber",
+      "year": 2021,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/89/59/6a/89596ab9-fa3c-8d08-4d95-a6450fa2013c/886449400515.jpg/1000x1000bb.jpg",
+        "alt": "STAY single artwork by The Kid LAROI and Justin Bieber",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/0fz3XWOqMa33xURK7ddcQh",
+        "source": "https://music.apple.com/us/album/stay/1574968878?i=1574968888&uo=4"
+      },
+      "description": "A hyper-compressed pop rush built for instant replay.",
+      "tags": [
+        "song",
+        "pop",
+        "pop rap",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-grammy-freestyle-lil-tecca",
+      "type": "song",
+      "title": "GRAMMY (Freestyle)",
+      "creator": "Lil Tecca",
+      "year": 2019,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/74/3f/ed/743fed91-322b-89f5-b5d2-403463b884b0/21UMGIM70556.rgb.jpg/1000x1000bb.jpg",
+        "alt": "GRAMMY (Freestyle) song artwork by Lil Tecca",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Lil%20Tecca%20GRAMMY%20Freestyle",
+        "source": "https://music.apple.com/us/album/grammy-freestyle/1583882161?i=1583882572&uo=4"
+      },
+      "description": "A loose freestyle from Tecca's early internet-rap period.",
+      "tags": [
+        "song",
+        "rap",
+        "freestyle",
+        "2010s",
+        "needs review"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-burn-ellie-goulding",
+      "type": "song",
+      "title": "Burn",
+      "creator": "Ellie Goulding",
+      "year": 2013,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/99/48/f6/9948f600-7cfb-1c09-b8f7-b390557f0e30/13UAAIM44623.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Burn song artwork by Ellie Goulding",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/1XkK8NQgucFJ0vntWwreDb",
+        "source": "https://music.apple.com/us/album/burn/1440818331?i=1440819532&uo=4"
+      },
+      "description": "A bright festival-pop anthem with a big chorus lift.",
+      "tags": [
+        "song",
+        "pop",
+        "dance pop",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-sweet-but-psycho-ava-max",
+      "type": "song",
+      "title": "Sweet but Psycho",
+      "creator": "Ava Max",
+      "year": 2018,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/94/74/1e/94741ee9-bb3c-4c9f-da27-e04d9878faae/075679797032.jpg/1000x1000bb.jpg",
+        "alt": "Sweet but Psycho song artwork by Ava Max",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/track/7eJUKvmg9Q8wVY8UNo8Q9N",
+        "source": "https://music.apple.com/us/album/sweet-but-psycho/1538214602?i=1538214889&uo=4"
+      },
+      "description": "A sharp, theatrical pop single with a maximal hook.",
+      "tags": [
+        "song",
+        "pop",
+        "dance pop",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-areyoulistening-gunnr",
+      "type": "song",
+      "title": "areyoulistening",
+      "creator": "Gunnr",
+      "year": 2025,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7e/cd/5a/7ecd5a26-ae72-2f5b-d5a5-f61b4b9c588a/681014.jpg/1000x1000bb.jpg",
+        "alt": "areyoulistening single artwork by Gunnr",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/track/419TJRn7V9tOdm8ZfSqvgK",
+        "source": "https://music.apple.com/us/album/areyoulistening/1807671713?i=1807671716&uo=4"
+      },
+      "description": "A tightly wound underground track with compressed emotion.",
+      "tags": [
+        "song",
+        "underground",
+        "digicore",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-us-gracie-abrams-taylor-swift",
+      "type": "song",
+      "title": "us. (feat. Taylor Swift)",
+      "creator": "Gracie Abrams, Taylor Swift",
+      "year": 2024,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d2/f8/99/d2f89987-d2a5-45a5-1746-c0841c7e9843/24UM1IM17286.rgb.jpg/1000x1000bb.jpg",
+        "alt": "us. song artwork by Gracie Abrams featuring Taylor Swift",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/track/0hhzNPE68LWLfgZwdpxVdR",
+        "source": "https://music.apple.com/us/album/us-feat-taylor-swift/1775580883?i=1775581048&uo=4"
+      },
+      "description": "A hushed pop duet centered on memory and aftermath.",
+      "tags": [
+        "song",
+        "pop",
+        "singer-songwriter",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-in-my-room-frank-ocean",
+      "type": "song",
+      "title": "In My Room",
+      "creator": "Frank Ocean",
+      "year": 2019,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/60/ae/10/60ae102a-4452-16c9-558d-37deafa3bdb9/FRANK_OCEAN_IN_MY_ROOM.jpg/1000x1000bb.jpg",
+        "alt": "In My Room single artwork by Frank Ocean",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/71VX8yv9T2hNIYVZJVUWVp",
+        "source": "https://music.apple.com/us/album/in-my-room/1486713879?i=1486713880&uo=4"
+      },
+      "description": "A spare Blonded-era single with clipped flexes and empty-space mood.",
+      "tags": [
+        "song",
+        "r&b",
+        "alternative r&b",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-paper-rings-taylor-swift",
+      "type": "song",
+      "title": "Paper Rings",
+      "creator": "Taylor Swift",
+      "year": 2019,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/49/3d/ab/493dab54-f920-9043-6181-80993b8116c9/19UMGIM53909.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Paper Rings song artwork by Taylor Swift",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://music.apple.com/us/song/1468058181",
+        "source": "https://music.apple.com/us/album/paper-rings/1468058165?i=1468058181&uo=4"
+      },
+      "description": "A giddy, handclap-heavy Lover cut.",
+      "tags": [
+        "song",
+        "pop",
+        "power pop",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-scared-to-be-lonely-martin-garrix-dua-lipa",
+      "type": "song",
+      "title": "Scared to Be Lonely",
+      "creator": "Martin Garrix, Dua Lipa",
+      "year": 2017,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/44/46/1f/44461f0c-a949-ce72-0164-704056469fc8/886446328331.jpg/1000x1000bb.jpg",
+        "alt": "Scared to Be Lonely single artwork by Martin Garrix and Dua Lipa",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/2v9rQe4F8fVSh5v8bAq0jF",
+        "source": "https://music.apple.com/us/album/scared-to-be-lonely/1196786247?i=1196786344&uo=4"
+      },
+      "description": "A polished EDM-pop duet about holding on past the good part.",
+      "tags": [
+        "song",
+        "edm pop",
+        "dance pop",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-in-the-name-of-love-martin-garrix-bebe-rexha",
+      "type": "song",
+      "title": "In the Name of Love",
+      "creator": "Martin Garrix, Bebe Rexha",
+      "year": 2016,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/fc/8a/d2/fc8ad2a2-c75b-c33f-5d1a-070539e647bd/886446028088.jpg/1000x1000bb.jpg",
+        "alt": "In the Name of Love single artwork by Martin Garrix and Bebe Rexha",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://martingarrix.com/music/in-the-name-of-love/",
+        "source": "https://music.apple.com/us/album/in-the-name-of-love/1137640898?i=1137641426&uo=4"
+      },
+      "description": "A dramatic crossover between radio pop and festival EDM.",
+      "tags": [
+        "song",
+        "edm pop",
+        "future bass",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-cliche-2hollis",
+      "type": "song",
+      "title": "cliche",
+      "creator": "2hollis",
+      "year": 2023,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/f3/09/99/f3099914-6f3a-9aad-e074-326e6fbfe103/197342285117_cover.jpg/1000x1000bb.jpg",
+        "alt": "cliche single artwork by 2hollis",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://music.apple.com/us/song/1697377401",
+        "source": "https://music.apple.com/us/album/cliche/1697377154?i=1697377401&uo=4"
+      },
+      "description": "A sleek 2hollis track with cool-toned digital pressure.",
+      "tags": [
+        "song",
+        "digicore",
+        "underground",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-a-new-kind-of-love-frou-frou",
+      "type": "song",
+      "title": "A New Kind of Love - Demo",
+      "creator": "Frou Frou",
+      "year": 2022,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/4d/cc/97/4dcc9743-a61f-1f44-8b31-346156406659/195729525672_cover.jpg/1000x1000bb.jpg",
+        "alt": "A New Kind of Love demo artwork by Frou Frou",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/track/2p1qmpFg41n0XMBNGuMzoE",
+        "source": "https://music.apple.com/us/album/a-new-kind-of-love-feat-imogen-heap-guy-sigsworth-demo/1622851434?i=1622851436&uo=4"
+      },
+      "description": "A long-shelved Frou Frou demo that found a second life online.",
+      "tags": [
+        "song",
+        "electropop",
+        "downtempo",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-moment-vierre-cloud",
+      "type": "song",
+      "title": "moment",
+      "creator": "Vierre Cloud",
+      "year": 2019,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0e/0f/0e/0e0f0e1e-6968-a733-b73f-4c348c1c936a/886449050628.jpg/1000x1000bb.jpg",
+        "alt": "moment single artwork by Vierre Cloud",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/track/5K9tfeoiztw94dyWzF39jq",
+        "source": "https://music.apple.com/us/album/moment/1550988369?i=1550988374&uo=4"
+      },
+      "description": "A dreamy, sample-driven track with wistful internet-era lift.",
+      "tags": [
+        "song",
+        "electronic",
+        "drum and bass",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-inertia-eternal-raijin",
+      "type": "song",
+      "title": "Inertia",
+      "creator": "Eternal Raijin",
+      "year": 2021,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/43/46/11/4346118f-d875-13d3-c392-8aad2605566d/196051916565_cover.jpg/1000x1000bb.jpg",
+        "alt": "Inertia single artwork by Eternal Raijin",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://music.apple.com/us/song/1654855572",
+        "source": "https://music.apple.com/us/album/inertia/1654855571?i=1654855572&uo=4"
+      },
+      "description": "An anime-phonk adjacent instrumental with dramatic forward motion.",
+      "tags": [
+        "song",
+        "phonk",
+        "anime edit",
+        "2020s",
+        "needs review"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-delilah-pull-me-out-of-this-fred-again",
+      "type": "song",
+      "title": "Delilah (pull me out of this)",
+      "creator": "Fred again.., Delilah Montagu",
+      "year": 2022,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/b0/9c/b7/b09cb72c-cca9-5d66-bc9d-a9b5e5f86b22/5054197236389.jpg/1000x1000bb.jpg",
+        "alt": "Delilah (pull me out of this) song artwork by Fred again.. and Delilah Montagu",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Fred%20again..%20Delilah%20pull%20me%20out%20of%20this",
+        "source": "https://music.apple.com/us/album/delilah-pull-me-out-of-this/1640463893?i=1640463908&uo=4"
+      },
+      "description": "A kinetic emotional release from Fred again..",
+      "tags": [
+        "song",
+        "electronic",
+        "dance",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-immortal-21-savage",
+      "type": "song",
+      "title": "Immortal",
+      "creator": "21 Savage",
+      "year": 2019,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/de/d3/b4/ded3b4d5-1df1-f1b1-c44f-20799492d5fc/886448108924.jpg/1000x1000bb.jpg",
+        "alt": "Immortal single artwork by 21 Savage",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/track/4IO8X9W69dIQe0EC5ALXhq",
+        "source": "https://music.apple.com/us/album/immortal/1485688403?i=1485688404&uo=4"
+      },
+      "description": "A cold, menacing 21 Savage single.",
+      "tags": [
+        "song",
+        "trap",
+        "rap",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-easter-pink-fakemink",
+      "type": "song",
+      "title": "Easter Pink",
+      "creator": "fakemink",
+      "year": 2025,
+      "image": {
+        "url": "https://coverartarchive.org/release/16c3780b-2454-4056-b66c-64eeb60dc74c/41318187320-1200.jpg",
+        "alt": "Easter Pink single artwork by fakemink",
+        "width": 1200,
+        "height": 1200
+      },
+      "links": {
+        "primary": "https://open.spotify.com/track/7DQU0GwQRtJmaGb6sRMvhM",
+        "source": "https://musicbrainz.org/release/16c3780b-2454-4056-b66c-64eeb60dc74c"
+      },
+      "description": "A clipped, high-energy fakemink track with underground momentum.",
+      "tags": [
+        "song",
+        "cloud rap",
+        "experimental hip hop",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-fever-buckshot-fakemink",
+      "type": "song",
+      "title": "Fever",
+      "creator": "Buckshot, fakemink",
+      "year": 2025,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d3/16/a6/d316a67f-1574-1713-4168-0990439eb8a3/199732953057.png/1000x1000bb.jpg",
+        "alt": "Fever single artwork by Buckshot and fakemink",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/track/09xhawlPUifhftf8zuie7w",
+        "source": "https://music.apple.com/us/album/fever/1836137764?i=1836137765&uo=4"
+      },
+      "description": "A dark collaboration pairing Buckshot with fakemink.",
+      "tags": [
+        "song",
+        "rap",
+        "underground",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "song-night-blooming-jasmine-fakemink",
+      "type": "song",
+      "title": "Night, Blooming Jasmine",
+      "creator": "fakemink",
+      "year": 2026,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/da/21/61/da216117-5af9-8cf7-1eb3-023d787102b5/840471814894.png/1000x1000bb.jpg",
+        "alt": "Night, Blooming Jasmine single artwork by fakemink",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/track/4WKUmjoUeYkzyoEvTbiVdW",
+        "source": "https://music.apple.com/us/album/night-blooming-jasmine/1893388757?i=1893388914&uo=4"
+      },
+      "description": "A recent fakemink single with punchy vocals and bright lift.",
+      "tags": [
+        "song",
+        "cloud rap",
+        "experimental hip hop",
+        "2020s",
+        "needs review"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-rodeo-travis-scott",
+      "type": "album",
+      "title": "Rodeo",
+      "creator": "Travis Scott",
+      "year": 2015,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/6d/fb/f1/6dfbf17d-4032-f585-35ad-f3f9b6859cd9/886445460421.jpg/1000x1000bb.jpg",
+        "alt": "Rodeo album artwork by Travis Scott",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/7EGY16IWSHpPdoWazUyL9R",
+        "source": "https://music.apple.com/us/album/rodeo/1456179762?uo=4"
+      },
+      "description": "Travis Scott's major-label debut, murky and cinematic.",
+      "tags": [
+        "album",
+        "rap",
+        "trap",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-astroworld-travis-scott",
+      "type": "album",
+      "title": "ASTROWORLD",
+      "creator": "Travis Scott",
+      "year": 2018,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e7/49/8f/e7498f65-df8f-bead-d6e3-2a8d4d642a79/886447235317.jpg/1000x1000bb.jpg",
+        "alt": "ASTROWORLD album artwork by Travis Scott",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/41GuZcammIkupMPKH2OJ6I",
+        "source": "https://music.apple.com/us/album/astroworld/1421658111?uo=4"
+      },
+      "description": "A maximal Houston rap carnival with psychedelic detail.",
+      "tags": [
+        "album",
+        "rap",
+        "trap",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-playboi-carti-playboi-carti",
+      "type": "album",
+      "title": "Playboi Carti",
+      "creator": "Playboi Carti",
+      "year": 2017,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/f9/58/95/f95895f4-0ef6-a636-241e-ba4824ef6621/17UMGIM08349.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Playboi Carti album artwork by Playboi Carti",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/7aM9uiOOQd6oEzM35ji4hr",
+        "source": "https://music.apple.com/us/album/playboi-carti/1440887343?uo=4"
+      },
+      "description": "The self-titled mixtape that crystalized Carti's airy style.",
+      "tags": [
+        "album",
+        "trap",
+        "cloud rap",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-ye-kanye-west",
+      "type": "album",
+      "title": "ye",
+      "creator": "Kanye West",
+      "year": 2018,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f8/92/62/f892628e-bfd5-2437-c1f5-0ebbd366de09/00602577303098.rgb.jpg/1000x1000bb.jpg",
+        "alt": "ye album artwork by Kanye West",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/5EBGCvO6upi3GNknMVe9x9",
+        "source": "https://music.apple.com/us/album/ye/1441460375?uo=4"
+      },
+      "description": "A brief, turbulent Wyoming-era Kanye album.",
+      "tags": [
+        "album",
+        "hip hop",
+        "art rap",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-music-playboi-carti",
+      "type": "album",
+      "title": "MUSIC",
+      "creator": "Playboi Carti",
+      "year": 2025,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/03/24/10/03241047-f22d-7e64-3932-6df7550acc42/25UMGIM46212.rgb.jpg/1000x1000bb.jpg",
+        "alt": "MUSIC album artwork by Playboi Carti",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/0fSfkmx0tdPqFYkJuNX74a",
+        "source": "https://music.apple.com/us/album/music/1802175271?uo=4"
+      },
+      "description": "Carti's long-awaited third studio album, sprawling and abrasive.",
+      "tags": [
+        "album",
+        "trap",
+        "rage",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-savage-mode-ii-21-savage-metro-boomin",
+      "type": "album",
+      "title": "SAVAGE MODE II",
+      "creator": "21 Savage, Metro Boomin",
+      "year": 2020,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/53/ed/40/53ed4078-7d2a-076e-f9b9-ffb29e776c42/886448747703.jpg/1000x1000bb.jpg",
+        "alt": "SAVAGE MODE II album artwork by 21 Savage and Metro Boomin",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://musicbrainz.org/release/3dbe18f8-925d-477d-b4bd-ed81b8adfc4d",
+        "source": "https://music.apple.com/us/album/savage-mode-ii/1534263780?uo=4"
+      },
+      "description": "A cinematic sequel pairing 21's menace with Metro's darkness.",
+      "tags": [
+        "album",
+        "trap",
+        "rap",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-lahai-sampha",
+      "type": "album",
+      "title": "Lahai",
+      "creator": "Sampha",
+      "year": 2023,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/27/c0/04/27c00450-0822-d948-8a62-13072ebe1261/889030031273.png/1000x1000bb.jpg",
+        "alt": "Lahai album artwork by Sampha",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/5GuWww4OaildzkmTTlfMN3",
+        "source": "https://music.apple.com/us/album/lahai/1702662891?uo=4"
+      },
+      "description": "A warm, intricate Sampha album about connection and motion.",
+      "tags": [
+        "album",
+        "electronic",
+        "soul",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-discovery-daft-punk",
+      "type": "album",
+      "title": "Discovery",
+      "creator": "Daft Punk",
+      "year": 2001,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fd/4a/77/fd4a77db-0ebc-d043-41a2-f32fa1bb0fb4/dj.qrikkdwj.jpg/1000x1000bb.jpg",
+        "alt": "Discovery album artwork by Daft Punk",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/0RBZJDWUVMjzdKS8rjO6bY",
+        "source": "https://music.apple.com/us/album/discovery/697194953?uo=4"
+      },
+      "description": "A gleaming French-house classic where pop memory turns futuristic.",
+      "tags": [
+        "album",
+        "electronic",
+        "french house",
+        "2000s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-thriller-michael-jackson",
+      "type": "album",
+      "title": "Thriller",
+      "creator": "Michael Jackson",
+      "year": 1982,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/1000x1000bb.jpg",
+        "alt": "Thriller album artwork by Michael Jackson",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/5Ne1SPpiXQqpCZ6pZCRfIM",
+        "source": "https://music.apple.com/us/album/thriller/269572838?uo=4"
+      },
+      "description": "A Quincy Jones-produced pop blockbuster.",
+      "tags": [
+        "album",
+        "pop",
+        "r&b",
+        "1980s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-my-beautiful-dark-twisted-fantasy-kanye-west",
+      "type": "album",
+      "title": "My Beautiful Dark Twisted Fantasy",
+      "creator": "Kanye West",
+      "year": 2010,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d1/74/da/d174dacf-5782-dfe2-19f7-ce037dcd0237/00602527584935.rgb.jpg/1000x1000bb.jpg",
+        "alt": "My Beautiful Dark Twisted Fantasy album artwork by Kanye West",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/1SGxmLRKnJNI1ZMDoBWXoS",
+        "source": "https://music.apple.com/us/album/my-beautiful-dark-twisted-fantasy/1443160553?uo=4"
+      },
+      "description": "A maximalist rap album built like grand self-mythology.",
+      "tags": [
+        "album",
+        "hip hop",
+        "art rap",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-legends-never-die-juice-wrld",
+      "type": "album",
+      "title": "Legends Never Die",
+      "creator": "Juice WRLD",
+      "year": 2020,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/39/b1/1e/39b11eef-4709-bf53-2b5b-7954d2782496/20UMGIM58296.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Legends Never Die album artwork by Juice WRLD",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/0Zs0b11dQneqR0rfNhbGU4",
+        "source": "https://music.apple.com/us/album/legends-never-die/1526575291?uo=4"
+      },
+      "description": "A posthumous Juice WRLD album balancing grief and melody.",
+      "tags": [
+        "album",
+        "emo rap",
+        "pop rap",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-kids-see-ghosts-kids-see-ghosts",
+      "type": "album",
+      "title": "KIDS SEE GHOSTS",
+      "creator": "KIDS SEE GHOSTS",
+      "year": 2018,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3f/2e/d3/3f2ed3b1-d260-4e92-816b-4beac102c676/00602567794318.rgb.jpg/1000x1000bb.jpg",
+        "alt": "KIDS SEE GHOSTS album artwork by KIDS SEE GHOSTS, Kanye West, and Kid Cudi",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/6pwuKxMUkNg673KETsXPUV",
+        "source": "https://music.apple.com/us/album/kids-see-ghosts/1397651890?uo=4"
+      },
+      "description": "Kanye West and Kid Cudi's concise collaborative album.",
+      "tags": [
+        "album",
+        "hip hop",
+        "psychedelic rap",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-currents-tame-impala",
+      "type": "album",
+      "title": "Currents",
+      "creator": "Tame Impala",
+      "year": 2015,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a8/2e/b4/a82eb490-f30a-a321-461a-0383c88fec95/15UMGIM23316.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Currents album artwork by Tame Impala",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/0rxKf57PZvWEoU8v3m5W2q",
+        "source": "https://music.apple.com/us/album/currents/1440838039?uo=4"
+      },
+      "description": "A lush psych-pop pivot about change and control.",
+      "tags": [
+        "album",
+        "psychedelic pop",
+        "indie",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-die-lit-playboi-carti",
+      "type": "album",
+      "title": "Die Lit",
+      "creator": "Playboi Carti",
+      "year": 2018,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/a2/38/52/a23852d9-21e4-5ac5-6d75-2682fecdda46/18UMGIM26096.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Die Lit album artwork by Playboi Carti",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/7dAm8ShwJLFm9SaJ6Yc58O",
+        "source": "https://music.apple.com/us/album/die-lit/1381553184?uo=4"
+      },
+      "description": "A minimalist, high-energy trap record.",
+      "tags": [
+        "album",
+        "trap",
+        "rage",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-bad-cameo-james-blake-lil-yachty",
+      "type": "album",
+      "title": "Bad Cameo",
+      "creator": "James Blake, Lil Yachty",
+      "year": 2024,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/12/03/a8/1203a871-f9ba-38d5-e44e-7c1ebf94475d/24UMGIM50479.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Bad Cameo album artwork by James Blake and Lil Yachty",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://music.apple.com/us/album/bad-cameo/1751983556",
+        "source": "https://music.apple.com/us/album/bad-cameo/1751983556?uo=4"
+      },
+      "description": "A patient, ambient-leaning James Blake and Lil Yachty collaboration.",
+      "tags": [
+        "album",
+        "alternative",
+        "ambient pop",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-the-first-time-the-kid-laroi",
+      "type": "album",
+      "title": "THE FIRST TIME",
+      "creator": "The Kid LAROI",
+      "year": 2023,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0a/f0/ec/0af0ec0a-6899-496d-7b6b-690bbf82bff6/196874338292.jpg/1000x1000bb.jpg",
+        "alt": "THE FIRST TIME album artwork by The Kid LAROI",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/63IolVUykZCHMlu2zu9jHS",
+        "source": "https://music.apple.com/us/album/the-first-time/1895173348?uo=4"
+      },
+      "description": "A widescreen pop-rap album from The Kid LAROI.",
+      "tags": [
+        "album",
+        "pop rap",
+        "pop",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-rapunzel-dhruv",
+      "type": "album",
+      "title": "rapunzel",
+      "creator": "dhruv",
+      "year": 2022,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/a4/c6/71/a4c6714b-650b-e235-33b5-5acb1f99915d/886449732470.jpg/1000x1000bb.jpg",
+        "alt": "rapunzel album artwork by Dhruv",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://music.apple.com/us/album/rapunzel/1604470418",
+        "source": "https://music.apple.com/us/album/rapunzel/1604470418?uo=4"
+      },
+      "description": "A gentle debut EP centered on soft R&B-pop intimacy.",
+      "tags": [
+        "album",
+        "r&b",
+        "pop",
+        "ep",
+        "2020s",
+        "needs review"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "youtube-pop-culture-madeon",
+      "type": "youtube",
+      "title": "Pop Culture",
+      "creator": "Madeon",
+      "year": 2011,
+      "image": {
+        "url": "https://i.ytimg.com/vi/lTx3G6h2xyA/hqdefault.jpg",
+        "alt": "Pop Culture by Madeon YouTube thumbnail",
+        "width": 480,
+        "height": 360
+      },
+      "links": {
+        "primary": "https://www.youtube.com/watch?v=lTx3G6h2xyA",
+        "source": "https://i.ytimg.com/vi/lTx3G6h2xyA/hqdefault.jpg"
+      },
+      "description": "A launchpad performance packed with tiny recognizable moments.",
+      "tags": [
+        "youtube",
+        "madeon",
+        "mashup",
+        "electronic"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "youtube-500-days-chasing-my-dreams",
+      "type": "youtube",
+      "title": "500 Days of Chasing My Dreams",
+      "creator": "Justin Shen",
+      "image": {
+        "url": "https://i.ytimg.com/vi/cL_-TmEIgsw/maxresdefault.jpg",
+        "alt": "YouTube thumbnail for \"500 days of chasing my dreams\" by Justin Shen",
+        "width": 1280,
+        "height": 720
+      },
+      "links": {
+        "primary": "https://www.youtube.com/watch?v=cL_-TmEIgsw",
+        "source": "https://i.ytimg.com/vi/cL_-TmEIgsw/maxresdefault.jpg"
+      },
+      "description": "A creator video about persistence and creative ambition.",
+      "tags": [
+        "youtube",
+        "creator",
+        "dreams",
+        "video"
+      ],
+      "addedAt": "2026-07-21",
+      "year": 2024
+    },
+    {
+      "id": "youtube-i-was-doing-fine-without-you",
+      "type": "youtube",
+      "title": "I Was Doing Fine Without You",
+      "creator": "Blendtastic",
+      "image": {
+        "url": "https://i.ytimg.com/vi/H6JjSdO0XWA/hqdefault.jpg",
+        "alt": "YouTube thumbnail for \"I was doing fine without you\" by Blendtastic",
+        "width": 480,
+        "height": 360
+      },
+      "links": {
+        "primary": "https://www.youtube.com/watch?v=H6JjSdO0XWA",
+        "source": "https://i.ytimg.com/vi/H6JjSdO0XWA/hqdefault.jpg"
+      },
+      "description": "A YouTube pick from the media wall starter set.",
+      "tags": [
+        "youtube",
+        "blendtastic",
+        "video"
+      ],
+      "addedAt": "2026-07-21",
+      "year": 2017
+    },
+    {
+      "id": "youtube-asked-out-100-girls",
+      "type": "youtube",
+      "title": "I Asked Out 100 Girls on a Date to Get Over My Fear of Rejection... This Is What I Learned",
+      "creator": "yankeesam11",
+      "image": {
+        "url": "https://i.ytimg.com/vi/mC34TSXNKiY/maxresdefault.jpg",
+        "alt": "YouTube thumbnail for \"I asked out 100 girls on a date to get over my fear of rejection... this is what I learned\" by yankeesam11",
+        "width": 1280,
+        "height": 720
+      },
+      "links": {
+        "primary": "https://www.youtube.com/watch?v=mC34TSXNKiY",
+        "source": "https://i.ytimg.com/vi/mC34TSXNKiY/maxresdefault.jpg"
+      },
+      "description": "A social challenge video about getting more comfortable with rejection.",
+      "tags": [
+        "youtube",
+        "rejection",
+        "dating",
+        "challenge"
+      ],
+      "addedAt": "2026-07-21",
+      "year": 2022
+    }
+  ]
+}
