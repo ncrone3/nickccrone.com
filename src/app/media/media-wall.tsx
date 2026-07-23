@@ -407,6 +407,7 @@ export default function MediaWall() {
   );
   const [activeItem, setActiveItem] = useState<MediaItem | null>(null);
   const [gridColumnCount, setGridColumnCount] = useState<number | null>(null);
+  const [isInitialShuffleReady, setIsInitialShuffleReady] = useState(false);
   const [failedImageIds, setFailedImageIds] = useState<Set<string>>(
     () => new Set(),
   );
@@ -416,6 +417,17 @@ export default function MediaWall() {
     () => new Map(mediaItems.map((item) => [item.id, item])),
     [],
   );
+
+  useEffect(() => {
+    const animationFrameId = window.requestAnimationFrame(() => {
+      setOrderedIds((currentIds) =>
+        shuffleIdsForNewPackedOrder(currentIds, mediaById),
+      );
+      setIsInitialShuffleReady(true);
+    });
+
+    return () => window.cancelAnimationFrame(animationFrameId);
+  }, [mediaById]);
 
   useEffect(() => {
     const gridElement = gridRef.current;
@@ -451,7 +463,7 @@ export default function MediaWall() {
     resizeObserver.observe(observedGridElement);
 
     return () => resizeObserver.disconnect();
-  }, []);
+  }, [isInitialShuffleReady]);
 
   const normalizedQuery = query.trim().toLowerCase();
   const visibleItems = useMemo(
@@ -546,7 +558,7 @@ export default function MediaWall() {
       </header>
 
       <section className="px-2 py-2 sm:px-3 sm:py-3">
-        {visibleItems.length > 0 ? (
+        {!isInitialShuffleReady ? null : visibleItems.length > 0 ? (
           <div
             ref={gridRef}
             className="grid auto-rows-[3.6rem] grid-cols-[repeat(auto-fill,minmax(3.6rem,3.6rem))] justify-center gap-1 [grid-auto-flow:dense] sm:auto-rows-[4rem] sm:grid-cols-[repeat(auto-fill,minmax(4rem,4rem))] sm:gap-1.5 lg:auto-rows-[4.4rem] lg:grid-cols-[repeat(auto-fill,minmax(4.4rem,4.4rem))]"
