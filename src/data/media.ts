@@ -108,6 +108,14 @@ export function getTileVariant(item: MediaItem): TileVariant {
 
   const { width, height } = item.image;
 
+  if (item.type === "reel") {
+    if (width && height && width > height * 1.2) {
+      return item.featured ? "featureWide" : "wide";
+    }
+
+    return item.featured ? "featurePoster" : "poster";
+  }
+
   if (width && height && width > height * 1.2) {
     return item.featured ? "featureWide" : "wide";
   }

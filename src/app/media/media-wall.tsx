@@ -2,7 +2,13 @@
 
 import { Home, Info, Search, Shuffle } from "lucide-react";
 import Link from "next/link";
-import { useMemo, useState, type SVGProps } from "react";
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type SVGProps,
+} from "react";
 import {
   getMediaTypeLabel,
   getSearchableText,
@@ -22,6 +28,20 @@ const tileVariantClassNames: Record<TileVariant, string> = {
   featurePoster: "col-span-3 row-span-5",
   featureWide: "col-span-4 row-span-2",
 };
+
+const localPackLookaheadSize = 24;
+
+const tileVariantSpans: Record<TileVariant, { columns: number; rows: number }> =
+  {
+    small: { columns: 1, rows: 1 },
+    song: { columns: 1, rows: 1 },
+    square: { columns: 2, rows: 2 },
+    poster: { columns: 2, rows: 3 },
+    wide: { columns: 3, rows: 2 },
+    featureSquare: { columns: 3, rows: 3 },
+    featurePoster: { columns: 3, rows: 5 },
+    featureWide: { columns: 4, rows: 2 },
+  };
 
 function GitHubIcon({
   size = 24,
@@ -70,23 +90,189 @@ function getPackingRank(item: MediaItem) {
   return 3;
 }
 
-function packItemsForDenseGrid(items: MediaItem[]) {
+function packItemsByLocalRank(items: MediaItem[]) {
   return items
     .map((item, index) => ({ item, index }))
+    .reduce<MediaItem[]>((packedItems, _entry, chunkStart, indexedItems) => {
+      if (chunkStart % localPackLookaheadSize !== 0) {
+        return packedItems;
+      }
+
+      const packedChunk = indexedItems
+        .slice(chunkStart, chunkStart + localPackLookaheadSize)
+        .sort((firstItem, secondItem) => {
+          const rankDifference =
+            getPackingRank(firstItem.item) - getPackingRank(secondItem.item);
+
+          return rankDifference || firstItem.index - secondItem.index;
+        })
+        .map(({ item }) => item);
+
+      return [...packedItems, ...packedChunk];
+    }, []);
+}
+
+function getCellKey(row: number, column: number) {
+  return `${row}:${column}`;
+}
+
+function getTileSpan(item: MediaItem, columnCount: number) {
+  const span = tileVariantSpans[getTileVariant(item)];
+
+  return {
+    columns: Math.min(span.columns, columnCount),
+    rows: span.rows,
+  };
+}
+
+function itemFitsAt(
+  item: MediaItem,
+  row: number,
+  column: number,
+  columnCount: number,
+  occupiedCells: Set<string>,
+) {
+  const span = getTileSpan(item, columnCount);
+
+  if (column + span.columns > columnCount) {
+    return false;
+  }
+
+  for (let rowOffset = 0; rowOffset < span.rows; rowOffset += 1) {
+    for (let columnOffset = 0; columnOffset < span.columns; columnOffset += 1) {
+      if (
+        occupiedCells.has(getCellKey(row + rowOffset, column + columnOffset))
+      ) {
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
+
+function findFirstOpenCell(occupiedCells: Set<string>, columnCount: number) {
+  for (let row = 0; ; row += 1) {
+    for (let column = 0; column < columnCount; column += 1) {
+      if (!occupiedCells.has(getCellKey(row, column))) {
+        return { row, column };
+      }
+    }
+  }
+}
+
+function findFirstPlacement(
+  item: MediaItem,
+  columnCount: number,
+  occupiedCells: Set<string>,
+) {
+  for (let row = 0; ; row += 1) {
+    for (let column = 0; column < columnCount; column += 1) {
+      if (itemFitsAt(item, row, column, columnCount, occupiedCells)) {
+        return { row, column };
+      }
+    }
+  }
+}
+
+function occupyCells(
+  item: MediaItem,
+  placement: { row: number; column: number },
+  columnCount: number,
+  occupiedCells: Set<string>,
+) {
+  const span = getTileSpan(item, columnCount);
+
+  for (let row = placement.row; row < placement.row + span.rows; row += 1) {
+    for (
+      let column = placement.column;
+      column < placement.column + span.columns;
+      column += 1
+    ) {
+      occupiedCells.add(getCellKey(row, column));
+    }
+  }
+}
+
+function getBestLocalCandidateIndex(
+  indexedItems: { item: MediaItem; index: number }[],
+  columnCount: number,
+  occupiedCells: Set<string>,
+  placement: { row: number; column: number },
+) {
+  const lookaheadItems = indexedItems.slice(0, localPackLookaheadSize);
+  const localCandidate = lookaheadItems
+    .map((entry, localIndex) => ({ ...entry, localIndex }))
+    .filter(({ item }) =>
+      itemFitsAt(item, placement.row, placement.column, columnCount, occupiedCells),
+    )
     .sort((firstItem, secondItem) => {
       const rankDifference =
         getPackingRank(firstItem.item) - getPackingRank(secondItem.item);
 
-      return rankDifference || firstItem.index - secondItem.index;
-    })
-    .map(({ item }) => item);
+      return rankDifference || firstItem.localIndex - secondItem.localIndex;
+    })[0];
+
+  if (localCandidate) {
+    return localCandidate.localIndex;
+  }
+
+  return indexedItems.findIndex(({ item }) =>
+    itemFitsAt(item, placement.row, placement.column, columnCount, occupiedCells),
+  );
 }
 
-function getPackedSignature(ids: string[], mediaById: Map<string, MediaItem>) {
+function packItemsForDenseGrid(items: MediaItem[], columnCount?: number | null) {
+  if (!columnCount || columnCount < 2) {
+    return packItemsByLocalRank(items);
+  }
+
+  const indexedItems = items.map((item, index) => ({ item, index }));
+  const packedItems: MediaItem[] = [];
+  const occupiedCells = new Set<string>();
+
+  while (indexedItems.length > 0) {
+    const nextOpenCell = findFirstOpenCell(occupiedCells, columnCount);
+    const candidateIndex = getBestLocalCandidateIndex(
+      indexedItems,
+      columnCount,
+      occupiedCells,
+      nextOpenCell,
+    );
+    const selectedIndex = candidateIndex === -1 ? 0 : candidateIndex;
+    const [selectedItem] = indexedItems.splice(selectedIndex, 1);
+    const selectedPlacement = itemFitsAt(
+      selectedItem.item,
+      nextOpenCell.row,
+      nextOpenCell.column,
+      columnCount,
+      occupiedCells,
+    )
+      ? nextOpenCell
+      : findFirstPlacement(selectedItem.item, columnCount, occupiedCells);
+
+    occupyCells(
+      selectedItem.item,
+      selectedPlacement,
+      columnCount,
+      occupiedCells,
+    );
+    packedItems.push(selectedItem.item);
+  }
+
+  return packedItems;
+}
+
+function getPackedSignature(
+  ids: string[],
+  mediaById: Map<string, MediaItem>,
+  columnCount?: number | null,
+) {
   return packItemsForDenseGrid(
     ids
       .map((id) => mediaById.get(id))
       .filter((item): item is MediaItem => Boolean(item)),
+    columnCount,
   )
     .slice(0, 18)
     .map((item) => item.id)
@@ -96,14 +282,18 @@ function getPackedSignature(ids: string[], mediaById: Map<string, MediaItem>) {
 function shuffleIdsForNewPackedOrder(
   ids: string[],
   mediaById: Map<string, MediaItem>,
+  columnCount?: number | null,
 ) {
-  const currentSignature = getPackedSignature(ids, mediaById);
+  const currentSignature = getPackedSignature(ids, mediaById, columnCount);
   let bestIds = ids;
 
   for (let attempt = 0; attempt < 8; attempt += 1) {
     const candidateIds = shuffleIds(ids);
 
-    if (getPackedSignature(candidateIds, mediaById) !== currentSignature) {
+    if (
+      getPackedSignature(candidateIds, mediaById, columnCount) !==
+      currentSignature
+    ) {
       return candidateIds;
     }
 
@@ -216,14 +406,52 @@ export default function MediaWall() {
     mediaItems.map((item) => item.id),
   );
   const [activeItem, setActiveItem] = useState<MediaItem | null>(null);
+  const [gridColumnCount, setGridColumnCount] = useState<number | null>(null);
   const [failedImageIds, setFailedImageIds] = useState<Set<string>>(
     () => new Set(),
   );
+  const gridRef = useRef<HTMLDivElement>(null);
 
   const mediaById = useMemo(
     () => new Map(mediaItems.map((item) => [item.id, item])),
     [],
   );
+
+  useEffect(() => {
+    const gridElement = gridRef.current;
+
+    if (!gridElement) {
+      return;
+    }
+
+    const observedGridElement = gridElement;
+
+    function updateGridColumnCount() {
+      const nextColumnCount = window
+        .getComputedStyle(observedGridElement)
+        .gridTemplateColumns.split(" ")
+        .filter(Boolean).length;
+
+      setGridColumnCount((currentColumnCount) =>
+        currentColumnCount === nextColumnCount
+          ? currentColumnCount
+          : nextColumnCount,
+      );
+    }
+
+    updateGridColumnCount();
+
+    if (typeof ResizeObserver === "undefined") {
+      window.addEventListener("resize", updateGridColumnCount);
+
+      return () => window.removeEventListener("resize", updateGridColumnCount);
+    }
+
+    const resizeObserver = new ResizeObserver(updateGridColumnCount);
+    resizeObserver.observe(observedGridElement);
+
+    return () => resizeObserver.disconnect();
+  }, []);
 
   const normalizedQuery = query.trim().toLowerCase();
   const visibleItems = useMemo(
@@ -237,14 +465,14 @@ export default function MediaWall() {
             : true,
         );
 
-      return packItemsForDenseGrid(matchingItems);
+      return packItemsForDenseGrid(matchingItems, gridColumnCount);
     },
-    [mediaById, normalizedQuery, orderedIds],
+    [gridColumnCount, mediaById, normalizedQuery, orderedIds],
   );
 
   function handleShuffle() {
     setOrderedIds((currentIds) =>
-      shuffleIdsForNewPackedOrder(currentIds, mediaById),
+      shuffleIdsForNewPackedOrder(currentIds, mediaById, gridColumnCount),
     );
   }
 
@@ -319,7 +547,10 @@ export default function MediaWall() {
 
       <section className="px-2 py-2 sm:px-3 sm:py-3">
         {visibleItems.length > 0 ? (
-          <div className="grid auto-rows-[3.6rem] grid-cols-[repeat(auto-fill,minmax(3.6rem,3.6rem))] justify-center gap-1 [grid-auto-flow:dense] sm:auto-rows-[4rem] sm:grid-cols-[repeat(auto-fill,minmax(4rem,4rem))] sm:gap-1.5 lg:auto-rows-[4.4rem] lg:grid-cols-[repeat(auto-fill,minmax(4.4rem,4.4rem))]">
+          <div
+            ref={gridRef}
+            className="grid auto-rows-[3.6rem] grid-cols-[repeat(auto-fill,minmax(3.6rem,3.6rem))] justify-center gap-1 [grid-auto-flow:dense] sm:auto-rows-[4rem] sm:grid-cols-[repeat(auto-fill,minmax(4rem,4rem))] sm:gap-1.5 lg:auto-rows-[4.4rem] lg:grid-cols-[repeat(auto-fill,minmax(4.4rem,4.4rem))]"
+          >
             {visibleItems.map((item) => (
               <MediaTile
                 key={item.id}
