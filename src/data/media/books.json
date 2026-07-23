@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "book-hunter-gatherers-guide-21st-century",
+      "type": "book",
+      "title": "A Hunter-Gatherer's Guide to the 21st Century",
+      "creator": "Heather Heying and Bret Weinstein",
+      "year": 2021,
+      "image": {
+        "url": "https://images.penguinrandomhouse.com/cover/9780593086889?width=600&height=900",
+        "alt": "A Hunter-Gatherer's Guide to the 21st Century book cover",
+        "width": 447,
+        "height": 675
+      },
+      "links": {
+        "primary": "https://openlibrary.org/isbn/9780593086889",
+        "source": "https://www.penguinrandomhouse.com/books/618153/a-hunter-gatherers-guide-to-the-21st-century-by-heather-heying-and-bret-weinstein/"
+      },
+      "description": "Evolutionary thinking applied to modern life.",
+      "tags": [
+        "book",
+        "evolution",
+        "modern life",
+        "science"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "book-atomic-habits",
+      "type": "book",
+      "title": "Atomic Habits",
+      "creator": "James Clear",
+      "year": 2018,
+      "image": {
+        "url": "https://images.penguinrandomhouse.com/cover/9780735211292?width=600&height=900",
+        "alt": "Atomic Habits book cover",
+        "width": 447,
+        "height": 675
+      },
+      "links": {
+        "primary": "https://openlibrary.org/isbn/9780735211292",
+        "source": "https://www.penguinrandomhouse.com/books/543993/atomic-habits-by-james-clear/9780735211292/"
+      },
+      "description": "Tiny systems, compounding behavior, and practical self-improvement.",
+      "tags": [
+        "book",
+        "habits",
+        "systems",
+        "self improvement"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "book-how-to-win-friends",
+      "type": "book",
+      "title": "How to Win Friends and Influence People",
+      "creator": "Dale Carnegie",
+      "year": 1936,
+      "image": {
+        "url": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9780671027032/how-to-win-friends-and-influence-people-9780671027032_hr.jpg",
+        "alt": "How to Win Friends and Influence People book cover",
+        "width": 1400,
+        "height": 2174
+      },
+      "links": {
+        "primary": "https://openlibrary.org/isbn/9780671027032",
+        "source": "https://www.simonandschuster.com/books/How-to-Win-Friends-and-Influence-People/Dale-Carnegie/Dale-Carnegie-Books/9780671027032"
+      },
+      "description": "A classic on attention, warmth, and getting along with people.",
+      "tags": [
+        "book",
+        "communication",
+        "people",
+        "classic"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "book-mans-search-for-meaning",
+      "type": "book",
+      "title": "Man's Search for Meaning",
+      "creator": "Viktor E. Frankl",
+      "year": 1946,
+      "image": {
+        "url": "https://covers.openlibrary.org/b/isbn/9780807014295-L.jpg",
+        "alt": "Man's Search for Meaning book cover",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://openlibrary.org/isbn/9780807014295",
+        "source": "https://covers.openlibrary.org/b/isbn/9780807014295-L.jpg"
+      },
+      "description": "A short, durable book about meaning under pressure.",
+      "tags": [
+        "book",
+        "meaning",
+        "psychology",
+        "classic"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "book-grit",
+      "type": "book",
+      "title": "Grit: The Power of Passion and Perseverance",
+      "creator": "Angela Duckworth",
+      "year": 2016,
+      "image": {
+        "url": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781501111105/grit-9781501111105_hr.jpg",
+        "alt": "Grit: The Power of Passion and Perseverance book cover",
+        "width": 1837,
+        "height": 2775
+      },
+      "links": {
+        "primary": "https://openlibrary.org/isbn/9781501111105",
+        "source": "https://www.simonandschuster.com/books/Grit/Angela-Duckworth/9781501111105"
+      },
+      "description": "A focused look at persistence, practice, and long games.",
+      "tags": [
+        "book",
+        "grit",
+        "psychology",
+        "growth"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "book-economic-facts-and-fallacies",
+      "type": "book",
+      "title": "Economic Facts and Fallacies",
+      "creator": "Thomas Sowell",
+      "year": 2008,
+      "image": {
+        "url": "https://www.hachettebookgroup.com/wp-content/uploads/2017/06/9780465022038.jpg",
+        "alt": "Economic Facts and Fallacies book cover",
+        "width": 1733,
+        "height": 2600
+      },
+      "links": {
+        "primary": "https://openlibrary.org/isbn/9780465022038",
+        "source": "https://www.hachettebookgroup.com/titles/thomas-sowell/economic-facts-and-fallacies/9780465022038/?lens=basic-books"
+      },
+      "description": "Economics, incentives, and sharp arguments.",
+      "tags": [
+        "book",
+        "economics",
+        "policy",
+        "nonfiction"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "book-i-funny-james-patterson",
+      "type": "book",
+      "title": "I Funny: A Middle School Story",
+      "creator": "James Patterson and Chris Grabenstein",
+      "year": 2012,
+      "image": {
+        "url": "https://www.hachettebookgroup.com/wp-content/uploads/2017/06/9780316206938.jpg",
+        "alt": "I Funny: A Middle School Story book cover",
+        "width": 1753,
+        "height": 2600
+      },
+      "links": {
+        "primary": "https://openlibrary.org/books/OL26495070M/I_Funny_A_Middle_School_Story",
+        "source": "https://www.hachettebookgroup.com/titles/james-patterson/i-funny/9780316206938/?lens=jimmy-patterson"
+      },
+      "description": "Jamie Grimm, a middle-schooler who dreams of becoming a stand-up comedian, enters a comedy contest while dealing with bullies, family strain, and self-doubt.",
+      "tags": [
+        "book",
+        "middle grade",
+        "humor",
+        "comedy",
+        "school"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "book-i-even-funnier-james-patterson",
+      "type": "book",
+      "title": "I Even Funnier: A Middle School Story",
+      "creator": "James Patterson and Chris Grabenstein",
+      "year": 2013,
+      "image": {
+        "url": "https://www.hachettebookgroup.com/wp-content/uploads/2017/06/9780316206976.jpg",
+        "alt": "I Even Funnier book cover",
+        "width": 1806,
+        "height": 2600
+      },
+      "links": {
+        "primary": "https://openlibrary.org/books/OL26241339M/I_Even_Funnier_A_Middle_School_Story_%28I_Funny%29",
+        "source": "https://www.hachettebookgroup.com/titles/james-patterson/i-even-funnier/9780316206976/?lens=jimmy-patterson"
+      },
+      "description": "Jamie Grimm continues chasing his comedy dreams as new competitions, school pressures, and personal challenges test his confidence and friendships.",
+      "tags": [
+        "book",
+        "middle grade",
+        "humor",
+        "comedy",
+        "school"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "book-i-totally-funniest-james-patterson",
+      "type": "book",
+      "title": "I Totally Funniest: A Middle School Story",
+      "creator": "James Patterson and Chris Grabenstein",
+      "year": 2015,
+      "image": {
+        "url": "https://www.hachettebookgroup.com/wp-content/uploads/2017/06/9780316405935.jpg",
+        "alt": "I Totally Funniest book cover",
+        "width": 1655,
+        "height": 2600
+      },
+      "links": {
+        "primary": "https://openlibrary.org/books/OL26885631M/I_totally_funniest",
+        "source": "https://www.hachettebookgroup.com/titles/james-patterson/i-totally-funniest/9780316405935/?lens=jimmy-patterson"
+      },
+      "description": "As the Planet's Funniest Kid Comic finals approach, Jamie Grimm faces fame, pressure, and tough competition on the road to Hollywood.",
+      "tags": [
+        "book",
+        "middle grade",
+        "humor",
+        "comedy",
+        "contest"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "book-doctor-proctors-fart-powder-jo-nesbo",
+      "type": "book",
+      "title": "Doctor Proctor's Fart Powder",
+      "creator": "Jo Nesbo",
+      "year": 2009,
+      "image": {
+        "url": "https://d28hgpri8am2if.cloudfront.net/book_images/cvr9781416979722_9781416979722_hr.jpg",
+        "alt": "Cover of Doctor Proctor's Fart Powder by Jo Nesbo",
+        "width": 1660,
+        "height": 2542
+      },
+      "links": {
+        "primary": "https://openlibrary.org/isbn/9781416979722",
+        "source": "https://www.simonandschuster.com/books/Doctor-Proctors-Fart-Powder/Jo-Nesbo/Doctor-Proctors-Fart-Powder/9781416979722"
+      },
+      "description": "Nilly and Lisa help eccentric inventor Doctor Proctor sell a strange fart powder, only to discover that the extra-strength formula can attract dangerous attention.",
+      "tags": [
+        "book",
+        "middle grade",
+        "humor",
+        "inventions",
+        "Norway"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "book-nicholas-rene-goscinny",
+      "type": "book",
+      "title": "Nicholas",
+      "creator": "Rene Goscinny and Jean-Jacques Sempe",
+      "year": 2005,
+      "image": {
+        "url": "https://covers.openlibrary.org/b/id/6823791-L.jpg?default=false",
+        "alt": "Cover of Nicholas by Rene Goscinny and Jean-Jacques Sempe",
+        "width": 336,
+        "height": 500
+      },
+      "links": {
+        "primary": "https://openlibrary.org/books/OL24769964M/Nicholas",
+        "source": "https://covers.openlibrary.org/b/id/6823791-L.jpg?default=false"
+      },
+      "description": "The English edition of Le petit Nicolas collects comic schoolyard and family misadventures told through the innocent voice of young Nicholas.",
+      "tags": [
+        "book",
+        "children's classic",
+        "humor",
+        "school",
+        "France"
+      ],
+      "addedAt": "2026-07-22"
+    }
+  ]
+}

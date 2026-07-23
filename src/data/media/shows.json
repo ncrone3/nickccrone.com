@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "show-avatar-the-last-airbender",
+      "type": "show",
+      "title": "Avatar: The Last Airbender",
+      "creator": "Michael Dante DiMartino and Bryan Konietzko",
+      "year": 2005,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/v2vn1coUMPKw0GI1KGC5J4IXtqp.jpg",
+        "alt": "Poster for Avatar: The Last Airbender (2005)",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/tv/246-avatar-the-last-airbender",
+        "source": "https://www.themoviedb.org/tv/246-avatar-the-last-airbender"
+      },
+      "description": "A perfectly built adventure show with heart.",
+      "tags": [
+        "show",
+        "animation",
+        "adventure",
+        "favorite"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "show-the-office-us",
+      "type": "show",
+      "title": "The Office",
+      "creator": "Greg Daniels",
+      "year": 2005,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/qWnJzyZhyy74gjpSjIXWmuk0ifX.jpg",
+        "alt": "The Office poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/tv/2316-the-office",
+        "source": "https://image.tmdb.org/t/p/w500/qWnJzyZhyy74gjpSjIXWmuk0ifX.jpg"
+      },
+      "description": "Easy comfort comedy with an endless supply of bits.",
+      "tags": [
+        "show",
+        "comedy",
+        "sitcom",
+        "comfort"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "show-attack-on-titan",
+      "type": "show",
+      "title": "Attack on Titan",
+      "creator": "Hajime Isayama",
+      "year": 2013,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/hqRb1wyIVsaMukZElPBUXoJPqrR.jpg",
+        "alt": "Poster for Attack on Titan (2013)",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/tv/1429-attack-on-titan",
+        "source": "https://www.themoviedb.org/tv/1429-attack-on-titan"
+      },
+      "description": "Huge stakes, hard choices, and relentless momentum.",
+      "tags": [
+        "show",
+        "anime",
+        "action",
+        "drama"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "show-brooklyn-nine-nine",
+      "type": "show",
+      "title": "Brooklyn Nine-Nine",
+      "creator": "Dan Goor and Michael Schur",
+      "year": 2013,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/sInWA4mKzMJU596LL2nOaC6pVT0.jpg",
+        "alt": "Poster for Brooklyn Nine-Nine (2013)",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/tv/48891-brooklyn-nine-nine",
+        "source": "https://www.themoviedb.org/tv/48891-brooklyn-nine-nine"
+      },
+      "description": "Fast workplace comedy with a lot of heart.",
+      "tags": [
+        "show",
+        "comedy",
+        "sitcom",
+        "workplace"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "show-parks-and-recreation",
+      "type": "show",
+      "title": "Parks and Recreation",
+      "creator": "Greg Daniels and Michael Schur",
+      "year": 2009,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/dDuzrl9rUIBYieZjqmtNCdncrmZ.jpg",
+        "alt": "Poster for Parks and Recreation (2009)",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/tv/8592-parks-and-recreation",
+        "source": "https://www.themoviedb.org/tv/8592-parks-and-recreation"
+      },
+      "description": "Optimistic, quotable, and very good hangout TV.",
+      "tags": [
+        "show",
+        "comedy",
+        "sitcom",
+        "workplace"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "show-breaking-bad",
+      "type": "show",
+      "title": "Breaking Bad",
+      "creator": "Vince Gilligan",
+      "year": 2008,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg",
+        "alt": "Breaking Bad poster",
+        "width": 500,
+        "height": 741
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/tv/1396-breaking-bad",
+        "source": "https://www.themoviedb.org/tv/1396-breaking-bad/images/posters"
+      },
+      "description": "A chemistry teacher facing a terminal diagnosis turns to manufacturing meth, pulling his family and criminal partners into escalating danger.",
+      "tags": [
+        "show",
+        "crime",
+        "drama",
+        "antihero",
+        "drug trade"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "show-better-call-saul",
+      "type": "show",
+      "title": "Better Call Saul",
+      "creator": "Vince Gilligan and Peter Gould",
+      "year": 2015,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/zjg4jpK1Wp2kiRvtt5ND0kznako.jpg",
+        "alt": "Better Call Saul poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/tv/60059-better-call-saul",
+        "source": "https://www.themoviedb.org/tv/60059-better-call-saul/images/posters"
+      },
+      "description": "Small-time lawyer Jimmy McGill struggles to build a practice and identity before fully becoming the morally flexible Saul Goodman.",
+      "tags": [
+        "show",
+        "crime",
+        "legal drama",
+        "prequel",
+        "character study"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "show-invincible",
+      "type": "show",
+      "title": "Invincible",
+      "creator": "Robert Kirkman",
+      "year": 2021,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/jBn4LWlgdsf6xIUYhYBwpctBVsj.jpg",
+        "alt": "Invincible poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/tv/95557-invincible",
+        "source": "https://www.themoviedb.org/tv/95557-invincible/images/posters"
+      },
+      "description": "Teenager Mark Grayson inherits superpowers from his famous father and learns that heroism comes with brutal secrets and consequences.",
+      "tags": [
+        "show",
+        "animation",
+        "superhero",
+        "action",
+        "comic adaptation"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "show-wild-kratts",
+      "type": "show",
+      "title": "Wild Kratts",
+      "creator": "Martin Kratt and Chris Kratt",
+      "year": 2011,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/7Nn1AZb6LJv0WedeK7o4yU6Aioh.jpg",
+        "alt": "Wild Kratts poster",
+        "width": 500,
+        "height": 735
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/tv/35094-wild-kratts",
+        "source": "https://www.themoviedb.org/tv/35094-wild-kratts/images/posters"
+      },
+      "description": "Animated versions of Chris and Martin Kratt travel the world, using creature powers to explore animal abilities and protect wildlife.",
+      "tags": [
+        "show",
+        "animation",
+        "kids",
+        "nature",
+        "educational"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "show-impractical-jokers",
+      "type": "show",
+      "title": "Impractical Jokers",
+      "creator": "Joe Gatto, Sal Vulcano, Brian Quinn, James Murray",
+      "year": 2011,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/tRLj19YXH9GPiaqlU7GwWyd6G5K.jpg",
+        "alt": "Impractical Jokers poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/tv/59186-impractical-jokers",
+        "source": "https://www.themoviedb.org/tv/59186-impractical-jokers/images/posters"
+      },
+      "description": "Lifelong friends challenge one another to perform awkward public dares, with the episode loser facing a bigger punishment.",
+      "tags": [
+        "show",
+        "comedy",
+        "reality",
+        "hidden camera",
+        "pranks"
+      ],
+      "addedAt": "2026-07-22"
+    }
+  ]
+}

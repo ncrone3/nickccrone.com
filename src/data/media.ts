@@ -1,4 +1,15 @@
-import catalog from "./media.json";
+import albums from "./media/albums.json";
+import articles from "./media/articles.json";
+import books from "./media/books.json";
+import games from "./media/games.json";
+import movies from "./media/movies.json";
+import other from "./media/other.json";
+import podcasts from "./media/podcasts.json";
+import posts from "./media/posts.json";
+import reels from "./media/reels.json";
+import shows from "./media/shows.json";
+import songs from "./media/songs.json";
+import youtube from "./media/youtube.json";
 
 export const mediaTypes = [
   "book",
@@ -9,6 +20,7 @@ export const mediaTypes = [
   "youtube",
   "podcast",
   "reel",
+  "post",
   "article",
   "game",
   "other",
@@ -53,9 +65,22 @@ export type TileVariant =
   | "featurePoster"
   | "featureWide";
 
-const typedCatalog = catalog as MediaCatalog;
+const catalogs = [
+  books,
+  movies,
+  shows,
+  albums,
+  songs,
+  youtube,
+  podcasts,
+  reels,
+  posts,
+  articles,
+  games,
+  other,
+] as MediaCatalog[];
 
-export const mediaItems = typedCatalog.items;
+export const mediaItems = catalogs.flatMap((catalog) => catalog.items);
 
 export function getMediaTypeLabel(type: MediaType) {
   const labels: Record<MediaType, string> = {
@@ -67,6 +92,7 @@ export function getMediaTypeLabel(type: MediaType) {
     youtube: "YouTube",
     podcast: "Podcast",
     reel: "Reel",
+    post: "Post",
     article: "Article",
     game: "Game",
     other: "Other",

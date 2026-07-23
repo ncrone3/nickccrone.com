@@ -1,0 +1,548 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "movie-zindagi-na-milegi-dobara-2011",
+      "type": "movie",
+      "title": "Zindagi Na Milegi Dobara",
+      "creator": "Zoya Akhtar",
+      "year": 2011,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/hKO9O715wYxjkQSEv47giCYcyO8.jpg",
+        "alt": "Poster for Zindagi Na Milegi Dobara (2011)",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/61202-zindagi-na-milegi-dobara",
+        "source": "https://www.themoviedb.org/movie/61202"
+      },
+      "description": "A bright road-trip movie about friendship and taking the leap.",
+      "tags": [
+        "movie",
+        "bollywood",
+        "travel",
+        "friendship"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "movie-la-la-land-2016",
+      "type": "movie",
+      "title": "La La Land",
+      "creator": "Damien Chazelle",
+      "year": 2016,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
+        "alt": "La La Land movie poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/313369-la-la-land",
+        "source": "https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg"
+      },
+      "description": "Color, music, ambition, and a very good bittersweet ending.",
+      "tags": [
+        "movie",
+        "musical",
+        "jazz",
+        "favorite"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "movie-surfs-up-2007",
+      "type": "movie",
+      "title": "Surf's Up",
+      "creator": "Ash Brannon and Chris Buck",
+      "year": 2007,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/lenJ0hOmlks0dyxzNJoNVQlR3qR.jpg",
+        "alt": "Poster for Surf's Up (2007)",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/9408-surf-s-up",
+        "source": "https://www.themoviedb.org/movie/9408-surf-s-up"
+      },
+      "description": "A laid-back animated sports mockumentary.",
+      "tags": [
+        "movie",
+        "animation",
+        "surfing",
+        "comfort"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "movie-the-batman-2022",
+      "type": "movie",
+      "title": "The Batman",
+      "creator": "Matt Reeves",
+      "year": 2022,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+        "alt": "The Batman movie poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/414906-the-batman",
+        "source": "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+      },
+      "description": "Moody detective Batman with a heavy, stylish atmosphere.",
+      "tags": [
+        "movie",
+        "batman",
+        "detective",
+        "noir"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "movie-the-nice-guys-2016",
+      "type": "movie",
+      "title": "The Nice Guys",
+      "creator": "Shane Black",
+      "year": 2016,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/clq4So9spa9cXk3MZy2iMdqkxP2.jpg",
+        "alt": "Poster for The Nice Guys (2016)",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/290250-the-nice-guys",
+        "source": "https://www.themoviedb.org/movie/290250-the-nice-guys"
+      },
+      "description": "Fast, funny, and very rewatchable.",
+      "tags": [
+        "movie",
+        "comedy",
+        "detective",
+        "buddy"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "movie-spirited-away-2001",
+      "type": "movie",
+      "title": "Spirited Away",
+      "creator": "Hayao Miyazaki",
+      "year": 2001,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+        "alt": "Spirited Away movie poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/129-spirited-away",
+        "source": "https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg"
+      },
+      "description": "Dreamlike, strange, warm, and beautifully animated.",
+      "tags": [
+        "movie",
+        "anime",
+        "ghibli",
+        "animation"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "movie-fight-club-1999",
+      "type": "movie",
+      "title": "Fight Club",
+      "creator": "David Fincher",
+      "year": 1999,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+        "alt": "Fight Club movie poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/550-fight-club",
+        "source": "https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg"
+      },
+      "description": "Fincher chaos, identity, and late-night movie energy.",
+      "tags": [
+        "movie",
+        "fincher",
+        "drama",
+        "cult"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "movie-whiplash-2014",
+      "type": "movie",
+      "title": "Whiplash",
+      "creator": "Damien Chazelle",
+      "year": 2014,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
+        "alt": "Whiplash movie poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/244786-whiplash",
+        "source": "https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg"
+      },
+      "description": "Intensity, obsession, and one of the great final scenes.",
+      "tags": [
+        "movie",
+        "music",
+        "jazz",
+        "discipline"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "movie-your-name-2016",
+      "type": "movie",
+      "title": "Your Name",
+      "creator": "Makoto Shinkai",
+      "year": 2016,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg",
+        "alt": "Your Name movie poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/372058-your-name",
+        "source": "https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg"
+      },
+      "description": "Big feelings, cosmic timing, and gorgeous animation.",
+      "tags": [
+        "movie",
+        "anime",
+        "romance",
+        "animation"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "movie-the-shawshank-redemption-1994",
+      "type": "movie",
+      "title": "The Shawshank Redemption",
+      "creator": "Frank Darabont",
+      "year": 1994,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
+        "alt": "Poster for The Shawshank Redemption",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/278-the-shawshank-redemption",
+        "source": "https://www.themoviedb.org/movie/278-the-shawshank-redemption/images/posters"
+      },
+      "description": "A banker serving a life sentence forms an enduring friendship while holding onto hope inside Shawshank prison.",
+      "tags": [
+        "movie",
+        "drama",
+        "prison",
+        "friendship",
+        "hope"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "movie-kung-fu-panda-2008",
+      "type": "movie",
+      "title": "Kung Fu Panda",
+      "creator": "Mark Osborne and John Stevenson",
+      "year": 2008,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/wWt4JYXTg5Wr3xBW2phBrMKgp3x.jpg",
+        "alt": "Poster for Kung Fu Panda",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/9502-kung-fu-panda",
+        "source": "https://www.themoviedb.org/movie/9502-kung-fu-panda/images/posters"
+      },
+      "description": "An unlikely noodle-shop dreamer is chosen to train with legendary warriors and become the Dragon Warrior.",
+      "tags": [
+        "movie",
+        "animation",
+        "martial arts",
+        "comedy",
+        "family"
+      ],
+      "addedAt": "2026-07-22",
+      "featured": true
+    },
+    {
+      "id": "movie-cars-2006",
+      "type": "movie",
+      "title": "Cars",
+      "creator": "John Lasseter and Joe Ranft",
+      "year": 2006,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/abW5AzHDaIK1n9C36VdAeOwORRA.jpg",
+        "alt": "Poster for Cars",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/920-cars",
+        "source": "https://www.themoviedb.org/movie/920-cars/images/posters"
+      },
+      "description": "A hotshot race car gets stranded in a quiet desert town and discovers a slower, more meaningful road.",
+      "tags": [
+        "movie",
+        "animation",
+        "racing",
+        "family",
+        "pixar"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "movie-batman-begins-2005",
+      "type": "movie",
+      "title": "Batman Begins",
+      "creator": "Christopher Nolan",
+      "year": 2005,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/4MpN4kIEqUjW8OPtOQJXlTdHiJV.jpg",
+        "alt": "Poster for Batman Begins",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/272-batman-begins",
+        "source": "https://www.themoviedb.org/movie/272-batman-begins/images/posters"
+      },
+      "description": "Bruce Wayne returns to Gotham and channels fear, training, and trauma into the symbol of Batman.",
+      "tags": [
+        "movie",
+        "superhero",
+        "crime",
+        "origin story",
+        "action"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "movie-the-dark-knight-2008",
+      "type": "movie",
+      "title": "The Dark Knight",
+      "creator": "Christopher Nolan",
+      "year": 2008,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+        "alt": "Poster for The Dark Knight",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/155-the-dark-knight",
+        "source": "https://www.themoviedb.org/movie/155-the-dark-knight/images/posters"
+      },
+      "description": "Batman, Gordon, and Dent confront chaos in Gotham when the Joker turns justice into a moral siege.",
+      "tags": [
+        "movie",
+        "superhero",
+        "crime",
+        "thriller",
+        "nolan"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "movie-the-dark-knight-rises-2012",
+      "type": "movie",
+      "title": "The Dark Knight Rises",
+      "creator": "Christopher Nolan",
+      "year": 2012,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/hr0L2aueqlP2BYUblTTjmtn0hw4.jpg",
+        "alt": "Poster for The Dark Knight Rises",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/49026-the-dark-knight-rises",
+        "source": "https://www.themoviedb.org/movie/49026-the-dark-knight-rises/images/posters"
+      },
+      "description": "Years after vanishing, Batman is forced back into Gotham's fight when Bane threatens to break the city.",
+      "tags": [
+        "movie",
+        "superhero",
+        "action",
+        "crime",
+        "trilogy"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "movie-interstellar-2014",
+      "type": "movie",
+      "title": "Interstellar",
+      "creator": "Christopher Nolan",
+      "year": 2014,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+        "alt": "Poster for Interstellar",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/157336-interstellar",
+        "source": "https://www.themoviedb.org/movie/157336-interstellar/images/posters"
+      },
+      "description": "A pilot joins a desperate mission through a wormhole to find humanity a future beyond a dying Earth.",
+      "tags": [
+        "movie",
+        "science fiction",
+        "space",
+        "drama",
+        "nolan"
+      ],
+      "addedAt": "2026-07-22",
+      "featured": true
+    },
+    {
+      "id": "movie-spider-man-across-the-spider-verse-2023",
+      "type": "movie",
+      "title": "Spider-Man: Across the Spider-Verse",
+      "creator": "Joaquim Dos Santos, Kemp Powers, Justin K. Thompson",
+      "year": 2023,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+        "alt": "Poster for Spider-Man: Across the Spider-Verse",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/569094-spider-man-across-the-spider-verse",
+        "source": "https://www.themoviedb.org/movie/569094-spider-man-across-the-spider-verse/images/posters"
+      },
+      "description": "Miles Morales crosses the multiverse and clashes with the Spider-Society over what heroism must cost.",
+      "tags": [
+        "movie",
+        "animation",
+        "superhero",
+        "multiverse",
+        "spider-man"
+      ],
+      "addedAt": "2026-07-22",
+      "featured": true
+    },
+    {
+      "id": "movie-3-idiots-2009",
+      "type": "movie",
+      "title": "3 Idiots",
+      "creator": "Rajkumar Hirani",
+      "year": 2009,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/66A9MqXOyVFCssoloscw79z8Tew.jpg",
+        "alt": "Poster for 3 Idiots",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/20453-3-idiots",
+        "source": "https://www.themoviedb.org/movie/20453-3-idiots/images/posters"
+      },
+      "description": "Two friends search for their missing college companion while revisiting lessons about ambition, learning, and joy.",
+      "tags": [
+        "movie",
+        "comedy",
+        "drama",
+        "friendship",
+        "bollywood"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "movie-dead-poets-society-1989",
+      "type": "movie",
+      "title": "Dead Poets Society",
+      "creator": "Peter Weir",
+      "year": 1989,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/erzbMlcNHOdx24AXOcn2ZKA7R1q.jpg",
+        "alt": "Poster for Dead Poets Society",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/207-dead-poets-society",
+        "source": "https://www.themoviedb.org/movie/207-dead-poets-society/images/posters"
+      },
+      "description": "An English teacher inspires students at a strict prep school to think freely and seize their own lives.",
+      "tags": [
+        "movie",
+        "drama",
+        "school",
+        "poetry",
+        "coming of age"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "movie-ala-vaikunthapurramuloo-2020",
+      "type": "movie",
+      "title": "Ala Vaikunthapurramuloo",
+      "creator": "Trivikram Srinivas",
+      "year": 2020,
+      "image": {
+        "url": "https://images.moviebuff.com/54f276c3-d2d8-40e5-a02d-0cc86808f2fc?w=1000",
+        "alt": "Poster for Ala Vaikunthapurramuloo",
+        "width": 1000,
+        "height": 1417
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/628241-ala-vaikunthapurramuloo",
+        "source": "https://www.moviebuff.com/ala-vaikunthapuramulo"
+      },
+      "description": "A young man uncovers a life-altering family secret and steps into a wealthy household shaped by rivalry and pride.",
+      "tags": [
+        "movie",
+        "telugu",
+        "action",
+        "comedy",
+        "family drama"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "movie-baby-driver-2017",
+      "type": "movie",
+      "title": "Baby Driver",
+      "creator": "Edgar Wright",
+      "year": 2017,
+      "image": {
+        "url": "https://image.tmdb.org/t/p/w500/tYzFuYXmT8LOYASlFCkaPiAFAl0.jpg",
+        "alt": "Baby Driver movie poster",
+        "width": 500,
+        "height": 750
+      },
+      "links": {
+        "primary": "https://www.themoviedb.org/movie/339403-baby-driver",
+        "source": "https://www.themoviedb.org/movie/339403-baby-driver/images/posters?language=en-US"
+      },
+      "description": "Edgar Wright's rhythm-driven action crime film about a gifted getaway driver pulled into a dangerous heist.",
+      "tags": [
+        "movie",
+        "action",
+        "crime",
+        "heist"
+      ],
+      "addedAt": "2026-07-22"
+    }
+  ]
+}

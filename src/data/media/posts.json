@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "post-dz26rqwd7-a",
+      "type": "post",
+      "title": "Instagram post DZ26rqwD7_A",
+      "creator": "Instagram",
+      "year": 2026,
+      "image": {
+        "url": "/media/instagram/DZ26rqwD7_A.jpg",
+        "alt": "Thumbnail for Instagram post DZ26rqwD7_A",
+        "width": 640,
+        "height": 799
+      },
+      "links": {
+        "primary": "https://www.instagram.com/p/DZ26rqwD7_A/",
+        "source": "https://www.instagram.com/p/DZ26rqwD7_A/"
+      },
+      "description": "Instagram post saved for the media wall.",
+      "tags": [
+        "instagram",
+        "post"
+      ],
+      "addedAt": "2026-07-23"
+    }
+  ]
+}

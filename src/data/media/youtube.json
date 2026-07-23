@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "youtube-pop-culture-madeon",
+      "type": "youtube",
+      "title": "Pop Culture",
+      "creator": "Madeon",
+      "year": 2011,
+      "image": {
+        "url": "https://i.ytimg.com/vi/lTx3G6h2xyA/hqdefault.jpg",
+        "alt": "Pop Culture by Madeon YouTube thumbnail",
+        "width": 480,
+        "height": 360
+      },
+      "links": {
+        "primary": "https://www.youtube.com/watch?v=lTx3G6h2xyA",
+        "source": "https://i.ytimg.com/vi/lTx3G6h2xyA/hqdefault.jpg"
+      },
+      "description": "A launchpad performance packed with tiny recognizable moments.",
+      "tags": [
+        "youtube",
+        "madeon",
+        "mashup",
+        "electronic"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "youtube-500-days-chasing-my-dreams",
+      "type": "youtube",
+      "title": "500 Days of Chasing My Dreams",
+      "creator": "Justin Shen",
+      "image": {
+        "url": "https://i.ytimg.com/vi/cL_-TmEIgsw/maxresdefault.jpg",
+        "alt": "YouTube thumbnail for \"500 days of chasing my dreams\" by Justin Shen",
+        "width": 1280,
+        "height": 720
+      },
+      "links": {
+        "primary": "https://www.youtube.com/watch?v=cL_-TmEIgsw",
+        "source": "https://i.ytimg.com/vi/cL_-TmEIgsw/maxresdefault.jpg"
+      },
+      "description": "A creator video about persistence and creative ambition.",
+      "tags": [
+        "youtube",
+        "creator",
+        "dreams",
+        "video"
+      ],
+      "addedAt": "2026-07-21",
+      "year": 2024
+    },
+    {
+      "id": "youtube-i-was-doing-fine-without-you",
+      "type": "youtube",
+      "title": "I Was Doing Fine Without You",
+      "creator": "Blendtastic",
+      "image": {
+        "url": "https://i.ytimg.com/vi/H6JjSdO0XWA/hqdefault.jpg",
+        "alt": "YouTube thumbnail for \"I was doing fine without you\" by Blendtastic",
+        "width": 480,
+        "height": 360
+      },
+      "links": {
+        "primary": "https://www.youtube.com/watch?v=H6JjSdO0XWA",
+        "source": "https://i.ytimg.com/vi/H6JjSdO0XWA/hqdefault.jpg"
+      },
+      "description": "A YouTube pick from the media wall starter set.",
+      "tags": [
+        "youtube",
+        "blendtastic",
+        "video"
+      ],
+      "addedAt": "2026-07-21",
+      "year": 2017
+    },
+    {
+      "id": "youtube-asked-out-100-girls",
+      "type": "youtube",
+      "title": "I Asked Out 100 Girls on a Date to Get Over My Fear of Rejection... This Is What I Learned",
+      "creator": "yankeesam11",
+      "image": {
+        "url": "https://i.ytimg.com/vi/mC34TSXNKiY/maxresdefault.jpg",
+        "alt": "YouTube thumbnail for \"I asked out 100 girls on a date to get over my fear of rejection... this is what I learned\" by yankeesam11",
+        "width": 1280,
+        "height": 720
+      },
+      "links": {
+        "primary": "https://www.youtube.com/watch?v=mC34TSXNKiY",
+        "source": "https://i.ytimg.com/vi/mC34TSXNKiY/maxresdefault.jpg"
+      },
+      "description": "A social challenge video about getting more comfortable with rejection.",
+      "tags": [
+        "youtube",
+        "rejection",
+        "dating",
+        "challenge"
+      ],
+      "addedAt": "2026-07-21",
+      "year": 2022
+    },
+    {
+      "id": "youtube-conor-mcgregor-knocks-out-jose-aldo-ufc-194",
+      "type": "youtube",
+      "title": "Conor McGregor's KNOCKS OUT Jose Aldo | UFC 194",
+      "creator": "UFC",
+      "year": 2021,
+      "image": {
+        "url": "https://i.ytimg.com/vi/7qrVQwjieac/maxresdefault.jpg",
+        "alt": "YouTube thumbnail for Conor McGregor's KNOCKS OUT Jose Aldo | UFC 194 by UFC",
+        "width": 1280,
+        "height": 720
+      },
+      "links": {
+        "primary": "https://www.youtube.com/watch?v=7qrVQwjieac",
+        "source": "https://www.youtube.com/@ufc"
+      },
+      "description": "UFC highlight revisiting Conor McGregor's 13-second knockout of Jose Aldo at UFC 194.",
+      "tags": [
+        "youtube",
+        "ufc",
+        "mma",
+        "conor mcgregor",
+        "knockout"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "youtube-islam-makhachev-vs-alexander-volkanovski-full-fight",
+      "type": "youtube",
+      "title": "Islam Makhachev vs Alexander Volkanovski | Full Fight",
+      "creator": "UFC Eurasia",
+      "year": 2026,
+      "image": {
+        "url": "https://i.ytimg.com/vi/xJFbXIGMKws/maxresdefault.jpg",
+        "alt": "YouTube thumbnail for Islam Makhachev vs Alexander Volkanovski | Full Fight by UFC Eurasia",
+        "width": 1280,
+        "height": 720
+      },
+      "links": {
+        "primary": "https://www.youtube.com/watch?v=xJFbXIGMKws",
+        "source": "https://www.youtube.com/@UFCEurasia"
+      },
+      "description": "Full-fight upload of Islam Makhachev versus Alexander Volkanovski from UFC Eurasia.",
+      "tags": [
+        "youtube",
+        "ufc",
+        "mma",
+        "full fight",
+        "volkanovski"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "youtube-why-polymaths-matter-specialized-world",
+      "type": "youtube",
+      "title": "Why Polymaths Matter in a Specialized World",
+      "creator": "by ansley jane",
+      "year": 2025,
+      "image": {
+        "url": "https://i.ytimg.com/vi/n5jZtNjtsjU/maxresdefault.jpg",
+        "alt": "YouTube thumbnail for Why Polymaths Matter in a Specialized World by ansley jane",
+        "width": 1280,
+        "height": 720
+      },
+      "links": {
+        "primary": "https://www.youtube.com/watch?v=n5jZtNjtsjU",
+        "source": "https://www.youtube.com/@byansleyjane"
+      },
+      "description": "A reflection on why broad curiosity and cross-disciplinary thinking still matter in an expert-driven culture.",
+      "tags": [
+        "youtube",
+        "polymath",
+        "creativity",
+        "learning",
+        "specialization"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "youtube-stop-pouring-start-drinking",
+      "type": "youtube",
+      "title": "Stop Pouring. Start Drinking.",
+      "creator": "Ali Gallop",
+      "year": 2024,
+      "image": {
+        "url": "https://i.ytimg.com/vi/zS2yF1dUYfs/maxresdefault.jpg",
+        "alt": "YouTube thumbnail for Stop Pouring. Start Drinking. by Ali Gallop",
+        "width": 1280,
+        "height": 720
+      },
+      "links": {
+        "primary": "https://www.youtube.com/watch?v=zS2yF1dUYfs",
+        "source": "https://www.youtube.com/@aligallop"
+      },
+      "description": "A short essay-style video about moving from passive information consumption to active practice.",
+      "tags": [
+        "youtube",
+        "self improvement",
+        "learning",
+        "practice",
+        "attention"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "youtube-get-girls-pua-phase-more-plates-more-dates",
+      "type": "youtube",
+      "title": "Why You Need To Get The Get Girls/\"PUA\" Phase Of Your Life Done As Soon As Possible",
+      "creator": "More Plates More Dates",
+      "year": 2020,
+      "image": {
+        "url": "https://i.ytimg.com/vi/zkdGsOKaDY4/maxresdefault.jpg",
+        "alt": "YouTube thumbnail for Why You Need To Get The Get Girls/PUA Phase Of Your Life Done As Soon As Possible by More Plates More Dates",
+        "width": 1280,
+        "height": 720
+      },
+      "links": {
+        "primary": "https://www.youtube.com/watch?v=zkdGsOKaDY4",
+        "source": "https://www.youtube.com/@MorePlatesMoreDates"
+      },
+      "description": "Derek from More Plates More Dates discusses dating, self-development, and moving past the PUA phase early.",
+      "tags": [
+        "youtube",
+        "dating",
+        "self improvement",
+        "relationships",
+        "pua"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "youtube-zack-fox-dj-set-elevator-music",
+      "type": "youtube",
+      "title": "Zack Fox (DJ Set) - Elevator Music",
+      "creator": "Elevator Music",
+      "year": 2024,
+      "image": {
+        "url": "https://i.ytimg.com/vi/iVZkcDOal7w/sddefault.jpg",
+        "alt": "YouTube thumbnail for Zack Fox (DJ Set) - Elevator Music by Elevator Music",
+        "width": 640,
+        "height": 480
+      },
+      "links": {
+        "primary": "https://www.youtube.com/watch?v=iVZkcDOal7w",
+        "source": "https://www.youtube.com/@ElevatorMusicLive"
+      },
+      "description": "Zack Fox performs a DJ set for Elevator Music's in-elevator mix series.",
+      "tags": [
+        "youtube",
+        "dj set",
+        "zack fox",
+        "elevator music",
+        "mix"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "youtube-why-youre-always-tired-better-ideas",
+      "type": "youtube",
+      "title": "Why you're always tired",
+      "creator": "Better Ideas",
+      "year": 2020,
+      "image": {
+        "url": "https://i.ytimg.com/vi/js2vfr96iAQ/maxresdefault.jpg",
+        "alt": "YouTube thumbnail for Why you're always tired by Better Ideas",
+        "width": 1280,
+        "height": 720
+      },
+      "links": {
+        "primary": "https://www.youtube.com/watch?v=js2vfr96iAQ",
+        "source": "https://www.youtube.com/@betterideas"
+      },
+      "description": "Better Ideas examines common lifestyle and mindset reasons people feel chronically tired.",
+      "tags": [
+        "youtube",
+        "fatigue",
+        "energy",
+        "self improvement",
+        "habits"
+      ],
+      "addedAt": "2026-07-22"
+    }
+  ]
+}

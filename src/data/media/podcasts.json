@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "podcast-jre-1309-naval-ravikant",
+      "type": "podcast",
+      "title": "#1309 - Naval Ravikant",
+      "creator": "The Joe Rogan Experience",
+      "year": 2019,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/e6/61/f7/e661f71b-bc22-59df-2292-27cbfd3e8e73/mza_550587729782303948.jpg/600x600bb.jpg",
+        "alt": "The Joe Rogan Experience podcast artwork",
+        "width": 600,
+        "height": 600
+      },
+      "links": {
+        "primary": "https://podcasts.apple.com/us/podcast/1309-naval-ravikant/id360084272?i=1000644539412",
+        "source": "https://podcasts.apple.com/us/podcast/1309-naval-ravikant/id360084272?i=1000644539412"
+      },
+      "description": "Joe Rogan talks with entrepreneur and AngelList co-founder Naval Ravikant about wealth, happiness, work, and knowledge work.",
+      "tags": [
+        "podcast",
+        "interview",
+        "entrepreneurship",
+        "philosophy",
+        "wealth"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "podcast-modern-wisdom-44-harsh-truths-human-nature",
+      "type": "podcast",
+      "title": "44 Harsh Truths About Human Nature - Naval Ravikant - #922",
+      "creator": "Modern Wisdom",
+      "year": 2025,
+      "image": {
+        "url": "https://i.ytimg.com/vi/KyfUysrNaco/maxresdefault.jpg",
+        "alt": "44 Harsh Truths About Human Nature - Naval Ravikant episode thumbnail",
+        "width": 1280,
+        "height": 720
+      },
+      "links": {
+        "primary": "https://podcasts.apple.com/us/podcast/44-harsh-truths-about-human-nature-naval-ravikant-922/id1347973549?i=1000701535098",
+        "source": "https://www.youtube.com/watch?v=KyfUysrNaco"
+      },
+      "description": "Chris Williamson interviews Naval Ravikant on human nature, success, happiness, wealth, culture, family, technology, death, and living well.",
+      "tags": [
+        "podcast",
+        "interview",
+        "human nature",
+        "philosophy",
+        "self improvement"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "podcast-iced-coffee-hour-i-just-lost-everything",
+      "type": "podcast",
+      "title": "\"I Just Lost Everything\" - How Togi Made (And Blew) $10,000,000 In 90 Days",
+      "creator": "The Iced Coffee Hour",
+      "year": 2025,
+      "image": {
+        "url": "https://i.ytimg.com/vi/HPMHSKdRqjg/maxresdefault.jpg",
+        "alt": "The Iced Coffee Hour episode thumbnail for Togi's $10,000,000 story",
+        "width": 1280,
+        "height": 720
+      },
+      "links": {
+        "primary": "https://www.youtube.com/watch?v=HPMHSKdRqjg",
+        "source": "https://podcasts.apple.com/us/podcast/i-just-lost-everything-how-togi-made-and-blew-%2410-000/id1515070058?i=1000705264198"
+      },
+      "description": "The Iced Coffee Hour interviews Togi about making and losing millions through gambling and crypto, addiction, risk-taking, and lessons for young people.",
+      "tags": [
+        "podcast",
+        "interview",
+        "money",
+        "risk",
+        "creator economy"
+      ],
+      "addedAt": "2026-07-22"
+    }
+  ]
+}

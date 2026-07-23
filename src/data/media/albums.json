@@ -1,0 +1,761 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "album-speak-for-yourself",
+      "type": "album",
+      "title": "Speak for Yourself",
+      "creator": "Imogen Heap",
+      "year": 2005,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/98/85/1e/98851e09-6760-85e1-c1ef-e1034f6a7cb8/886445364712_cover.jpg/1000x1000bb.jpg",
+        "alt": "Speak for Yourself by Imogen Heap album cover",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Speak%20for%20Yourself%20Imogen%20Heap",
+        "source": "https://open.spotify.com/search/Speak%20for%20Yourself%20Imogen%20Heap"
+      },
+      "description": "Inventive electronic pop with a very specific mood.",
+      "tags": [
+        "album",
+        "electronic",
+        "pop",
+        "imogen heap"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "album-for-us",
+      "type": "album",
+      "title": "For Us",
+      "creator": "Nate Sib",
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6c/95/69/6c956977-e61a-b2a1-033e-5f3b8caf9d31/25UMGIM61691.rgb.jpg/1000x1000bb.jpg",
+        "alt": "for us by Nate Sib album cover",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/For%20Us%20Nate%20Sib",
+        "source": "https://open.spotify.com/search/For%20Us%20Nate%20Sib"
+      },
+      "description": "Nate Sib in the rotation.",
+      "tags": [
+        "album",
+        "nate sib",
+        "music",
+        "pop"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-boy-2hollis",
+      "type": "album",
+      "title": "Boy",
+      "creator": "2hollis",
+      "year": 2024,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7d/ca/16/7dca16b6-4996-3a83-1384-e3be1ca3004d/197342590211_cover.jpg/1000x1000bb.jpg",
+        "alt": "boy by 2hollis album cover",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Boy%202hollis",
+        "source": "https://open.spotify.com/search/Boy%202hollis"
+      },
+      "description": "Glitchy, high-energy, and very online.",
+      "tags": [
+        "album",
+        "2hollis",
+        "electronic",
+        "pop"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-the-college-dropout",
+      "type": "album",
+      "title": "The College Dropout",
+      "creator": "Kanye West",
+      "year": 2004,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/15/05/09/15050911-a2f1-9ebc-0d16-6e8faad1cf80/00602567924326.rgb.jpg/1000x1000bb.jpg",
+        "alt": "The College Dropout by Kanye West album cover",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/The%20College%20Dropout%20Kanye%20West",
+        "source": "https://open.spotify.com/search/The%20College%20Dropout%20Kanye%20West"
+      },
+      "description": "A cornerstone album with personality in every corner.",
+      "tags": [
+        "album",
+        "hip hop",
+        "kanye west",
+        "classic"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-graduation",
+      "type": "album",
+      "title": "Graduation",
+      "creator": "Kanye West",
+      "year": 2007,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/39/25/2d/39252d65-2d50-b991-0962-f7a98a761271/00602517483507.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Graduation by Kanye West album cover",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Graduation%20Kanye%20West",
+        "source": "https://open.spotify.com/search/Graduation%20Kanye%20West"
+      },
+      "description": "Big hooks and even bigger production.",
+      "tags": [
+        "album",
+        "hip hop",
+        "kanye west",
+        "pop rap"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "album-ll-the-hellp",
+      "type": "album",
+      "title": "LL",
+      "creator": "The Hellp",
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/91/6c/2b/916c2b6e-a777-f812-97cd-e684c49a60bf/075679629128.jpg/1000x1000bb.jpg",
+        "alt": "LL by The Hellp album cover",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/LL%20The%20Hellp",
+        "source": "https://open.spotify.com/search/LL%20The%20Hellp"
+      },
+      "description": "Sleek, strange, and catchy.",
+      "tags": [
+        "album",
+        "the hellp",
+        "electronic",
+        "music"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-korean-kimj",
+      "type": "album",
+      "title": "Korean",
+      "creator": "kimj",
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3c/87/41/3c874177-e21b-e7e1-575d-d983bcef9d0a/artwork.jpg/1000x1000bb.jpg",
+        "alt": "KOREAN by kimj album cover",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Korean%20kimj",
+        "source": "https://open.spotify.com/search/Korean%20kimj"
+      },
+      "description": "A compact pick from the music pile.",
+      "tags": [
+        "album",
+        "kimj",
+        "music"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-future-nostalgia",
+      "type": "album",
+      "title": "Future Nostalgia",
+      "creator": "Dua Lipa",
+      "year": 2020,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/6c/11/d6/6c11d681-aa3a-d59e-4c2e-f77e181026ab/190295092665.jpg/1000x1000bb.jpg",
+        "alt": "Future Nostalgia by Dua Lipa album cover",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Future%20Nostalgia%20Dua%20Lipa",
+        "source": "https://open.spotify.com/search/Future%20Nostalgia%20Dua%20Lipa"
+      },
+      "description": "Clean pop polish with disco momentum.",
+      "tags": [
+        "album",
+        "pop",
+        "dance",
+        "dua lipa"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "album-rodeo-travis-scott",
+      "type": "album",
+      "title": "Rodeo",
+      "creator": "Travis Scott",
+      "year": 2015,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/6d/fb/f1/6dfbf17d-4032-f585-35ad-f3f9b6859cd9/886445460421.jpg/1000x1000bb.jpg",
+        "alt": "Rodeo album artwork by Travis Scott",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/7EGY16IWSHpPdoWazUyL9R",
+        "source": "https://open.spotify.com/album/7EGY16IWSHpPdoWazUyL9R"
+      },
+      "description": "Travis Scott's major-label debut, murky and cinematic.",
+      "tags": [
+        "album",
+        "rap",
+        "trap",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-astroworld-travis-scott",
+      "type": "album",
+      "title": "ASTROWORLD",
+      "creator": "Travis Scott",
+      "year": 2018,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e7/49/8f/e7498f65-df8f-bead-d6e3-2a8d4d642a79/886447235317.jpg/1000x1000bb.jpg",
+        "alt": "ASTROWORLD album artwork by Travis Scott",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/41GuZcammIkupMPKH2OJ6I",
+        "source": "https://open.spotify.com/album/41GuZcammIkupMPKH2OJ6I"
+      },
+      "description": "A maximal Houston rap carnival with psychedelic detail.",
+      "tags": [
+        "album",
+        "rap",
+        "trap",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "album-playboi-carti-playboi-carti",
+      "type": "album",
+      "title": "Playboi Carti",
+      "creator": "Playboi Carti",
+      "year": 2017,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/f9/58/95/f95895f4-0ef6-a636-241e-ba4824ef6621/17UMGIM08349.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Playboi Carti album artwork by Playboi Carti",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/7aM9uiOOQd6oEzM35ji4hr",
+        "source": "https://open.spotify.com/album/7aM9uiOOQd6oEzM35ji4hr"
+      },
+      "description": "The self-titled mixtape that crystalized Carti's airy style.",
+      "tags": [
+        "album",
+        "trap",
+        "cloud rap",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-ye-kanye-west",
+      "type": "album",
+      "title": "ye",
+      "creator": "Kanye West",
+      "year": 2018,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f8/92/62/f892628e-bfd5-2437-c1f5-0ebbd366de09/00602577303098.rgb.jpg/1000x1000bb.jpg",
+        "alt": "ye album artwork by Kanye West",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/5EBGCvO6upi3GNknMVe9x9",
+        "source": "https://open.spotify.com/album/5EBGCvO6upi3GNknMVe9x9"
+      },
+      "description": "A brief, turbulent Wyoming-era Kanye album.",
+      "tags": [
+        "album",
+        "hip hop",
+        "art rap",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-music-playboi-carti",
+      "type": "album",
+      "title": "MUSIC",
+      "creator": "Playboi Carti",
+      "year": 2025,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/03/24/10/03241047-f22d-7e64-3932-6df7550acc42/25UMGIM46212.rgb.jpg/1000x1000bb.jpg",
+        "alt": "MUSIC album artwork by Playboi Carti",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/0fSfkmx0tdPqFYkJuNX74a",
+        "source": "https://open.spotify.com/album/0fSfkmx0tdPqFYkJuNX74a"
+      },
+      "description": "Carti's long-awaited third studio album, sprawling and abrasive.",
+      "tags": [
+        "album",
+        "trap",
+        "rage",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-savage-mode-ii-21-savage-metro-boomin",
+      "type": "album",
+      "title": "SAVAGE MODE II",
+      "creator": "21 Savage, Metro Boomin",
+      "year": 2020,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/53/ed/40/53ed4078-7d2a-076e-f9b9-ffb29e776c42/886448747703.jpg/1000x1000bb.jpg",
+        "alt": "SAVAGE MODE II album artwork by 21 Savage and Metro Boomin",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/SAVAGE%20MODE%20II%2021%20Savage%2C%20Metro%20Boomin",
+        "source": "https://open.spotify.com/search/SAVAGE%20MODE%20II%2021%20Savage%2C%20Metro%20Boomin"
+      },
+      "description": "A cinematic sequel pairing 21's menace with Metro's darkness.",
+      "tags": [
+        "album",
+        "trap",
+        "rap",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-lahai-sampha",
+      "type": "album",
+      "title": "Lahai",
+      "creator": "Sampha",
+      "year": 2023,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/27/c0/04/27c00450-0822-d948-8a62-13072ebe1261/889030031273.png/1000x1000bb.jpg",
+        "alt": "Lahai album artwork by Sampha",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/5GuWww4OaildzkmTTlfMN3",
+        "source": "https://open.spotify.com/album/5GuWww4OaildzkmTTlfMN3"
+      },
+      "description": "A warm, intricate Sampha album about connection and motion.",
+      "tags": [
+        "album",
+        "electronic",
+        "soul",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-discovery-daft-punk",
+      "type": "album",
+      "title": "Discovery",
+      "creator": "Daft Punk",
+      "year": 2001,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fd/4a/77/fd4a77db-0ebc-d043-41a2-f32fa1bb0fb4/dj.qrikkdwj.jpg/1000x1000bb.jpg",
+        "alt": "Discovery album artwork by Daft Punk",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/0RBZJDWUVMjzdKS8rjO6bY",
+        "source": "https://open.spotify.com/album/0RBZJDWUVMjzdKS8rjO6bY"
+      },
+      "description": "A gleaming French-house classic where pop memory turns futuristic.",
+      "tags": [
+        "album",
+        "electronic",
+        "french house",
+        "2000s"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "album-thriller-michael-jackson",
+      "type": "album",
+      "title": "Thriller",
+      "creator": "Michael Jackson",
+      "year": 1982,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/1000x1000bb.jpg",
+        "alt": "Thriller album artwork by Michael Jackson",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/5Ne1SPpiXQqpCZ6pZCRfIM",
+        "source": "https://open.spotify.com/album/5Ne1SPpiXQqpCZ6pZCRfIM"
+      },
+      "description": "A Quincy Jones-produced pop blockbuster.",
+      "tags": [
+        "album",
+        "pop",
+        "r&b",
+        "1980s"
+      ],
+      "addedAt": "2026-07-21",
+      "featured": true
+    },
+    {
+      "id": "album-my-beautiful-dark-twisted-fantasy-kanye-west",
+      "type": "album",
+      "title": "My Beautiful Dark Twisted Fantasy",
+      "creator": "Kanye West",
+      "year": 2010,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d1/74/da/d174dacf-5782-dfe2-19f7-ce037dcd0237/00602527584935.rgb.jpg/1000x1000bb.jpg",
+        "alt": "My Beautiful Dark Twisted Fantasy album artwork by Kanye West",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/1SGxmLRKnJNI1ZMDoBWXoS",
+        "source": "https://open.spotify.com/album/1SGxmLRKnJNI1ZMDoBWXoS"
+      },
+      "description": "A maximalist rap album built like grand self-mythology.",
+      "tags": [
+        "album",
+        "hip hop",
+        "art rap",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-legends-never-die-juice-wrld",
+      "type": "album",
+      "title": "Legends Never Die",
+      "creator": "Juice WRLD",
+      "year": 2020,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/39/b1/1e/39b11eef-4709-bf53-2b5b-7954d2782496/20UMGIM58296.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Legends Never Die album artwork by Juice WRLD",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/0Zs0b11dQneqR0rfNhbGU4",
+        "source": "https://open.spotify.com/album/0Zs0b11dQneqR0rfNhbGU4"
+      },
+      "description": "A posthumous Juice WRLD album balancing grief and melody.",
+      "tags": [
+        "album",
+        "emo rap",
+        "pop rap",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-kids-see-ghosts-kids-see-ghosts",
+      "type": "album",
+      "title": "KIDS SEE GHOSTS",
+      "creator": "KIDS SEE GHOSTS",
+      "year": 2018,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3f/2e/d3/3f2ed3b1-d260-4e92-816b-4beac102c676/00602567794318.rgb.jpg/1000x1000bb.jpg",
+        "alt": "KIDS SEE GHOSTS album artwork by KIDS SEE GHOSTS, Kanye West, and Kid Cudi",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/6pwuKxMUkNg673KETsXPUV",
+        "source": "https://open.spotify.com/album/6pwuKxMUkNg673KETsXPUV"
+      },
+      "description": "Kanye West and Kid Cudi's concise collaborative album.",
+      "tags": [
+        "album",
+        "hip hop",
+        "psychedelic rap",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-currents-tame-impala",
+      "type": "album",
+      "title": "Currents",
+      "creator": "Tame Impala",
+      "year": 2015,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a8/2e/b4/a82eb490-f30a-a321-461a-0383c88fec95/15UMGIM23316.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Currents album artwork by Tame Impala",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/0rxKf57PZvWEoU8v3m5W2q",
+        "source": "https://open.spotify.com/album/0rxKf57PZvWEoU8v3m5W2q"
+      },
+      "description": "A lush psych-pop pivot about change and control.",
+      "tags": [
+        "album",
+        "psychedelic pop",
+        "indie",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-die-lit-playboi-carti",
+      "type": "album",
+      "title": "Die Lit",
+      "creator": "Playboi Carti",
+      "year": 2018,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/a2/38/52/a23852d9-21e4-5ac5-6d75-2682fecdda46/18UMGIM26096.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Die Lit album artwork by Playboi Carti",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/7dAm8ShwJLFm9SaJ6Yc58O",
+        "source": "https://open.spotify.com/album/7dAm8ShwJLFm9SaJ6Yc58O"
+      },
+      "description": "A minimalist, high-energy trap record.",
+      "tags": [
+        "album",
+        "trap",
+        "rage",
+        "2010s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-bad-cameo-james-blake-lil-yachty",
+      "type": "album",
+      "title": "Bad Cameo",
+      "creator": "James Blake, Lil Yachty",
+      "year": 2024,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/12/03/a8/1203a871-f9ba-38d5-e44e-7c1ebf94475d/24UMGIM50479.rgb.jpg/1000x1000bb.jpg",
+        "alt": "Bad Cameo album artwork by James Blake and Lil Yachty",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Bad%20Cameo%20James%20Blake%2C%20Lil%20Yachty",
+        "source": "https://open.spotify.com/search/Bad%20Cameo%20James%20Blake%2C%20Lil%20Yachty"
+      },
+      "description": "A patient, ambient-leaning James Blake and Lil Yachty collaboration.",
+      "tags": [
+        "album",
+        "alternative",
+        "ambient pop",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-the-first-time-the-kid-laroi",
+      "type": "album",
+      "title": "THE FIRST TIME",
+      "creator": "The Kid LAROI",
+      "year": 2023,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0a/f0/ec/0af0ec0a-6899-496d-7b6b-690bbf82bff6/196874338292.jpg/1000x1000bb.jpg",
+        "alt": "THE FIRST TIME album artwork by The Kid LAROI",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/63IolVUykZCHMlu2zu9jHS",
+        "source": "https://open.spotify.com/album/63IolVUykZCHMlu2zu9jHS"
+      },
+      "description": "A widescreen pop-rap album from The Kid LAROI.",
+      "tags": [
+        "album",
+        "pop rap",
+        "pop",
+        "2020s"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-rapunzel-dhruv",
+      "type": "album",
+      "title": "rapunzel",
+      "creator": "dhruv",
+      "year": 2022,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/a4/c6/71/a4c6714b-650b-e235-33b5-5acb1f99915d/886449732470.jpg/1000x1000bb.jpg",
+        "alt": "rapunzel album artwork by Dhruv",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/rapunzel%20dhruv",
+        "source": "https://open.spotify.com/search/rapunzel%20dhruv"
+      },
+      "description": "A gentle debut EP centered on soft R&B-pop intimacy.",
+      "tags": [
+        "album",
+        "r&b",
+        "pop",
+        "ep",
+        "2020s",
+        "needs review"
+      ],
+      "addedAt": "2026-07-21"
+    },
+    {
+      "id": "album-weekend-rockstar-feng",
+      "type": "album",
+      "title": "Weekend Rockstar",
+      "creator": "Feng",
+      "year": 2026,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3b/36/c0/3b36c00b-8791-6104-a9c1-a6ec52ae5853/26UMGIM05237.rgb.jpg/1200x1200bb.jpg",
+        "alt": "Cover art for Weekend Rockstar by Feng",
+        "width": 1200,
+        "height": 1200
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/60CIpF4ABFJ0b76qzafXio",
+        "source": "https://open.spotify.com/album/60CIpF4ABFJ0b76qzafXio"
+      },
+      "description": "A 13-track 2026 hip-hop/rap album by Feng, released by Weekendrockstar LLC.",
+      "tags": [
+        "album",
+        "hip-hop",
+        "rap",
+        "2026",
+        "feng"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "album-florence-fields-kurtains",
+      "type": "album",
+      "title": "florence fields",
+      "creator": "kurtains",
+      "year": 2024,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e0/34/93/e03493c8-5196-1e36-6c19-8229013994ef/535297.jpg/1200x1200bb.jpg",
+        "alt": "Cover art for florence fields by kurtains",
+        "width": 1200,
+        "height": 1200
+      },
+      "links": {
+        "primary": "https://open.spotify.com/album/7CaY1L6DsyGzWdA2az11a4",
+        "source": "https://open.spotify.com/album/7CaY1L6DsyGzWdA2az11a4"
+      },
+      "description": "A 7-track 2024 pop album by kurtains, released by slowsilver03.",
+      "tags": [
+        "album",
+        "pop",
+        "hyperpop",
+        "digicore",
+        "kurtains"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "album-pink-tape-lil-uzi-vert",
+      "type": "album",
+      "title": "Pink Tape",
+      "creator": "Lil Uzi Vert",
+      "year": 2023,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/29/a3/34/29a3341f-2cd6-9661-f8f7-e154478b8491/075679677983.jpg/1200x1200bb.jpg",
+        "alt": "Pink Tape album cover by Lil Uzi Vert",
+        "width": 1200,
+        "height": 1200
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Pink%20Tape%20Lil%20Uzi%20Vert",
+        "source": "https://open.spotify.com/search/Pink%20Tape%20Lil%20Uzi%20Vert"
+      },
+      "description": "Lil Uzi Vert's expansive 2023 album, spanning trap, club music, rock-leaning textures, and melodic rap.",
+      "tags": [
+        "album",
+        "hip-hop",
+        "rap",
+        "trap"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "album-whole-lotta-red-playboi-carti",
+      "type": "album",
+      "title": "Whole Lotta Red",
+      "creator": "Playboi Carti",
+      "year": 2020,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ba/1e/05/ba1e058e-5637-e53c-563c-f5b9a1a6c344/20UM1IM18331.rgb.jpg/1200x1200bb.jpg",
+        "alt": "Whole Lotta Red album cover by Playboi Carti",
+        "width": 1200,
+        "height": 1200
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Whole%20Lotta%20Red%20Playboi%20Carti",
+        "source": "https://open.spotify.com/search/Whole%20Lotta%20Red%20Playboi%20Carti"
+      },
+      "description": "Playboi Carti's abrasive, minimalist 2020 album that pushes trap into punky, chaotic high-energy territory.",
+      "tags": [
+        "album",
+        "hip-hop",
+        "rap",
+        "experimental"
+      ],
+      "addedAt": "2026-07-22"
+    },
+    {
+      "id": "album-eternal-atake-lil-uzi-vert",
+      "type": "album",
+      "title": "Eternal Atake",
+      "creator": "Lil Uzi Vert",
+      "year": 2020,
+      "image": {
+        "url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/99/36/ec/9936ec13-b95f-c909-0985-ff10a3c6a39f/075679831934.jpg/1000x1000bb.jpg",
+        "alt": "Eternal Atake by Lil Uzi Vert cover art",
+        "width": 1000,
+        "height": 1000
+      },
+      "links": {
+        "primary": "https://open.spotify.com/search/Eternal%20Atake%20Lil%20Uzi%20Vert",
+        "source": "https://open.spotify.com/search/Eternal%20Atake%20Lil%20Uzi%20Vert"
+      },
+      "description": "A Round 5 album pick for the media wall.",
+      "tags": [
+        "album",
+        "music",
+        "hip-hop",
+        "rap"
+      ],
+      "addedAt": "2026-07-23"
+    }
+  ]
+}
