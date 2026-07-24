@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "media:resolve-spotify-links": "node scripts/media-resolve-spotify-links.mjs",
+    "media:sync-songs": "node scripts/media-sync-spotify-playlist.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.23.0",

@@ -282,6 +282,33 @@
         "habits"
       ],
       "addedAt": "2026-07-22"
+    },
+    {
+      "id": "youtube-jre-episode-1309-naval-ravikant",
+      "type": "youtube",
+      "title": "Joe Rogan Experience #1309 - Naval Ravikant",
+      "creator": "The Joe Rogan Experience",
+      "year": 2019,
+      "image": {
+        "url": "https://i.ytimg.com/vi/3qHkcs3kG44/maxresdefault.jpg",
+        "alt": "YouTube thumbnail for Joe Rogan Experience #1309 - Naval Ravikant by The Joe Rogan Experience",
+        "width": 1280,
+        "height": 720
+      },
+      "links": {
+        "primary": "https://www.youtube.com/watch?v=3qHkcs3kG44",
+        "source": "https://www.youtube.com/@TheJoeRoganExperience"
+      },
+      "description": "Joe Rogan talks with entrepreneur and AngelList co-founder Naval Ravikant about wealth, happiness, work, and knowledge work.",
+      "tags": [
+        "youtube",
+        "life",
+        "podcast",
+        "self improvement",
+        "philiosophy",
+        "entrepreneurship"
+      ],
+      "addedAt": "2026-07-22"
     }
   ]
 }
